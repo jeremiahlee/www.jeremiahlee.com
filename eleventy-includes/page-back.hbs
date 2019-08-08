@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <title>{{title}}</title>
+{{> partial-css }}
+{{#if excerpt}}
+    <meta name="description" content="{{ excerpt }}"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@JeremiahLee"/>
+    <meta name="twitter:title" content="{{ title }}"/>
+    <meta name="twitter:description" content="{{ excerpt }}"/>
+    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:description" content="{{ excerpt }}"/>
+    {{#if excerptImage}}
+    <meta name="twitter:image" content="https://www.jeremiahlee.com{{ permalink }}{{ excerptImage }}"/>
+    <meta property="og:image" content="https://www.jeremiahlee.com{{ permalink }}{{ excerptImage }}"/>
+    {{/if}}
+{{/if}}
+{{> partial-head }}
+</head>
+<body>
+<div class="container mx-auto">
+    <nav>
+        <p><a href="/" title="Home" class="no-underline">←︎ Home</a></p>
+    </nav>
+</div>
+<div class="container mx-auto">
+    {{{ content }}}
+</div>
+</div>
+</body>
+</html>

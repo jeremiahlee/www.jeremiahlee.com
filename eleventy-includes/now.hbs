@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <title>{{ collections.mostRecentNowPost.data.title }}</title>
+{{> partial-css }}
+    <meta name="description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@JeremiahLee" />
+    <meta name="twitter:title" content="{{ collections.mostRecentNowPost.data.title }}"/>
+    <meta name="twitter:description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
+    <meta property="og:title" content="{{ collections.mostRecentNowPost.data.title }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
+    <meta name="twitter:image" content="https://www.jeremiahlee.com/now/now.jpg"/>
+    <meta property="og:image" content="https://www.jeremiahlee.com/now/now.jpg"/>
+{{> partial-head }}
+</head>
+<body>
+
+<div class="container mx-auto">
+    <nav>
+        <p><a href="/" title="Home" class="no-underline">←︎ Home</a></p>
+    </nav>
+</div>
+
+<div class="container mx-auto">
+    <h1>What I’m Up To Now</h1>
+    <p class="text-sm">
+        Last updated on <time property="datePublished" datetime="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment collections.mostRecentNowPost.data.date 'LLLL'}}</time>
+    </p>
+
+    {{{ collections.mostRecentNowPost.data.content }}}
+</div>
+
+<footer class="container mx-auto">
+    <hr />
+    <p><small>Thanks to <a href="https://taylordavidson.com/now">Taylor Davidson</a> for the <a href="http://nownownow.com/about">/now page</a> tip.</small></p>
+</footer>
+
+</body>
+</html>

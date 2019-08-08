@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <title>{{title}}</title>
+    <link rel="canonical" href="https://www.jeremiahlee.com{{ page.url }}"/>
+{{> partial-css }}
+{{#if excerpt}}
+    <meta name="description" content="{{ excerpt }}"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@JeremiahLee"/>
+    <meta name="twitter:title" content="{{ title }}"/>
+    <meta name="twitter:description" content="{{ excerpt }}"/>
+    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:description" content="{{ excerpt }}"/>
+    {{#if excerptImage}}
+    <meta name="twitter:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"/>
+    <meta property="og:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"/>
+    {{/if}}
+{{/if}}
+{{> partial-head }}
+</head>
+<body>
+
+<div class="container mx-auto">
+    <nav>
+        <p><a href="/posts/" title="Writing" class="no-underline">←︎ Writing</a></p>
+    </nav>
+</div>
+
+<article class="container mx-auto">
+    <header>
+        <h1 class="mb-0" property="headline">{{title}}</h1>
+        <p class="text-sm">
+            <time property="datePublished" datetime="{{moment date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment date 'LLLL'}}</time>
+{{#if updated}}
+            <span class="text-gray-700">• Updated <time property="dateModified" datetime="{{moment updated 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment updated 'LLLL'}}</time></span>
+{{/if}}
+        </p>
+    </header>
+
+    {{{ content }}}
+</article>
+
+<footer class="container mx-auto">
+    <hr />
+    <p><small>No ads! Support my work via <a href="https://flattr.com/@jeremiahlee">Flattr</a> and <a href="https://brave.com/jer128">BAT</a>.</small></p>
+    <p><small>© {{moment date 'YYYY'}} <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Jeremiah Lee</span>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</small></p>
+</footer>
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Article",
+    "headline": "{{title}}",
+    "description": "{{ excerpt }}",
+    "author": {
+        "@type": "Person",
+        "name": "Jeremiah Lee"
+    },
+    "datePublished": "{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}",
+{{#if updated}}
+    "dateModified": "{{moment updated 'YYYY-MM-DDTHH:mm:ssZZ'}}",
+{{else}}
+    "dateModified": "{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}",
+{{/if}}
+{{#if excerptImage}}
+    "image": [
+        "https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"
+    ],
+{{/if}}
+    "copyrightYear": {{moment date 'YYYY'}}
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <title>Writing</title>
+    <meta name="description" content="onThought — the blog of Jeremiah Lee"/>
+{{> partial-css }}
+{{> partial-head }}
+</head>
+<body>
+<div class="container mx-auto">
+    <nav>
+        <p><a href="/" title="Home" class="no-underline">←︎ Home</a></p>
+    </nav>
+</div>
+
+<div class="container mx-auto">
+    <h1>Writing</h1>
+
+    {{#each collections.blogPostsByYear}}
+        <h2>{{this.year}}</h2>
+        <ul>{{#each this.data}}
+            <li><a href="{{this.url}}">{{this.data.title}}</a></li>
+        {{/each}}</ul>
+    {{/each}}
+
+</div>
+</body>
+</html>
