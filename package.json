@@ -1,0 +1,25 @@
+{
+    "author": "Jeremiah Lee",
+    "dependencies": {},
+    "description": "The website of Jeremiah Lee",
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^1.2.0",
+        "autoprefixer": "^9.6.1",
+        "cssnano": "^4.1.10",
+        "moment": "^2.24.0",
+        "postcss-cli": "^6.1.3",
+        "tailwindcss": "^1.0.5"
+    },
+    "keywords": [],
+    "license": "UNLICENSED",
+    "name": "jeremiahlee.com",
+    "private": true,
+    "scripts": {
+        "build": "npm run build:html && npm run build:css && npm run build:now",
+        "build:css": "./node_modules/.bin/postcss css/style.css -o dist/soul-class-style-badass.css",
+        "build:html": "npx @11ty/eleventy --config=eleventy.config.js",
+        "build:now": "node generate-redirects.js",
+        "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve"
+    },
+    "version": "3.0.0"
+}
