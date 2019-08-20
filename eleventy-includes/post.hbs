@@ -29,10 +29,10 @@
     </nav>
 </div>
 
-<article class="container mx-auto">
+<article class="container mx-auto grid-12 {{#unless css}}jxl-article{{/unless}}">
     <header>
-        <h1 class="mb-0" property="headline">{{title}}</h1>
-        <p class="text-sm">
+        <h1 class="mb-0 text-6xl" property="headline">{{title}}</h1>
+        <p class="text-sm font-sans">
             <time property="datePublished" datetime="{{moment date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment date 'LLLL'}}</time>
 {{#if updated}}
             <span class="text-gray-700">• Updated <time property="dateModified" datetime="{{moment updated 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment updated 'LLLL'}}</time></span>
