@@ -16,11 +16,12 @@
     "name": "jeremiahlee.com",
     "private": true,
     "scripts": {
-        "build": "npm run build:html && npm run build:css && npm run build:now",
+        "build": "npm run build:html && npm run build:css && npm run build:redirects",
         "build:css": "./node_modules/.bin/postcss css/style.css -o dist/soul-class-style-badass.css",
         "build:html": "npx @11ty/eleventy --config=eleventy.config.js",
-        "build:now": "node generate-redirects.js",
-        "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve"
+        "build:redirects": "node generate-redirects.js",
+        "dev:css": "npx tailwind build css/style.css -o site/soul-class-style-badass.css",
+        "dev:html": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve"
     },
     "version": "3.0.0"
 }
