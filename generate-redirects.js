@@ -31,7 +31,6 @@ const redirects = [
 
 const nowConfig = {
     version: 2,
-    "name": "www",
     "alias": [
         "jeremiahlee.com",
         "www.jeremiahlee.com"

@@ -22,10 +22,8 @@ module.exports = {
         }),
         purgecss({
             content: ["dist/**/*.html"],
-            extractors: [{
-                extractor: TailwindExtractor,
-                extensions: ["html"]
-            }]
+            defaultExtractor: content =>
+                content.match(/[\w-/:]+(?<!:)/g) || []
         }),
         autoprefixer
     ]

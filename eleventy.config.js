@@ -76,13 +76,19 @@ module.exports = function(eleventyConfig) {
         }
     );
 
+    eleventyConfig.addPassthroughCopy([
+        "**/*.js"
+    ]);
+
     return {
         templateFormats: [
             "css",
             "hbs",
             "html",
+            "js",
             "json",
             "jpg",
+            "m4v",
             "md",
             "mp4",
             "png",
@@ -90,6 +96,8 @@ module.exports = function(eleventyConfig) {
             "txt",
             "webmanifest",
             "webp",
+            "woff",
+            "woff2",
             "xml"
         ],
 
