@@ -3,34 +3,27 @@
 <head>
     <meta charset="utf-8"/>
     <title>{{title}}</title>
-    <meta http-equiv="onion-location" content="http://flajosieqaajmjtob7una5srx2xr6x7fhd6k26bkzj44f7vzalqm7fqd.onion{{ page.url }}" />
+    <link rel="canonical" href="https://www.jeremiahlee.com{{ page.url }}"/>
 {{> partial-css }}
 {{#if excerpt}}
     <meta name="description" content="{{ excerpt }}"/>
     <meta name="author" content="Jeremiah Lee"/>
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="@JeremiahLee"/>
+    <meta name="twitter:creator" content="@JeremiahLee" />
     <meta name="twitter:title" content="{{ title }}"/>
     <meta name="twitter:description" content="{{ excerpt }}"/>
     <meta property="og:title" content="{{ title }}"/>
     <meta property="og:type" content="article"/>
     <meta property="og:description" content="{{ excerpt }}"/>
     {{#if excerptImage}}
-    <meta name="twitter:image" content="https://www.jeremiahlee.com{{ permalink }}{{ excerptImage }}"/>
-    <meta property="og:image" content="https://www.jeremiahlee.com{{ permalink }}{{ excerptImage }}"/>
+    <meta name="twitter:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"/>
+    <meta property="og:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"/>
     {{/if}}
 {{/if}}
-{{> partial-head permalink=permalink }}
+{{> partial-head }}
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
-<div class="container mx-auto">
-    <nav>
-        <p><a href="/" title="Home" class="no-underline">←︎ Home</a></p>
-    </nav>
-</div>
-<div class="container mx-auto">
-    {{{ content }}}
-</div>
-</div>
+{{{ content }}}
 </body>
 </html>

@@ -7,6 +7,7 @@
     "description": "The website of Jeremiah Lee",
     "devDependencies": {
         "@11ty/eleventy": "^0.10.0",
+        "@11ty/eleventy-plugin-rss": "^1.0.7",
         "@fullhuman/postcss-purgecss": "^2.1.2",
         "autoprefixer": "^9.7.6",
         "cssnano": "^4.1.10",
@@ -25,6 +26,9 @@
         "build:redirects": "node generate-redirects.js",
         "dev:css": "npx tailwind build css/style.css -o site/soul-class-style-badass.css",
         "dev:spotify": "npx tailwind build site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css",
+        "build:spotify": "./node_modules/.bin/postcss site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css",
+        "dev:burp": "npx tailwind build site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css",
+        "build:burp": "./node_modules/.bin/postcss site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css",
         "dev:html": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve"
     },
     "version": "3.0.0"

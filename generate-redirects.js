@@ -26,15 +26,12 @@ const redirects = [
     ["/blog/2007/05/13/evvy-26/", "/posts/evvy-26/"],
     ["/blog/2005/07/30/explicitly-me/", "/posts/explicitly-me/"],
     ["/blog/2003/05/10/mom-monologue/", "/posts/mom-monologue/"],
-    ["/rsvp/", "https://jeremiahlee.typeform.com/to/tsZCL1"]
+    ["/rsvp/", "https://jeremiahlee.typeform.com/to/tsZCL1"],
+    ["/posts/failed-squad-goals", "/posts/failed-squad-goals/"]
 ];
 
 const nowConfig = {
     version: 2,
-    "alias": [
-        "jeremiahlee.com",
-        "www.jeremiahlee.com"
-    ],
     routes: []
 };
 
@@ -54,7 +51,7 @@ redirects.forEach(
     }
 );
 
-fs.writeFile("./dist/now.json",
+fs.writeFile("./dist/vercel.json",
     JSON.stringify(nowConfig),
     function (err) {
         if (err) {

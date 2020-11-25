@@ -4,14 +4,13 @@
     <meta charset="utf-8"/>
     <title>{{title}}</title>
     <link rel="canonical" href="https://www.jeremiahlee.com{{ page.url }}"/>
-    <meta http-equiv="onion-location" content="http://flajosieqaajmjtob7una5srx2xr6x7fhd6k26bkzj44f7vzalqm7fqd.onion{{ page.url }}" />
 {{> partial-css }}
 {{#if excerpt}}
     <meta name="description" content="{{ excerpt }}"/>
     <meta name="author" content="Jeremiah Lee"/>
     <meta name="published_date" content="{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}">
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="@JeremiahLee"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@JeremiahLee" />
     <meta name="twitter:title" content="{{ title }}"/>
     <meta name="twitter:description" content="{{ excerpt }}"/>
     <meta property="og:title" content="{{ title }}"/>
@@ -26,31 +25,11 @@
 </head>
 <body>
 
-<div class="container mx-auto">
-    <nav>
-        <p><a href="/posts/" title="Writing" class="no-underline">←︎ Writing</a></p>
-    </nav>
-</div>
+<div class="absolute left-0 top-0 bg-white text-purple mt-4 p-2 z-20"><a href="/" class="no-underline">←︎ Home</a></div>
 
 <article>
-    <header class="container mx-auto">
-        <h1 class="mb-0" property="headline">{{title}}</h1>
-        <p class="text-sm">
-            <time property="datePublished" datetime="{{moment date 'YYYY-MM-DDTHH:mm:ss'}}">{{moment date 'LLLL'}}</time>
-{{#if updated}}
-            <span class="text-gray-700">• Updated <time property="dateModified" datetime="{{moment updated 'YYYY-MM-DDTHH:mm:ss'}}">{{moment updated 'LLLL'}}</time></span>
-{{/if}}
-        </p>
-    </header>
-
-    {{{ content }}}
+{{{ content }}}
 </article>
-
-<footer class="container mx-auto">
-    <hr />
-    <p><small>No ads! Support my work via <a href="https://coil.com/learn-more/">Coil</a>, <a href="https://flattr.com/@jeremiahlee">Flattr</a>, and <a href="https://brave.com/jer128">BAT</a>.</small></p>
-    <p><small>© {{moment date 'YYYY'}} <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Jeremiah Lee</span>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</small></p>
-</footer>
 
 <script type="application/ld+json">
 {

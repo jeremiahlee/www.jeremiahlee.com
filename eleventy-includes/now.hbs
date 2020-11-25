@@ -3,10 +3,13 @@
 <head>
     <meta charset="utf-8"/>
     <title>{{ collections.mostRecentNowPost.data.title }}</title>
+    <meta http-equiv="onion-location" content="http://flajosieqaajmjtob7una5srx2xr6x7fhd6k26bkzj44f7vzalqm7fqd.onion{{ page.url }}" />
 {{> partial-css }}
     <meta name="description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
+    <meta name="author" content="Jeremiah Lee"/>
+    <meta name="published_date" content="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@JeremiahLee" />
+    <meta name="twitter:creator" content="@JeremiahLee" />
     <meta name="twitter:title" content="{{ collections.mostRecentNowPost.data.title }}"/>
     <meta name="twitter:description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
     <meta property="og:title" content="{{ collections.mostRecentNowPost.data.title }}"/>
@@ -18,13 +21,13 @@
 </head>
 <body>
 
-<div class="container mx-auto">
+<div class="container mx-auto max-w-xl">
     <nav>
         <p><a href="/" title="Home" class="no-underline">←︎ Home</a></p>
     </nav>
 </div>
 
-<div class="container mx-auto">
+<div class="container mx-auto max-w-xl">
     <h1 class="mb-0 text-6xl" property="headline">What I’m Up To Now</h1>
     <p class="text-sm">
         Last updated on <time property="datePublished" datetime="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment collections.mostRecentNowPost.data.date 'LLLL'}}</time>
@@ -33,7 +36,7 @@
     {{{ collections.mostRecentNowPost.data.content }}}
 </div>
 
-<footer class="container mx-auto">
+<footer class="container mx-auto max-w-xl">
     <hr />
     <p><small>Thanks to Derek Sivers for the <a href="http://nownownow.com/about">/now page</a> idea.</small></p>
 </footer>

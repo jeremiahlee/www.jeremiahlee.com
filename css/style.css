@@ -46,20 +46,20 @@ body {
 }
 
 h1 {
-    @apply text-5xl;
+    @apply text-4xl;
     @apply leading-tight;
 }
 
 h2 {
-    @apply text-4xl;
+    @apply text-2xl;
 }
 
 h3 {
-    @apply text-3xl;
+    @apply text-xl;
 }
 
 h4 {
-    @apply text-2xl;
+    @apply text-lg;
 }
 
 h1, h2, h3, h4, h5, h6, p, ol, ul {
@@ -81,6 +81,26 @@ ul {
 article {
     @apply leading-relaxed;
     @apply font-serif;
+}
+
+blockquote {
+    @apply border-solid;
+    @apply border-l-2;
+    @apply pl-4;
+    @apply italic;
+    @apply border-gray-600;
+    @apply mb-4;
+}
+
+blockquote p:last-child {
+    @apply mb-0;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 1rem;
 }
 
 /*

@@ -1,5 +1,6 @@
 const moment = require("moment");
 const defaultCssPath = "/soul-class-style-badass.css";
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection(
@@ -8,6 +9,19 @@ module.exports = function(eleventyConfig) {
             const postsTaggedNow = collection.getFilteredByTag("now");
             const mostRecentPostTaggedNow = postsTaggedNow[postsTaggedNow.length - 1];
             return mostRecentPostTaggedNow;
+        }
+    );
+
+    eleventyConfig.addCollection(
+        "atomFeed",
+        function(collection) {
+            const postsTaggedBlog = collection.getFilteredByTag("posts");
+
+            const postsTaggedNow = collection.getFilteredByTag("now");
+
+            postsTaggedBlog.push(postsTaggedNow[postsTaggedNow.length - 1]);
+
+            return postsTaggedBlog;
         }
     );
 
@@ -53,6 +67,13 @@ module.exports = function(eleventyConfig) {
         }
     );
 
+    eleventyConfig.addNunjucksFilter(
+        "json",
+        function(value) {
+            return JSON.stringify(value);
+        }
+    );
+
     eleventyConfig.addHandlebarsHelper(
         "moment",
         function(date, format) {
@@ -80,6 +101,8 @@ module.exports = function(eleventyConfig) {
         "**/*.js"
     ]);
 
+    eleventyConfig.addPlugin(pluginRss);
+
     return {
         templateFormats: [
             "css",
@@ -91,6 +114,7 @@ module.exports = function(eleventyConfig) {
             "m4v",
             "md",
             "mp4",
+            "njk",
             "png",
             "svg",
             "txt",

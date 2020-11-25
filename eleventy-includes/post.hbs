@@ -4,11 +4,14 @@
     <meta charset="utf-8"/>
     <title>{{title}}</title>
     <link rel="canonical" href="https://www.jeremiahlee.com{{ page.url }}"/>
+    <meta http-equiv="onion-location" content="http://flajosieqaajmjtob7una5srx2xr6x7fhd6k26bkzj44f7vzalqm7fqd.onion{{ page.url }}" />
 {{> partial-css }}
 {{#if excerpt}}
     <meta name="description" content="{{ excerpt }}"/>
+    <meta name="author" content="Jeremiah Lee"/>
+    <meta name="published_date" content="{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}">
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="@JeremiahLee"/>
+    <meta name="twitter:creator" content="@JeremiahLee"/>
     <meta name="twitter:title" content="{{ title }}"/>
     <meta name="twitter:description" content="{{ excerpt }}"/>
     <meta property="og:title" content="{{ title }}"/>
@@ -31,7 +34,7 @@
 
 <article class="container mx-auto grid-12 {{#unless css}}jxl-article{{/unless}}">
     <header>
-        <h1 class="mb-0 text-6xl" property="headline">{{title}}</h1>
+        <h1 class="mb-0" property="headline">{{title}}</h1>
         <p class="text-sm font-sans">
             <time property="datePublished" datetime="{{moment date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment date 'LLLL'}}</time>
 {{#if updated}}
