@@ -1,8 +1,6 @@
 {
     "author": "Jeremiah Lee",
-    "dependencies": {
-        "install": "^0.13.0"
-    },
+    "dependencies": {},
     "description": "The website of Jeremiah Lee",
     "devDependencies": {
         "@11ty/eleventy": "^0.11.1",
@@ -13,11 +11,12 @@
         "moment": "^2.29.1",
         "postcss": "^8.1.10",
         "postcss-cli": "^8.3.0",
-        "tailwindcss": "^2.0.1"
+        "tailwindcss": "^2.0.1",
+        "tailwindcss-cli": "^0.1.2"
     },
     "keywords": [],
     "license": "UNLICENSED",
-    "name": "jeremiahlee.com",
+    "name": "www.jeremiahlee.com",
     "private": true,
     "scripts": {
         "build": "npm run build:html && npm run build:css && npm run build:redirects",
