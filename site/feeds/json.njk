@@ -1,0 +1,43 @@
+---json
+{
+    "permalink": "feeds/jsonfeed.json",
+    "eleventyExcludeFromCollections": true,
+    "metadata": {
+        "title": "JeremiahLee.com",
+        "subtitle": "Thoughts from a Californian living in Stockholm, Sverige.",
+        "url": "https://www.jeremiahlee.com/",
+        "feedUrl": "https://www.jeremiahlee.com/feeds/jsonfeed.json",
+        "author": {
+            "name": "Jeremiah Lee"
+        }
+    }
+}
+---
+{
+   "version": "https://jsonfeed.org/version/1",
+   "title": "{{ metadata.title }}",
+   "home_page_url": "{{ metadata.url }}",
+   "feed_url": "{{ metadata.feedUrl }}",
+   "author": {
+      "url": "https://www.jeremiahlee.com/about/",
+      "name": "Jeremiah Lee"
+   },
+   "icon": "{{ metadata.url }}favicon-180x180.png",
+   "favicon": "{{ metadata.url }}favicon-32x32.png",
+   "items": [
+    {%- for post in collections.atomFeed | reverse %}
+    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+      {
+         "title": "{{ post.data.title }}",
+         "date_published": "{{ post.date | rssDate }}",
+         "date_modified": "{{ (post.data.updated if post.data.updated else post.date) | rssDate }}",
+         "id": "{{ absolutePostUrl }}",
+         "url": "{{ absolutePostUrl }}",
+         "author": {
+            "name": "Jeremiah Lee"
+         },
+         "content_html": {{ post.data.excerpt | htmlToAbsoluteUrls(absolutePostUrl) | replace(r/[\r\n\t]+/gm, "") | json | safe }}
+      }{{ "" if loop.last else "," }}
+    {%- endfor %}
+    ]
+}

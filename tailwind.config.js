@@ -1,7 +1,17 @@
 module.exports = {
-    theme: {
-        extend: {}
+    purge: {
+        enabled: true,
+        content: [
+            "./dist/**/*.html",
+            "./dist/**/*.js"
+        ]
     },
-    variants: {},
-    plugins: []
+    darkMode: false, // or 'media' or 'class'
+    theme: {
+        extend: {},
+    },
+    variants: {
+        extend: {},
+    },
+    plugins: [],
 }

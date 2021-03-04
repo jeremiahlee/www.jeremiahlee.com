@@ -1,26 +1,98 @@
 <!doctype html>
 <html lang="en" dir="ltr">
+
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Writing</title>
-    <meta name="description" content="onThought — the blog of Jeremiah Lee"/>
-{{> partial-css }}
-{{> partial-head }}
+    <meta name="description" content="onThought — the blog of Jeremiah Lee" />
+    {{> partial-css }}
+    {{> partial-head }}
 </head>
+
 <body>
 <div class="container mx-auto">
     <nav>
-        <p><a href="/" title="Home" class="no-underline">←︎ Home</a></p>
+        <p><a href="/" class="no-underline">←︎ Cover</a></p>
     </nav>
 </div>
-
-<div class="container mx-auto">
+<div class="relative max-w-7xl mx-auto">
     <h1>Writing</h1>
 
-    {{#each collections.blogPostsByYear}}
-        <h2>{{this.year}}</h2>
-        <ul>{{#each this.data}}
-            <li><a href="{{this.url}}">{{this.data.title}}</a></li>
+    <h2>Featured essays</h2>
+    <div class="max-w-lg mb-12 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+
+{{#each (reverseArray collections.featured)}}
+        <a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-purple-600 hover:shadow-2xl" href="{{this.url}}">
+            <div class="flex-shrink-0">
+                <img class="w-full object-cover" src="{{this.url}}{{#if this.data.excerptImageSquare}}{{this.data.excerptImageSquare}}{{else}}{{this.data.excerptImage}}{{/if}}" alt="">
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                    <p class="text-sm font-medium text-indigo-600">{{this.data.tags.[2]}}</p>
+                    <div class="block mt-2">
+                        <p class="text-xl font-semibold text-gray-900">{{this.data.title}}</p>
+                        <p class="mb-0 mt-3 text-base text-gray-500">{{this.data.excerpt}}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+{{/each}}
+
+    </div>
+
+    <h2>Featured conference talks</h2>
+    <div class="max-w-lg mb-12 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+{{#each (reverseArray collections.conferenceTalk)}}
+        <a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-purple-600 hover:shadow-2xl" href="{{this.url}}">
+            <div class="flex-shrink-0">
+                <img class="w-full object-cover" src="{{this.url}}{{this.data.excerptImage}}" alt="">
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                    <p class="text-sm font-medium text-indigo-600">{{this.data.tags.[2]}}</p>
+                    <div class="block mt-2">
+                        <p class="text-xl font-semibold text-gray-900">{{this.data.title}}</p>
+                        <p class="mb-0 mt-3 text-base text-gray-500">{{this.data.excerpt}}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+{{/each}}
+
+    </div>
+
+    <h2>Featured interviews</h2>
+    <div class="max-w-lg mb-12 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+
+{{#each (reverseArray collections.interview)}}
+        <a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-purple-600 hover:shadow-2xl" href="{{this.url}}">
+            <div class="flex-shrink-0">
+                <img class="w-full object-cover" src="{{this.url}}{{this.data.excerptImage}}" alt="">
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                    <p class="text-sm font-medium text-indigo-600">{{this.data.tags.[2]}}</p>
+                    <div class="block mt-2">
+                        <p class="text-xl font-semibold text-gray-900">{{this.data.title}}</p>
+                        <p class="mb-0 mt-3 text-base text-gray-500">{{this.data.excerpt}}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+{{/each}}
+
+    </div>
+
+    <h2>And everything else</h2>
+    {{#each collections.otherPostsByYear}}
+    <h3>{{this.year}}</h3>
+    <ul>{{#each this.data}}
+        <li>
+            <a class="block no-underline" href="{{this.url}}">
+                <p class="m-0"><span class="font-bold underline">{{this.data.title}}</span> <span class="bg-purple-100 inline-block px-2 py-1 ml-2 rounded text-xs text-purple">{{this.data.tags.[1]}}</span></p>
+                <p class="mt-0 text-gray-600">{{this.data.excerpt}}</p>
+            </a>
+        </li>
         {{/each}}</ul>
     {{/each}}
 

@@ -1,0 +1,35 @@
+---
+title: "404: Not Found"
+layout: index.hbs
+permalink: "404.html"
+css:
+  - default
+---
+
+<h1 class="text-red-600">That page seems to be missing</h1>
+
+<p>My website is more than 20 years old. Things have moved around.</p>
+
+<p><a href="/contact/">Let me know</a> what you were looking for and I will try to get it back online.</p>
+
+<ul>
+<li><a href="/now/">Now</a></li>
+<li><a href="/posts/">Writing</a></li>
+<li><a href="/projects/">Projects</a></li>
+<li><a href="/best-for-me/"><em>Best for me</em>, a series on products I love</a></li>
+<li><a href="/speaking/">Speaking</a></li>
+<li><a href="/contact/">Contact</a></li>
+</ul>
+
+<script>
+window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };
+
+plausible(
+    "404",
+    {
+        props: {
+            path: document.location.pathname
+        }
+    }
+);
+</script>

@@ -1,0 +1,92 @@
+@tailwind base;
+
+:root {
+    --blue: #0F4C81;
+    --red: #943D3E;
+}
+
+body {
+    @apply text-lg;
+    @apply font-sans;
+    @apply p-4;
+}
+
+h3, p, li {
+    @apply mb-4;
+}
+
+a {
+    @apply underline;
+}
+
+sup a {
+    @apply no-underline;
+    opacity: .5;
+    font-size: .8em;
+}
+sup a:hover {
+    @apply underline;
+}
+
+.border-red {
+    border-color: var(--red);
+}
+
+.border-blue {
+    border-color: var(--blue);
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.mark-blue {
+    background-color: #D1E7FA;
+}
+.mark-red {
+    background-color: #F0DBDB;
+}
+
+.text-red {
+    color: var(--red);
+}
+.text-blue {
+    color: var(--blue);
+}
+
+.page-3 {
+    background-color: var(--red);
+    color: #ffffff;
+}
+
+.page-5 {
+    background-color:var(--blue);
+    color: #ffffff;
+}
+
+.page-7 {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Grid utilities */
+
+/* Custom base styles start */
+/* Small, Medium, Large breakpoints */
+@screen sm {
+}
+
+@screen md {
+}
+
+@screen lg {
+    .spread {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        box-sizing: border-box;
+    }
+}
+
+/* Custom base styles must come before components and utilities to avoid specificity issues */
+@tailwind components;
+@tailwind utilities;

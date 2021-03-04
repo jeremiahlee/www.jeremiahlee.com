@@ -1,0 +1,433 @@
+---
+date: 2017-10-10T21:08:00+02:00
+updated: 2018-05-18T12:38:00+01:00
+title: "JSON API: Your smart default"
+excerpt: "The JSONAPI.org specification should be your smart default for designing Web APIs."
+excerptImage: json-api-definition.png
+layout: presentation.hbs
+original-permalink: /blog/2017/10/10/pragmatic-design-with-json-api/
+tags:
+  - "posts"
+  - "conferenceTalk"
+  - "API"
+---
+
+<div class="container mx-auto">
+
+_This is an adaptation of my presentation at the Nordic APIs 2017 API Platform Summit in Stockholm, Sweden on October 10, 2017. I updated it for APIDays Paris on January 30, 2018 and expanded it for API Conference London on April 11, 2018 and WeAreDevelopers World Congress in Vienna, Austria on May 16, 2018._
+
+</div>
+
+<div id="introduction" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#introduction"><img src="slide-1b.png" loading="lazy" alt="Slide with text. JSON API: Your smart default" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Hello, I’m Jeremiah Lee. I am going to be talking about my experience at Fitbit, where I led its Web API for 4 years.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-3.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>This is a talk about <a href="http://jsonapi.org/">JSON API a.k.a. the JSONAPI.org specification</a>, but I am not going to read the specification to you or lead a tutorial on how to use it. If you are unfamiliar with spec, that’s ok! Please stay for my talk. I hope that my talk convinces you to read more about it later today. Because ultimately, I hope to convince you that the JSONAPI.org specification should be your default style when designing Web APIs. It won't be best for every situation, but it is a great default starting point.</p>
+		<p>I’m going to talk about the Web API problems Fitbit had and how and why the JSONAPI.org specification’s features helped. I have consulted with many companies on their Web API designs and I have seen common patterns emerge. While I am using Fitbit as an example, I suspect its problems will feel familiar to you.</p>
+	</div>
+</div>
+
+<div id="disclaimer" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#disclaimer"><img src="slide-4.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Before I get started, I need to make a disclaimer: some of this information is aspirational. I helped get this going at Fitbit, but I do not know the current state. In April, I moved to Sweden for my husband’s work. As far as I know, none of Fitbit’s JSON API-based endpoints have been released on its public API. The views represented here are my own and have not been reviewed by Fitbit.</p>
+	</div>
+</div>
+
+<div id="context" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#context"><img src="slide-7b.png" loading="lazy" alt="Slide with images of the Fitbit smart watches and activity trackers" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>For those of you who aren’t familiar with Fitbit, it is a digital health and wellness company. Fitbit pioneered the activity tracker and wearables space. Fitbit released a public Web API before most of its competitors even existed. Today, the Fitbit Web API is used by thousands of apps, hundreds of which are meaningfully activated by people. As of last November, the Fitbit Web API served at least 4 billion requests a day with about a quarter from third-party apps. Fitbit can attribute tens of millions of dollars in annual revenue to sales driven by partners using its Web API.</p>
+		<p>Fitbit's own apps use the same Web API that is available publicly. I am going to focus today on the problems the teams building these apps had.</p>
+	</div>
+</div>
+
+<div id="problem-1" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#problem-1"><img src="slide-8.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p><strong>The first problem:</strong> client teams had very different perspectives on how they wanted to retrieve information from the server.</p>
+		<p>Fitbit had 4 major clients, the Fitbit app on four platforms: Android, iOS, Windows, and Web.</p>
+		<p>Fitbit organized teams into full stack feature teams. This was a team composed of a product manager, program mananger, designer, QA engineer, engineers for each client, backend engineers. They were responsible for an entire feature area, such as exercise logging. They had everyone they needed to release a feature in the Fitbit app on every platform.</p>
+		<p>New features were implemented on one platform first to prototype. The platform typically was chosen based on engineering availability. Once the experience had been finalized, other client engineers “fast followed” in implementation on their platforms.</p>
+		<p>This could have worked, but Android and iOS developers had very different ideas of what an ideal Web API would look like. The iOS developers preferred fewer network requests and were ok with the performance of parsing large API responses. Android developers, however, preferred smaller API responses and accepted the tradeoff of more network requests. There was no way to reconcile this with the version 1 Web API. The two biggest client teams wanted the exact opposite of each other because they had different primary constraints.</p>
+	</div>
+</div>
+
+<div id="problem-2" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#problem-2"><img src="slide-9.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p><strong>The second problem:</strong> without clear guidance, the data models got messy. Because of the large amount of data available, API endpoints started to resemble view-models instead of well-defined, normalized data models. Teams regularly overloaded existing endpoints in order to not make clients make another API request. Endpoints were filled with loosely related data instead of being well-scoped. Often, data would only be split across multiple endpoints when there was a new distinct view in the app when another request could be justified to the client developers. This could be fine, except the experience evolved over time. What data was needed for a view changed, so the data seemed arbitrarily split. There was no librarian.</p>
+	</div>
+</div>
+
+<div id="problem-3" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#problem-3"><img src="slide-10.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p><strong>Third problem:</strong> misalignment between client and server data models. Clients didn’t think about data in the same way as the server. This wasn't their fault. The server's classes and underlying database models were not <em>considerate interfaces</em>. This problem was complicated further because Fitbit has a multiple ways data can be expressed: summaries, collections of logs, and time series.</p>
+		<p>The problem was not limited to client—server data models. Even though the Fitbit app had a mostly consistent end-user experience across four platforms, each platform's client team created their own internal data models. Client developers picked different expressions of the data from the Web API and plucked the relevant data from the API response to suit their particular platform's internal data model.</p>
+	</div>
+</div>
+
+<div id="problem-4" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#problem-4"><img src="slide-11.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p><strong>Fourth problem:</strong> Clients had great difficulty staying in sync with the server. Fitbit devices synced data every 15 minutes, but data could change more frequently. Many people used the Fitbit app on multiple platforms. A change made from the Web app on their laptop should show on their iPhone quickly. Many people also used third-party apps that could modify data and those changes from the server needed to be reflected in the app. The Fitbit apps could also be used offline and would need to reconcile changes made offline with new changes from the server when reconnected.</p>
+	</div>
+</div>
+
+<div id="problems" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#problems"><img src="slide-12.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Again, here were the top 4 problems that clients had with the Fitbit Web API.</p>
+		<p>How might we solve these particular problems? What would be the requirements be?</p>
+		<ol>
+			<li>We would need to settle the debate over number of requests versus request size.</li>
+			<li>We would need an agreement on data models and how the data fits together.</li>
+			<li>We would need an agreement on how to handle data between the client and server. We would need a common approach to selectively retrieving parts of data and related data.</li>
+			<li>We would need the ability to check if data has changed with as little overhead as possible.</li>
+		</ol>
+	</div>
+</div>
+
+<div id="requirement-1" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#requirement-1"><img src="slide-18.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Let’s take the first one. The hypermedia proponents burned much credibility by fetishizing REST instead of focusing on problems client developers actually had. This made my discussions about Web API design styles difficult with client developers at Fitbit.</p>
+		<p><strong>When suboptimal networks have a significant impact on perceived and actual client performance, it is reasonable for clients to want to minimize interactions over the network.</strong> Too many Web APIs have been designed with the assumption that the clients are high end servers with perfect network connections. That’s just not the world that mobile clients live in. And in Fitbit’s case, the vast majority of Web API requests were made by smart phones on hostile cellular data networks.</p>
+		<p>When tensions are high, we need to bring data to an argument.</p>
+		</ol>
+	</div>
+</div>
+
+<div id="hypotheses" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#hypotheses"><img src="slide-22.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>We agreed that betting on the future was a reasonable thing to do. We agreed that network performance was something getting better at a reasonable enough pace that making short term tradeoffs in order to take advantage of new advancements as soon as they became available on the server and client platforms would be acceptable.</p>
+		<p>We agreed to three hypotheses to test:</p>
+		<ol>
+			<li><strong>HTTP/2 would meaningfully reduce the overhead of multiple requests.</strong> Specifically, we were looking for <a href="https://blog.cloudflare.com/hpack-the-silent-killer-feature-of-http-2/" title="HPACK: the silent killer (feature) of HTTP/2">binary and compressed headers with HPACK to significantly reduced the overhead of multiple API requests</a>. Also, we hoped pipelining would make handling of multiple, concurrent requests easier on the client because they wouldn’t need to manage network connection pooling.</li>
+			<li><strong>TLS 1.3 would meaningfully reduce latency introduced by HTTPS.</strong> <a href="https://timtaubert.de/blog/2015/11/more-privacy-less-latency-improved-handshakes-in-tls-13/" title="More Privacy, Less Latency: Improved Handshakes in TLS version 1.3">It reduces the initial handshake in half</a> from 2 to 1 round trip. Once that happens, preshared key session resumption and zero-round trip resumption would make subsequent secure connections significantly faster to establish if the connection were interrupted. This would be a noticeable win for reducing latency for end users far away from Fitbit’s Texas datacenters.</li>
+			<li><strong>LTE network coverage would expand.</strong> LTE is not only a faster connection, but also a more resilient connection from its switch from a switch-based to a packet-based network.</li>
+		</ol>
+	</div>
+</div>
+
+<div id="many-small-requests-are-ok" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#many-small-requests-are-ok"><img src="slide-23.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>We tested these assumptions. I wish I could share the data from them, but you can <a href="http://www.httpvshttps.com" title="HTTP vs HTTPS Test">find</a> <a href="http://www.http2demo.io/" title="HTTP/2 Technology Demo by ">more</a> <a href="http://vanseodesign.com/web-design/http2-performance/" title="How HTTP/2 Solves The Performance Issues Of HTTP/1.1">rigorous</a> <a href="http://ieeexplore.ieee.org/document/7745823/" title="HTTP/1.1 pipelining vs HTTP2 in-the-clear: Performance comparison">tests</a> that prove this better than what we did. The important part is that this allowed us to come to an agreement that small resources and lots of HTTP requests <em>can</em> be ok.</p>
+		<p>This was especially true on fragile network connections. If the responses were small, the hit for retrying a request was lower and the faster the response completed, the less exposure the response had to being interrupted and having to restart all over.</p>
+	</div>
+</div>
+
+<div id="requirement-2" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#requirement-2"><img src="slide-24.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Once we removed the fear of small requests, we could work on an agreement to define a common data model for resources. We set out to try to normalize data, just like we might in a database. We still accepted that there could be multiple expressions of the data (e.g. time series, summaries, logs), but that the data should be canonical and should not be repeated across endpoints.</p>
+		<p>We immediately realized the need to define relationships—or if you prefer buzzwords, “a graph”. In this case, a graph is just identifying a relationship between data and naming that relationship. This is the first time I’m going to bring up JSONAPI.org specification. It sets explicit expectations about how to define and name relationships between data.</p>
+	</div>
+</div>
+
+<div id="what-is-json-api" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#what-is-json-api"><img src="json-api-definition.png" loading="lazy" alt="JSON API is a wire protocol for incrementally fetching and updating a graph over HTTP" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Here is how one of its creators, Yehuda Katz, described JSON API:</p>
+		<p>JSON API is a wire protocol for incrementally fetching and updating a graph over HTTP</p>
+		<p>JSON API is a wire protocol, which means it includes both a format for resources and a specification of operations that you can do on those resources.</p>
+		<p>JSON API works incrementally, which means clients can fetch data as they need it at the appropriate granularity.</p>
+		<p>JSON API defines a way for both fetching and updating because modifying resources often is just as important as fetching them.</p>
+		<p>JSON API defines a graph structure, which enables data to be linked together in a well-defined way.</p>
+		<p>JSON API works over HTTP, which means JSON API uses the HTTP protocol—including its caching semantics—as its backbone.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-26.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>Here is a hypothetical response for a social feed post. Most of the content is in <code>attributes</code>.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-28.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>There are also <code>relationships</code> defined, such as for the user profile data. After fetching the newsfeed posts, the client could then fetch the user information, since it’s a distinct type of data.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<!-- TODO: Turn this into an animation -->
+		<img src="slide-31.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>Going back to the client use case, it is reasonable to assume there will be situations where clients will need a resource and its related resources at the same time. While a client could get the initial resource with its defined relationships and then go fetch the linked resources, that puts a lot of work on the client to get a response, parse it, get the relationship URL, request it, and potentially do this multiple times.</p>
+		<p>The JSONAPI.org specification has a way of dealing with this use case. It’s called <em>compound documents</em>. It allows the client to <em>include</em> specific resources in the initial resource request to avoid chaining multiple requests together. It works simply by adding the <code>include</code> URI parameter for the relationship.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-32.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>But then we’re back to the problem of potentially large API responses. In the case of an exercise summary, there is a lot of data that could potentially be requested just in the summary. Once again, JSON API provides a solution for this problem.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-33.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>It’s called <em>sparse fieldsets</em>. It is a standardized method for allowing clients to specify only the properties they want from an object returned in the response. You add a `fields` URI parameter with the resource type and the field names you want.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-34.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>Sparse fieldsets also work when requesting a compound document. Simply include the relationship and add its resource type and fields desired.</p>
+	</div>
+</div>
+
+<div id="requirement-3" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#requirement-3"><img src="slide-35.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>One of the benefits of the JSONAPI.org specification is how <em>optional</em> it is to the client. Its default behavior is pretty much the same as any plain ol’ JSON REST-like Web API. Hopefully it’s a bit more intentionally designed with its data objects and relationships, but none of the features have to be used by clients. They’re optional and ready to provide optimizations for clients as soon as clients want them.</p>
+		<p>One of the challenges at Fitbit was not just getting clients to agree to common data models, but getting them to agree on a common way of retrieving, storing, and presenting data. This part is not related to the JSONAPI.org spec, but I think it’s important—it is how a client can leverage the features within the API to improve the perceived and actual performance of the end-user experience.</p>
+		<p>Here is data lifecycle for how clients might choose to implement.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slides-36-44.png" />
+	</div>
+	<div class="md:w-1/2">
+		<p>The first example is for fresh data. The view is going to request the data from the client local database. The database won’t have it, so it’s going to fetch it from the Web API. It will be a cache miss because it hasn’t retrieved it before. The database will save the response from the server, which will cause the view to render.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slides-45-51.png" />
+	</div>
+	<div class="md:w-1/2">
+		<p>The second example is for previously retrieved, unchanged data. If that data already existed in the database, the database would return the data and simultaneously ask the Web API if the data has changed. If the data hasn’t changed, nothing else happens.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slides-52-59.png" />
+	</div>
+	<div class="md:w-1/2">
+		<p>The third example is for previously retrieved, stale data. As soon as the the header response returns a <code>200 OK</code> HTTP status header instead of a <code>304 Not Modified</code>, the view can be triggered to display an updating state. When the body of the Web API response is received, it is stored in the database, and the view is updated with the latest information.</p>
+		<p>A key detail is that the data model is mostly shared between the client and the API. It’s key-value driven, with collections based on the data type, with the relationships and meta data stored. Clients also have flags to know if data is only partially represented (i.e. sparse fieldsets were used) or not yet synced if being updated from the client. This allows apps to more easily stay in sync with the server and to operate reasonably well offline.</p>
+		<p>This resolves problem three, which leads me to the requirement of caching.</p>
+	</div>
+</div>
+
+<div id="requirement-4" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#requirement-4"><img src="slide-60.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Well-scoped, normalized resources have an additional benefit: they improve cacheability. If data changes affect fewer resources, then there will be fewer resources invalidated when data changes. Because all of the clients now are accessing data in the same way, we don’t need to put the same data in multiple places.</p>
+		<p>Caching is a feature that is built into HTTP and JSON API leverages this functionality, but it does require a minor shift in thinking.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-62.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>This is an example of fetching an image from a server. When the resource is returned for the first time, there is an ETag header sent with it.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-64.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>When the client requests the image from the server again, it send the previously returned ETag in the request. This allows the server to respond with <code>304 Not Modified</code> if the image hasn't changed and the client can load the image from its cache.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-66.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>But with a JSON API response, the ETag is not returned in the header. This information is in the <code>meta</code> object. The ETag for a JSON API response cannot represent the exact bytes of the response because a request might have used JSON API features like sparse fieldsets or compound documents. Instead, the ETag in the <code>meta</code> object represents the <em>version</em> of ever resource and relationship returned in the response.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-68.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>The ETag is still passed in the <code>If-None-Match</code> header on subsequent requests. You still get a <code>304 Not Modified</code> response if the version or state of the resource has not changed.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<video src="slide-70.mp4" controls poster="slide-70.png" loop="true">
+			Your browser doesn't support embedded videos, but you can <a href="slide-70.mp4">download it</a> and watch it with your favorite video player.
+		</video>
+	</div>
+	<div class="md:w-1/2">
+		<p>Let’s put it all together. What does this look like in practice? The Fitbit news feed is a great example of data with mixed caching scenarios.</p>
+		<p>Most of the data is news feed stories, which is a mostly ephemeral experience. People are unlikely to see the exact same content more than once because new content is always being created. The stories are unlikely to be cached. However, the stories have related content that *is* likely to be cached and repeatedly accessed: the story creators, i.e. your friends.</p>
+		<p>If there are 20 news feed stories by 15 friends, that would mean that the client can save downloading up to 5 friends’ basic profile data multiple times. And if the user had viewed their friend leaderboard prior loading the news feed, the app would not need to re-download any of their friends’ basic profile data. This is a nice performance benefit from having normalized data with defined relationships. It adds up across the multiple experiences within the app!</p>
+	</div>
+</div>
+
+<div id="graphql-is-not-better" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#graphql-is-not-better"><img src="slide-72.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>You might be thinking, why didn’t you just use GraphQL? Well…</p>
+	</div>
+</div>
+
+<div id="graphql-benefits-not-unique" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#graphql-benefits-not-unique"><img src="slide-74.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>GraphQL features can be obtained with the JSONAPI.org spec without requiring developers embrace another tool chain. Sparse fieldsets and compound documents provide the main performance benefits people like in GraphQL.</p>
+	</div>
+</div>
+
+<div id="graphql-lacks-http-caching" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#graphql-lacks-http-caching"><img src="slide-76.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>But unlike JSON API, GraphQL does not leverage the built in caching features of HTTP and does not have a suggested common approach to caching. If a client developer works with multiple GraphQL-based APIs, they will likely need to learn and accomodate multiple caching methods. More so, an effective caching mechanism is difficult to implement when clients compose the response from multiple server data sources. <strong>I believe that caching is too important of a client performance consideration to be an afterthought.</strong></p>
+	</div>
+</div>
+
+<div id="graphql-pagination-inconsistency" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#graphql-pagination-inconsistency"><img src="slide-77.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Another common use case not addressed by GraphQL is pagination. I didn’t talk about collection access with JSON API today, but <a href="http://jsonapi.org/format/#fetching-pagination">pagination</a> is part of it. <code>next</code> and <code>prev</code>ious links are provided to clients and clients simply request them. This enables the a JSON API-based server to specify a pagination strategy, as this is one of the areas where the database implementation details are difficult to hide.</p>
+		<p>Pagination in GraphQL is done by the client. This is unfortunate, because it makes it very easy for clients to make very expensive database queries. For example, when paginating with offset, many databases still needs to process all of the query results first and then apply the offset by only returning a portion of the computed results to the client. As the offset grows, the amount of processing on the server grows. I won’t get into a details about cursor strategies for pagination, but I do believe this should not be something clients should have to worry about. Again, <strong>I think the pagination use case is too important and too common to be an afterthought.</strong></p>
+	</div>
+</div>
+
+<div id="reflective-data-models-are-better" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#reflective-data-models-are-better"><img src="slide-78.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Lastly, I believe there is an inherent advantage to clients and servers sharing a common data interface as much as possible. Reflective input/output makes composing create and update statements from the client much easier when the data model is shared. It also enables using <a href="http://jsonpatch.com/">JSON Patch</a> for incremental updates.</p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-79.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>In conclusion, I hope that I’ve convinced you to consider JSON API for your next Web API. While I think GraphQL is an advancement in API design, I think the JSONAPI.org specification addresses the concerns of client developers better.</p>
+	</div>
+</div>
+
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-80.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>I hope that I’ve convinced you that making suboptimal networks less painful for client developers is something API design styles can help with.</p>
+	</div>
+</div>
+
+
+<div id="intentional-design-required" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#intentional-design-required"><img src="slide-81.png" loading="lazy" alt="" /></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>I hope that I’ve convinced you that designing data models with intent and study of client needs is not a step that can be skipped. Both GraphQL and JSON API give clients control over what data is returned in the API response, but that <strong>does not mean highly intentional API design does not need to happen.</strong></p>
+	</div>
+</div>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<img src="slide-82.png" loading="lazy" alt="" />
+	</div>
+	<div class="md:w-1/2">
+		<p>So that’s all for now. There are a <a href="http://jsonapi.org/format/#fetching-sorting">few</a> <a href="http://jsonapi.org/format/#fetching-filterin">other</a> <a href="http://jsonapi.org/format/upcoming/#document-links">features</a> that I didn’t have time to cover in this talk. There also is <a href="http://jsonapi.org/implementations/">great tooling available for every major app platform and framework</a>—if they want it. The best part is that clients can use a JSON API-based API without needing them.</p>
+		<p>Please go check out <a href="https://jsonapi.org/">JSON API</a>. Don’t hesitate to <a href="https://twitter.com/jeremiahlee">reach out on Twitter</a> if you have questions or create something cool with it.</p>
+	</div>
+</div>
+
+<div class="container mx-auto">
+
+# Photo credits
+
+- ["Construction site and caution"](https://unsplash.com/photos/v_CxSroHKWg) by Matthew Hamilton,
+- ["Tree, forest, question and bark"](https://unsplash.com/photos/i--IN3cvEjg) by Evan Dennis
+- ["Green cat eyes photo"](https://unsplash.com/photos/OvLBv6F6DGE) by Paul
+- ["Begin Here"](https://unsplash.com/photos/ILlmVlkNcHU) by Tyler Lastovich
+
+# Compatibility notes
+
+This post contains animations in the APNG format.
+
+This post contains a video in MPEG-4 H.264. I hope one day we will have a patent-unincumbered[universally supported](https://caniuse.com/#search=video%20format) FOSS option instead.
+
+</div>

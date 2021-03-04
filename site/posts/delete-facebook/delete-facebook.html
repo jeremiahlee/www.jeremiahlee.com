@@ -1,0 +1,374 @@
+---
+layout: delete-facebook.hbs
+date: 2020-08-01T08:00:00+01:00
+title: "Move away and fix things"
+excerpt: "I am deleting my Facebook account, but I am not unfriending you. #DeleteFacebook #StopHateForProfit"
+excerptImage: preview-card.png
+css:
+  - default
+  - ./delete-facebook.css
+tags:
+  - "posts"
+  - "featured"
+  - "social media"
+---
+
+<div class="md:absolute md:left-0 md:top-0 md:bg-white md:mt-4 p-2 md:z-20"><a href="/posts/" class="no-underline">←︎ Writing</a></div>
+
+<div class="facebook-post bg-white rounded-lg max-w-xl mx-auto mb-4">
+    <div class="facebook-post-header flex p-3">
+        <div class="facebook-post-header-col1 pr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah" width="45" height="45" /></div>
+        <div class="facebook-post-header-col2">
+            <p class="font-bold text-base mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="12" height="12"/></p>
+            <p class="leading-6 text-gray-600 text-sm mb-0">August 1 at 11:22 AM • <img class="inline" src="shared-with-friends.png" alt="Jeremiah’s friends" title="Jeremiah’s friends"/></p>
+        </div>
+    </div>
+    <div class="facebook-big-post fb-post-bg-headline text-white text-center flex mb-3">
+        <h1 class="font-bold self-center w-full p-2">I am deleting<br>my Facebook account,<br>but I am not unfriending you.</h1>
+    </div>
+
+    <div class="flex border-b mx-3 mb-3 pb-2">
+        <p class="flex-auto leading-6 text-gray-600 text-sm m-0"><img class="inline" src="like.svg" alt="Like icon" width="18" height="18" /> You, Some Rando, and 14 others</p>
+    </div>
+
+    <div class="flex pb-2 mx-3">
+        <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid"
+                src="profile-image.jpg" alt="Jeremiah" width="32" height="32" /></div>
+        <div class="flex-auto">
+            <div class="bg-gray-200 fb-rounded-lg inline-block py-2 px-3 mb-1">
+                <p class="leading-6 text-sm font-bold mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="10" height="10"/></p>
+                <p class="text-base mb-0">2020-09-01 update: After <a href="/posts/delete-facebook-campaign/" title="14 reasons why #DeleteFacebook">a month-long campaign</a>, I have deleted my Facebook account.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="max-w-xl mx-auto text-gray-600 text-center">Note: This is my personal website made to look like Facebook. #EditorialDesign #parody</p>
+
+<div class="facebook-post bg-white rounded-lg max-w-xl mx-auto mb-4">
+    <div class="facebook-post-header flex p-3">
+        <div class="facebook-post-header-col1 pr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah" width="45" height="45" /></div>
+        <div class="facebook-post-header-col2">
+            <p class="font-bold text-base mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="12" height="12"/></p>
+            <p class="leading-6 text-gray-600 text-sm mb-0">August 1 at 11:23 AM • <img src="shared-with-friends.png" alt="Jeremiah’s friends" title="Jeremiah’s friends" class="inline" /></p>
+        </div>
+    </div>
+    <div class="facebook-big-post fb-post-bg-contact text-white text-center flex">
+        <h2 class="font-bold self-center w-full p-2 sm:text-3xl md:leading-relaxed md:text-4xl">Let’s make sure our contact information is up-to-date.</h2>
+    </div>
+    <p class="p-3 text-base m-0">I value our friendship and would like to keep in touch with you. I am not adding you to any sort of mailing list—just updating my contact card for you. I will send you my contact card in return.</p>
+    <form id="contactCardForm" class="grid grid-cols-1 gap-x-1 md:grid-cols-2 md:gap-x-3 p-3" method="POST" action="https://api.jeremiahlee.com/api/posts/delete-facebook/contacts">
+        <div>
+            <label class="leading-6 font-bold text-sm uppercase" for="firstName">First name</label><br/>
+            <input class="bg-gray-200 outline-none px-2 py-1 rounded-full text-base w-full" type="text" id="firstName" name="firstName" placeholder="Béarnaise" required />
+        </div>
+        <div>
+            <label class="leading-6 font-bold text-sm uppercase" for="lastName">Last name</label><br/>
+            <input class="bg-gray-200 outline-none px-2 py-1 rounded-full text-base w-full" type="text" id="lastName" name="lastName" placeholder="Sanders" />
+        </div>
+        <div>
+            <label class="leading-6 font-bold text-sm uppercase" for="email">Email</label><br/>
+            <input class="bg-gray-200 outline-none px-2 py-1 rounded-full text-base w-full" type="email" id="email" name="email" placeholder="bearnaise@example.com" required />
+        </div>
+        <div>
+            <label class="leading-6 font-bold text-sm uppercase" for="phone">Phone</label><br/>
+            <input class="bg-gray-200 outline-none px-2 py-1 rounded-full text-base w-full" type="tel" id="phone" name="phone" placeholder="+1-415-555-5555" />
+        </div>
+        <div>
+            <label class="leading-6 font-bold text-sm uppercase" for="birthday">Birthday</label><br/>
+            <input class="bg-gray-200 outline-none px-2 py-1 rounded-full text-base w-full" type="date" id="birthday" name="birthday" min="1900-01-01" max="2002-01-01" pattern="\d{4}-\d{2}-\d{2}" placeholder="yyyy-mm-dd" />
+        </div>
+        <div>
+            <label class="leading-6 font-bold text-sm uppercase" for="pronoun">Pronoun</label><br/>
+            <input class="bg-gray-200 outline-none px-2 py-1 rounded-full text-base w-full" type="text" id="pronoun" name="pronoun" placeholder="e.g. they, she, he" />
+        </div>
+        <div class="mt-3 h-captcha" data-sitekey="56705e29-1dad-4740-88a6-33bb30793d4d"></div>
+        <div class="text-right">
+            <button class="bg-fb font-bold mt-3 p-3 rounded-lg text-white" type="submit">Send to Jeremiah</button>
+        </div>
+    </form>
+</div>
+
+<div class="facebook-post bg-white rounded-lg max-w-xl mx-auto mb-4">
+    <div class="facebook-post-header flex p-3">
+        <div class="facebook-post-header-col1 pr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah" width="45" height="45" /></div>
+        <div class="facebook-post-header-col2">
+            <p class="font-bold text-base mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="12" height="12"/></p>
+            <p class="leading-6 text-gray-600 text-sm mb-0">August 1 at 11:24 AM • <img src="shared-with-friends.png" alt="Jeremiah’s friends" title="Jeremiah’s friends" class="inline" /></p>
+        </div>
+    </div>
+
+    <h2 class="text-base px-3">Other ways to stay connected with me</h2>
+
+    <div class="flex border-b mx-3 mb-3 pb-2">
+        <p class="flex-auto leading-6 text-gray-600 text-sm m-0"><img class="inline" src="like.svg" alt="Like icon" width="18" height="18" /> Jezebel, Salome, and Delilah</p>
+        <p class="flex-auto leading-6 text-gray-600 text-sm m-0 text-right">4 Comments</p>
+    </div>
+
+    <div class="flex pb-3 mx-3">
+        <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid"
+                src="profile-image.jpg" alt="Jeremiah" width="32" height="32" /></div>
+        <div class="flex-auto">
+            <div class="bg-gray-200 fb-rounded-lg inline-block py-2 px-3 mb-1">
+                <p class="leading-6 text-sm font-bold mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="10" height="10"/></p>
+                <p class="text-base mb-0">My ‘now’ page is an update I write every 3 months. Whenever I cross your mind, visit this page and then maybe send me a message.</p>
+            </div>
+            <a class="border fb-rounded-lg flex no-underline overflow-hidden" href="/now">
+                <div class="no-flex">
+                    <img src="link-preview-now.jpg" alt="Text slash now over rainbow gradient" width="96" height="96" />
+                </div>
+                <div class="flex-auto self-center pl-3">
+                    <p class="font-bold mb-0 leading-6 no-underline text-gray-600 text-sm uppercase">JeremiahLee.com</p>
+                    <p class="text-black mb-0 no-underline">What I’m up to now</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="flex pb-3 mx-3">
+        <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg"
+                alt="Jeremiah" width="32" height="32" /></div>
+        <div class="flex-auto">
+            <div class="bg-gray-200 fb-rounded-lg inline-block py-2 px-3 mb-1">
+                <p class="leading-6 text-sm font-bold mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="10" height="10"/></p>
+                <p class="text-base mb-0">Mastodon is like Twitter and Instagram, but better. Instead of a centralized service, you join a server or run your own. Thousands of independent communities running Mastodon form a coherent network. You can follow and interact with people even if they are on a different server. Each community decides its funding model and acceptable content hosting policies.</p>
+            </div>
+            <a class="border fb-rounded-lg flex no-underline overflow-hidden" href="/now">
+                <div class="flex-none"><img src="link-preview-mastodon.png" alt="" width="96" height="96" />
+                </div>
+                <div class="flex-auto self-center pl-3">
+                    <p class="font-bold mb-0 leading-6 no-underline text-gray-600 text-sm uppercase">social.librem.one</p>
+                    <p class="text-black mb-0 leading-6 no-underline">@jeremiahlee@librem.one</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="flex pb-3 mx-3">
+        <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah" width="32" height="32" /></div>
+        <div class="flex-auto">
+            <div class="bg-gray-200 fb-rounded-lg inline-block py-2 px-3 mb-1">
+                <p class="leading-6 text-sm font-bold mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="10" height="10"/></p>
+                <p class="text-base mb-0">My posts on Mastodon are syndicated to Twitter.</p>
+            </div>
+            <a class="border fb-rounded-lg flex no-underline overflow-hidden" href="/now">
+                <div class="flex-none">
+                    <img src="link-preview-twitter.png" alt="" width="96" height="96" />
+                </div>
+                <div class="flex-auto self-center pl-3">
+                    <p class="font-bold mb-0 leading-6 no-underline text-gray-600 text-sm uppercase">Twitter.com</p>
+                    <p class="text-black mb-0 no-underline">@JeremiahLee</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="flex pb-3 mx-3">
+        <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah" width="32" height="32" /></div>
+        <div class="flex-auto">
+            <div class="bg-gray-200 fb-rounded-lg inline-block py-2 px-3 mb-1">
+                <p class="leading-6 text-sm font-bold mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="10" height="10"/></p>
+                <p class="text-base mb-0">I genuinely like LinkedIn.</p>
+            </div>
+            <a class="border fb-rounded-lg flex no-underline overflow-hidden" href="/now">
+                <div class="flex-none">
+                    <img src="link-preview-linkedin.png" alt="" width="96" height="96" />
+                </div>
+                <div class="flex-auto self-center pl-3">
+                    <p class="font-bold mb-0 leading-6 no-underline text-gray-600 text-sm uppercase">LinkedIn.com</p>
+                    <p class="text-black mb-0 no-underline">Jeremiah Lee<span class="hidden md:inline">, Engineering Manager</span></p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="facebook-post bg-white rounded-lg max-w-xl mx-auto mb-4">
+    <div class="facebook-post-header flex p-3">
+        <div class="facebook-post-header-col1 pr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah" width="45" height="45" /></div>
+        <div class="facebook-post-header-col2">
+            <p class="font-bold text-base mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="12" height="12"/></p>
+            <p class="leading-6 text-gray-600 text-sm mb-0">August 1 at 11:25 AM • <img src="shared-with-friends.png" alt="Jeremiah’s friends" title="Jeremiah’s friends" class="inline" /></p>
+        </div>
+    </div>
+    <div class="facebook-big-post fb-post-bg-questions text-white text-center flex mb-2">
+        <h2 class="font-bold self-center w-full p-2 sm:text-3xl md:leading-relaxed md:text-4xl">For true success, ask yourself these four questions:<br/>Why? Why not?<br/>Why not me? Why not now?<br>—James Allen</h2>
+    </div>
+    <div class="flex border-b mx-3 mb-3 pb-2">
+        <p class="flex-1 leading-6 text-gray-600 text-sm m-0"><img class="inline" src="like.svg" alt="Like icon" width="18" height="18" /> Alexander Hamilton</p>
+        <p class="flex-1 leading-6 text-gray-600 text-sm m-0 text-right">10 Comments</p>
+    </div>
+
+
+    <div class="flex pb-3 mx-3">
+        <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image-terry.jpg" alt="Some Rando" width="32" height="32" /></div>
+        <div class="flex-auto">
+            <div class="bg-gray-200 fb-rounded-lg inline-block py-2 px-3 mb-3">
+                <p class="leading-6 text-sm font-bold mb-0">Terry Gross</p>
+                <p class="text-base mb-0">Why not just unfriend/mute people on Facebook?</p>
+            </div>
+            <div class="flex pb-3">
+                <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah Lee" width="32" height="32" /></div>
+                <div class="flex-auto">
+                    <div class="bg-gray-200 fb-rounded-lg py-2 px-3 mb-1">
+                        <p class="leading-6 text-sm font-bold mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="10" height="10"/></p>
+                        <p class="text-base">Facebook is optimized to spread hate. While not an intentional design, it is irreparable because the people who work at Facebook deny or refuse to understand the problem and therefore cannot fix it. <strong>The appropriate response to something systemically harmful is to stop participating in the harm.</strong></p>
+                        <p class="text-base mb-0">By using Facebook myself, I give you a reason to keep using Facebook. I want you to have one less reason to use Facebook. I hope your other friends also leave Facebook until you no longer go to Facebook because there is nothing there to see.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex pb-3 mx-3">
+        <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image-ira.jpg" alt="Some Rando" width="32" height="32" /></div>
+        <div class="flex-auto">
+            <div class="bg-gray-200 fb-rounded-lg inline-block py-2 px-3 mb-3">
+                <p class="leading-6 text-sm font-bold mb-0">Ira Glass</p>
+                <p class="text-base mb-0">Why do you think Facebook is harmful to society?</p>
+            </div>
+            <div class="flex pb-3">
+                <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah Lee" width="32" height="32" /></div>
+                <div class="flex-auto">
+                    <div class="bg-gray-200 fb-rounded-lg py-2 px-3 mb-1">
+                        <p class="leading-6 text-sm font-bold mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="10" height="10"/></p>
+                        <p class="text-base">The quick answer:</p>
+                        <ol class="text-base">
+                            <li class="mb-4">Facebook, Google, and Verizon Media Group are in a race to collect as much data about you as possible. They believe the company that knows the most about you can show you the most relevant ads. Invading your privacy is essential to the operation of their businesses.</li>
+                            <li class="mb-4">Companies that earn money from showing you ads, like Facebook, must create reasons for you to see the ads. Facebook’s primary goals are to keep you coming back and spending more time than you intended. Facebook creates a fear of missing out to keep you coming back. Facebook prioritizes content that is likely to illicit an emotional response from you so that you spend time commenting and returning to view replies. Once Facebook knows what triggers you, Facebook amplifies similar content.</li>
+                            <li class="mb-4">Facebook’s design has been optimized in every way to keep you in a reactionary state. Because you become desensitized after repeated exposure to the same type of content, the content gradually drifts to more extreme positions.</li>
+                            <li class="mb-4">Facebook’s content moderation policy is to permit as much as possible, as determined by laws and advertisers’ tastes. Polarizing content evokes the most reactions and the most re-shares. Facebook defends not moderating harmful content because it is the most profitable content.</li>
+                        </ol>
+                        <p class="text-base">Wealthy-Facebook-investor-turned-wealthier-critic Roger McNamee wrote the best answer to this question in his book <cite><a href="https://www.penguinrandomhouse.com/books/598206/zucked-by-roger-mcnamee/">Zucked: Waking Up to the Facebook Catastrophe</a></cite>.</p>
+                        <p class="text-base mb-0">Hundreds of businesses suspended advertising on Facebook in July 2020 as part of the <a href="https://www.stophateforprofit.org/">Stop Hate For Profit</a> protest, but it takes two—advertisers and us using Facebook—in order for Facebook to make money.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex pb-3 mx-3">
+        <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image-sylvia.jpg" alt="Some Rando" width="32" height="32" /></div>
+        <div class="flex-auto">
+            <div class="bg-gray-200 fb-rounded-lg inline-block py-2 px-3 mb-3">
+                <p class="leading-6 text-sm font-bold mb-0">Sylvia Poggioli</p>
+                <p class="text-base mb-0">Do you think I should delete my Facebook account too?</p>
+            </div>
+            <div class="flex pb-3">
+                <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah Lee" width="32" height="32" /></div>
+                <div class="flex-auto">
+                    <div class="bg-gray-200 fb-rounded-lg inline-block py-2 px-3 mb-1">
+                        <p class="leading-6 text-sm font-bold mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="10" height="10"/></p>
+                        <p class="text-base mb-0">Yes. <a href="https://deletefacebook.com/guide/">Here’s a step-by-step guide.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex pb-3 mx-3">
+        <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image-steve.jpg" alt="Some Rando" width="32" height="32" /></div>
+        <div class="flex-auto">
+            <div class="bg-gray-200 fb-rounded-lg inline-block py-2 px-3 mb-3">
+                <p class="leading-6 text-sm font-bold mb-0">Steve Inskeep</p>
+                <p class="text-base mb-0">Are you deleting your WhatsApp (by Facebook) too?</p>
+            </div>
+            <div class="flex pb-3">
+                <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah Lee" width="32" height="32" /></div>
+                <div class="flex-auto">
+                    <div class="bg-gray-200 fb-rounded-lg py-2 px-3 mb-1">
+                        <p class="leading-6 text-sm font-bold mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="10" height="10"/></p>
+                        <p class="text-base">I’m not on WhatsApp.</p>
+                        <p class="text-base">I use and recommend <a href="https://signal.org/">Signal</a>, the non-profit that created WhatsApp’s end-to-end encryption protocol.</p>
+                        <p class="text-base mb-0">Did you know Mark Zuckerberg broke a contractural promise to WhatApp’s founder, so the founder quit and gave $50 million to Signal? <cite><a href="https://www.forbes.com/sites/parmyolson/2018/09/26/exclusive-whatsapp-cofounder-brian-acton-gives-the-inside-story-on-deletefacebook-and-why-he-left-850-million-behind/">WhatsApp Cofounder Brian Acton Gives The Inside Story On #DeleteFacebook And Why He Left $850 Million Behind</a></cite></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex pb-2 mx-3">
+        <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image-renee.jpg" alt="Some Rando" width="32" height="32" /></div>
+        <div class="flex-auto">
+            <div class="bg-gray-200 fb-rounded-lg inline-block py-2 px-3 mb-3">
+                <p class="leading-6 text-sm font-bold mb-0">Renée Montagne</p>
+                <p class="text-base mb-0">Are you deleting your Instagram (by Facebook) too?</p>
+            </div>
+            <div class="flex">
+                <div class="flex-none mr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah Lee" width="32" height="32" /></div>
+                <div class="flex-auto">
+                    <div class="bg-gray-200 fb-rounded-lg py-2 px-3 mb-1">
+                        <p class="leading-6 text-sm font-bold mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="10" height="10"/></p>
+                        <p class="text-base">Not yet, but probably, eventually. Instagram uses the same Facebook infrastructure behind-the-scenes. Instagram has the same problematic business model of surveillance capitalism. However, Instagram is less harmful to my mental health. Instagram allows people to follow me without having to follow them back, so I rarely encounter hateful perspectives.</p>
+                        <p class="text-base mb-0">More importantly, Instagram is designed around creating original content yourself—not re-sharing. Re-sharing is what turned Facebook into a hateful meme machine. Sadly, Instagram has increased the number of ways people can re-share others’ content easily.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="facebook-post bg-white rounded-lg max-w-xl mx-auto mb-4">
+    <div class="facebook-post-header flex p-3">
+        <div class="facebook-post-header-col1 pr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image-mozilla.png" alt="Jeremiah" width="45" height="45" /></div>
+        <div class="facebook-post-header-col2">
+            <p class="font-bold text-base mb-0">Mozilla</p>
+            <p class="leading-6 text-gray-600 text-sm mb-0">Sponsored • <img class="inline" src="shared-with-public.png" alt="Shared with everyone" title="Shared with everyone" width="12" height="12"/></p>
+        </div>
+    </div>
+    <div class="text-base px-3">
+        <p>In her new book, The Age of Surveillance Capitalism, Harvard Business School’s Shoshana Zuboff argues Google and Facebook collect so much personal data for profit, that they’re changing the fundamentals of our economy and way of life. And now these companies are learning to shape our behavior to better serve their business goals. Shoshana joins Manoush Zomorodi to explain what this all means for us.</p>
+        <p>We then explore whether or not it’s time to end our relationship with corporate spies. OG advice columnist Dear Abby gives us some tips to start with. We chat with philosopher S. Matthew Liao. <strong>He asks if we have a moral duty to quit Facebook.</strong> And journalist Nithin Coca tells us what it was like for him to quit both Facebook and Google. Spoiler alert: it wasn’t easy, but he has no regrets.</p>
+    </div>
+    <a class="block no-underline" href="https://irlpodcast.org/season4/episode5/">
+        <img src="link-preview-irl.jpg" alt="IRL: The Surveillance Economy" />
+        <div class="bg-gray-200 p-3">
+            <p class="leading-6 mb-0 no-underline text-gray-600 text-sm uppercase">IRLPodcast.org</p>
+            <p class="mb-0 font-bold no-underline text-black text-lg">IRL Podcast: The Surveillance Economy</p>
+            <p class="mb-0 no-underline text-gray-600 text-base truncate">Explore the surveillance economy, the companies that participate in it, and its impact on you.</p>
+        </div>
+    </a>
+    <p class="leading-6 text-gray-600 text-sm p-3"><img class="inline" src="like.svg" alt="Like icon" width="18" height="18" /> Jeremiah Lee</p>
+</div>
+
+<div class="facebook-post bg-white rounded-lg max-w-xl mx-auto mb-4">
+    <div class="facebook-post-header flex p-3">
+        <div class="facebook-post-header-col1 pr-2"><img class="rounded-full border border-gray-400 border-solid" src="profile-image.jpg" alt="Jeremiah" width="45" height="45" /></div>
+        <div class="facebook-post-header-col2">
+            <p class="font-bold text-base mb-0">Jeremiah Lee <img class="align-baseline inline" src="verified.png" alt="Verified" width="12" height="12"/></p>
+            <p class="leading-6 text-gray-600 text-sm mb-0">August 1 at 11:25 AM • <img src="shared-with-friends.png" alt="Jeremiah’s friends" title="Jeremiah’s friends" class="inline" /></p>
+        </div>
+    </div>
+
+    <div class="text-base px-3">
+        <p>© 2020 Jeremiah Lee. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International license</a>.</p>
+        <p>Tailwind CSS, post background images, and icons copyright to their respective authors. Facebook assets used with commentary, criticism, and parody fair use allowance.</p>
+    </div>
+
+    <div class="flex border-b mx-3 mb-3 pb-2">
+        <p class="leading-6 flex-auto text-gray-600 text-sm m-0"><img class="inline" src="like.svg" alt="Like icon" width="18" height="18" /> Lawrence Lessig</p>
+    </div>
+</div>
+
+<script>
+const form = document.getElementById("contactCardForm");
+
+form.addEventListener(
+    "submit",
+    function gracefullySubmitForm(event) {
+        fetch(
+            event.target.action,
+            {
+                method: "POST",
+                body: new URLSearchParams([...(new FormData(form))])
+            }
+        ).then((response) => {
+            alert("Thanks! I will email you my updated contact card.");
+        }).catch((error) => {
+            alert(error);
+        });
+
+        event.preventDefault();
+    }
+);
+</script>

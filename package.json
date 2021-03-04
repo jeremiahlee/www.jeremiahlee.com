@@ -1,19 +1,19 @@
 {
     "author": "Jeremiah Lee",
     "dependencies": {
-        "install": "^0.13.0",
-        "npm": "^6.14.4"
+        "install": "^0.13.0"
     },
     "description": "The website of Jeremiah Lee",
     "devDependencies": {
-        "@11ty/eleventy": "^0.10.0",
-        "@11ty/eleventy-plugin-rss": "^1.0.7",
-        "@fullhuman/postcss-purgecss": "^2.1.2",
-        "autoprefixer": "^9.7.6",
+        "@11ty/eleventy": "^0.11.1",
+        "@11ty/eleventy-plugin-rss": "^1.0.9",
+        "@fullhuman/postcss-purgecss": "^3.0.0",
+        "autoprefixer": "^10.0.4",
         "cssnano": "^4.1.10",
-        "moment": "^2.24.0",
-        "postcss-cli": "^7.1.0",
-        "tailwindcss": "^1.2.0"
+        "moment": "^2.29.1",
+        "postcss": "^8.1.10",
+        "postcss-cli": "^8.3.0",
+        "tailwindcss": "^2.0.1"
     },
     "keywords": [],
     "license": "UNLICENSED",
@@ -21,15 +21,15 @@
     "private": true,
     "scripts": {
         "build": "npm run build:html && npm run build:css && npm run build:redirects",
-        "build:css": "./node_modules/.bin/postcss css/style.css -o dist/soul-class-style-badass.css",
-        "build:html": "npx @11ty/eleventy --config=eleventy.config.js",
+        "build:css": "NODE_ENV=production tailwindcss-cli build css/style.css -o dist/soul-class-style-badass.css --config tailwind.config.js",
+        "build:html": "eleventy --config=eleventy.config.js",
         "build:redirects": "node generate-redirects.js",
-        "dev:css": "npx tailwind build css/style.css -o site/soul-class-style-badass.css",
-        "dev:spotify": "npx tailwind build site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css",
-        "build:spotify": "./node_modules/.bin/postcss site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css",
-        "dev:burp": "npx tailwind build site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css",
-        "build:burp": "./node_modules/.bin/postcss site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css",
-        "dev:html": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve"
+        "dev:css": "tailwindcss-cli build css/style.css -o dist/soul-class-style-badass.css --config tailwind.config.dev.js",
+        "dev:serve": "ELEVENTY_ENV=development eleventy --config=eleventy.config.js --serve",
+        "dev:spotify": "tailwindcss-cli build site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css --config site/posts/failed-squad-goals/tailwind.config.js",
+        "build:spotify": "NODE_ENV=production tailwindcss-cli build site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css --config site/posts/failed-squad-goals/tailwind.config.js",
+        "dev:burp": "tailwindcss-cli build site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css --config site/posts/last-burp-of-hope/tailwind.config.js",
+        "build:burp": "NODE_ENV=production tailwindcss-cli build site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css --config site/posts/last-burp-of-hope/tailwind.config.js"
     },
-    "version": "3.0.0"
+    "version": "4.0.0"
 }

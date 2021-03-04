@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="500" width="500">
+  <defs>
+    <ellipse id="ellipse-0" opacity="1" rx="200" ry="200" cx="250" cy="300"/>
+    <mask id="mask-1" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+      <rect opacity="1" x="0" y="0" width="594.0926021895691" height="594.0926021895691" fill="black"/>
+      <use xlink:href="#ellipse-0" fill="white"/>
+    </mask>
+    <path id="path-2" opacity="1" fill-rule="evenodd" d="M375,300 C375,368.98937806175 318.98937806175,425 250.00000000000003,425 C181.01062193825,425 125.00000000000001,368.98937806175 125,300 "/>
+    <path id="path-3" opacity="1" fill-rule="evenodd" d="M75.14999999999971,24.99999999999996 C75.14999999999974,11.19288125423014 86.3428812542299,-1.6908843777454428e-15 100.14999999999971,0 L400.8499999999999,3.0616169978683933e-15 C414.6571187457698,-3.066214149976376e-14 425.85,11.1928812542302 425.84999999999997,25.000000000000085 L425.8499999999997,124.99999999999994 C425.8499999999997,138.8071187457698 437.0428812542298,150 450.8499999999997,150 L499.9999999999993,150 L499.99999999999955,260 L2.2737367544323193e-13,260 L-2.524354896707238e-29,150 L50.14999999999954,150 C63.95711874576935,150 75.14999999999951,138.80711874576986 75.14999999999954,125.00000000000004 L75.14999999999971,24.99999999999996Z"/>
+    <mask id="mask-4" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+      <rect opacity="1" x="0" y="0" width="594.0926021895691" height="594.0926021895691" fill="black"/>
+      <use xlink:href="#path-3" fill="white"/>
+    </mask>
+    <path id="path-5" opacity="1" fill-rule="evenodd" d="M227.99999999999991,260 L227.99999999999974,309.9999999999999 C227.99999999999972,323.8071187457698 239.1928812542299,335 252.99999999999974,335 L273.1499999999999,335 "/>
+    <path id="path-6" opacity="1" fill-rule="evenodd" d="M286,71 L361.00001999999995,141.30001899999996 "/>
+    <path id="path-7" opacity="1" fill-rule="evenodd" d="M286,71 L361.00001999999995,141.30001899999996 "/>
+  </defs>
+  <g>
+    <g opacity="1">
+      <use xlink:href="#ellipse-0" fill="rgb(255,221,156)" fill-opacity="1"/>
+      <use xlink:href="#ellipse-0" fill-opacity="0" stroke="rgb(80,37,111)" stroke-opacity="1" stroke-width="80" stroke-linecap="butt" stroke-linejoin="miter" mask="url(#mask-1)"/>
+    </g>
+    <g opacity="1">
+      <use xlink:href="#path-2" fill-opacity="0" stroke="rgb(80,37,111)" stroke-opacity="1" stroke-width="20" stroke-linecap="butt" stroke-linejoin="miter"/>
+    </g>
+    <g opacity="1">
+      <use xlink:href="#path-3" fill="rgb(251,238,220)" fill-opacity="1"/>
+      <use xlink:href="#path-3" fill-opacity="0" stroke="rgb(72,159,204)" stroke-opacity="1" stroke-width="80" stroke-linecap="butt" stroke-linejoin="miter" mask="url(#mask-4)"/>
+    </g>
+    <g opacity="1">
+      <use xlink:href="#path-5" fill="rgb(251,238,220)" fill-opacity="1"/>
+      <use xlink:href="#path-5" fill-opacity="0" stroke="rgb(80,37,111)" stroke-opacity="1" stroke-width="20" stroke-linecap="butt" stroke-linejoin="miter"/>
+    </g>
+    <g transform="translate(323.50001, 106.15000949999998) rotate(90.00003218077504) translate(-323.50001, -106.15000949999998)" opacity="1">
+      <use xlink:href="#path-6" fill-opacity="0" stroke="rgb(72,159,204)" stroke-opacity="1" stroke-width="20" stroke-linecap="butt" stroke-linejoin="miter"/>
+    </g>
+    <g opacity="1">
+      <use xlink:href="#path-7" fill-opacity="0" stroke="rgb(72,159,204)" stroke-opacity="1" stroke-width="20" stroke-linecap="butt" stroke-linejoin="miter"/>
+    </g>
+  </g>
+</svg>

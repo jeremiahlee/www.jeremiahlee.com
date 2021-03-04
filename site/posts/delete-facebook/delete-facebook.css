@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(240, 242, 245);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: rgb(33, 111, 219);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a.no-underline:hover {
+    text-decoration: none;
+}
+
+.facebook-post {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px
+}
+
+.facebook-big-post {
+    min-height: 400px;
+    background-position: center;
+    background-size: cover;
+}
+
+.fb-rounded-lg {
+    border-radius: 1.125rem;
+}
+
+.fb-post-bg-questions {
+    background-image: url(post-bg-questions.jpg);
+}
+
+.fb-post-bg-contact {
+    background-image: url(post-bg-contact.jpg);
+}
+
+.fb-post-bg-headline {
+    background-image: url(post-bg-headline.webp), url(post-bg-headline.jpg);
+}
+
+.bg-fb {
+    background-color: rgb(33, 111, 219);
+}
+
+/* Tailwind v2.0 changed the fucking colors, so override with old colors */
+.bg-gray-200 {
+    background-color: #edf2f7;
+}
+.border-gray-400 {
+    border-color: #cbd5e0;
+}
+.text-gray-600 {
+    color: #718096;
+}

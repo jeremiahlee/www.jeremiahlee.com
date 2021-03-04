@@ -25,6 +25,7 @@ module.exports = function(eleventyConfig) {
         }
     );
 
+    // Like blogPostsByYear only excluding any featured/interviews/conference talks
     eleventyConfig.addCollection(
         "blogPostsByYear",
         function(collection) {
@@ -67,6 +68,56 @@ module.exports = function(eleventyConfig) {
         }
     );
 
+    eleventyConfig.addCollection(
+        "otherPostsByYear",
+        function(collection) {
+            /*
+                We assume collection.getFilteredByTag is sorted date ascending.
+
+                Return an array of objects containing `year` and `data` array of posts
+                sorted descending, example:
+                [
+                    {
+                        year: 1984,
+                        data: [
+                            posts here
+                        ]
+                    }, ...
+                ]
+            */
+
+            const postsTaggedBlog = collection.getFilteredByTag("posts");
+
+            const newCollection = [];
+
+            let currentPostYearInCollection;
+
+            for (let post of postsTaggedBlog) {
+                if (
+                    post.data.tags.includes("featured") ||
+                    post.data.tags.includes("conferenceTalk") ||
+                    post.data.tags.includes("interview")
+                ) {
+                    continue;
+                }
+
+                const postYear = new Date(post.date).getUTCFullYear();
+
+                if (postYear !== currentPostYearInCollection) {
+                    newCollection.unshift({
+                        year: postYear,
+                        data: []
+                    });
+                    currentPostYearInCollection = postYear;
+                }
+
+                newCollection[0].data.unshift(post);
+            }
+
+            return newCollection;
+        }
+    );
+
     eleventyConfig.addNunjucksFilter(
         "json",
         function(value) {
@@ -78,6 +129,13 @@ module.exports = function(eleventyConfig) {
         "moment",
         function(date, format) {
             return moment(date).format(format);
+        }
+    );
+
+    eleventyConfig.addHandlebarsHelper(
+        "reverseArray",
+        function(arr) {
+            return [...arr].reverse();
         }
     );
 
@@ -119,6 +177,7 @@ module.exports = function(eleventyConfig) {
             "svg",
             "txt",
             "webmanifest",
+            "webm",
             "webp",
             "woff",
             "woff2",

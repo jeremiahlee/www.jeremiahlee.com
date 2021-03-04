@@ -1,0 +1,160 @@
+@tailwind base;
+
+@font-face {
+    font-family: "Vision";
+    src: url("Vision-Regular.woff2") format("woff2"), url("Vision-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Vision";
+    src: url("Vision-Heavy.woff2") format("woff2"), url("Vision-Heavy.woff") format("woff");
+    font-weight: bold;
+    /* font-weight: 700; */
+}
+@font-face {
+    font-family: "Vision";
+    src: url("Vision-Italic.woff2") format("woff2"), url("Vision-Italic.woff") format("woff");
+    font-style: italic;
+}
+@font-face {
+    font-family: "Vision";
+    src: url("Vision-HeavyItalic.woff2") format("woff2"), url("Vision-HeavyItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+}
+
+:root {
+    --green: #1DB954;
+    --purple: #533874;
+}
+.text-green {
+    color: var(--green);
+}
+.bg-green {
+    background-color: var(--green);
+}
+.border-green {
+    border-color: var(--green);
+}
+.text-purple {
+    color: var(--purple);
+}
+ul.bullet-green li::before {
+    content: "●";
+    color: var(--green);
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1rem;
+}
+
+.highlight {
+    background: rgba(0, 0, 0, 0) linear-gradient(transparent 32%, rgb(195, 240, 200) 32%, rgb(195, 240, 200) 78%, transparent 78%, transparent 100%) repeat scroll 0% 0%;
+}
+
+a {
+    @apply underline;
+}
+
+h3, p, li {
+    @apply mb-4;
+}
+
+html {
+    scroll-snap-type: y proximity;
+}
+
+article {
+    font-family: "Vision", sans-serif;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1;
+}
+
+.verso-page, .recto-page {}
+
+.text-column-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p.dropcap:first-child:first-letter {
+    float: left;
+    color: var(--green);
+    @apply text-6xl;
+    @apply font-bold;
+    line-height: .75em;
+}
+
+.page-4 {
+    background-image: url("./monkey-duotone-50pct.png"),
+        linear-gradient(135deg, hsl(298,37%,38%) 0%,hsl(254,34%,33%) 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, top left;
+}
+
+.spread-7 {
+    background-image: linear-gradient(135deg, hsl(168,86%,63%) 0%,hsl(236,69%,51%) 100%);
+}
+
+.box-shadow-blue {
+    box-shadow: 2rem 2rem 0px 0px hsl(236,69%,51%);
+    position: relative;
+    border: solid .2rem hsl(236,69%,51%);
+}
+.box-shadow-blue:after,
+.box-shadow-blue:before {
+  content: "";
+  background: hsl(236,69%,51%);
+  position: absolute;
+}
+.box-shadow-blue:after {
+  width: 100%;
+  height: 2.2rem;
+  left: .8rem;
+  bottom: 0;
+  transform: translatey(100%) skewx(45deg);
+}
+.box-shadow-blue:before {
+  width: 2.2rem;
+  height: 100%;
+  right: 0;
+  transform: translatex(100%) skewy(45deg);
+  top: .8rem;
+}
+
+.spread-10 {
+    background-image: url("./jaggies-background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.page-23 {
+    background-color: #60ADF7;
+}
+
+
+/* Grid utilities */
+
+/* Custom base styles start */
+/* Small, Medium, Large breakpoints */
+@screen sm {
+}
+
+@screen md {
+}
+
+@screen lg {
+    .spread {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100vh;
+        box-sizing: border-box;
+        scroll-snap-align: start;
+    }
+}
+
+/* Custom base styles must come before components and utilities to avoid specificity issues */
+@tailwind components;
+@tailwind utilities;
+

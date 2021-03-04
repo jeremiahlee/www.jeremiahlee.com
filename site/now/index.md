@@ -1,0 +1,7 @@
+---
+eleventyExcludeFromCollections: true
+tags: now
+title: What I’m Up To Now
+layout: now.hbs
+---
+
