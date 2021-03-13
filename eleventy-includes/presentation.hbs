@@ -26,30 +26,31 @@
 </head>
 <body>
 
-<div class="container mx-auto">
-    <nav>
-        <p><a href="/posts/" title="Writing" class="no-underline">←︎ Writing</a></p>
-    </nav>
-</div>
+<nav><a class="md:absolute md:left-0 md:top-0 md:bg-purple-100 md:mt-4 p-2 md:z-20 text-purple-800" href="/posts/" title="Writing">←︎ Writing</a></nav>
 
-<article>
-    <header class="container mx-auto">
-        <h1 class="mb-0" property="headline">{{title}}</h1>
-        <p class="text-sm">
-            <time property="datePublished" datetime="{{moment date 'YYYY-MM-DDTHH:mm:ss'}}">{{moment date 'LLLL'}}</time>
-{{#if updated}}
-            <span class="text-gray-700">• Updated <time property="dateModified" datetime="{{moment updated 'YYYY-MM-DDTHH:mm:ss'}}">{{moment updated 'LLLL'}}</time></span>
-{{/if}}
-        </p>
-    </header>
-
-    {{{ content }}}
+<article class="relative py-16">
+    <div class="relative px-4 sm:px-6 lg:px-8">
+        <header class="text-lg max-w-screen-lg mx-auto">
+            <h1 class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl" property="headline">{{title}}</h1>
+            <p class="text-center text-sm text-gray-500">
+                <time property="datePublished" datetime="{{moment date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment date 'dddd, MMMM Do YYYY'}}</time>
+    {{#if updated}}
+                <span>• Updated <time property="dateModified" datetime="{{moment updated 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment updated 'YYYY-MM-DD'}}</time></span>
+    {{/if}}
+            </p>
+        </header>
+        <div class="mt-6 prose prose-purple prose-lg text-gray-700 mx-auto max-w-screen-lg">
+            {{{ content }}}
+        </div>
+    </div>
 </article>
 
-<footer class="container mx-auto">
+<footer class="prose prose-lg mx-auto text-center">
     <hr />
-    <p><small>No ads! Support my work via <a href="https://coil.com/learn-more/">Coil</a>, <a href="https://flattr.com/@jeremiahlee">Flattr</a>, and <a href="https://brave.com/jer128">BAT</a>.</small></p>
-    <p><small>© {{moment date 'YYYY'}} <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Jeremiah Lee</span>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</small></p>
+    <div class="prose-sm">
+        <p class="text-gray-600">No ads! <strong>Support my work</strong> via <a href="https://coil.com/">Coil</a>, <a href="https://flattr.com/@jeremiahlee">Flattr</a>, and <a href="https://brave.com/jer128">BAT</a>.</small></p>
+        <p class="text-gray-500">© {{moment date 'YYYY'}} <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Jeremiah Lee</span>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a>.</p>
+    </div>
 </footer>
 
 <script type="application/ld+json">

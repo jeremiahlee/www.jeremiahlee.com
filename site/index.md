@@ -7,11 +7,11 @@ css:
     - /index/style.css
 ---
 
-# Hi, I’m Jeremiah.
+<h1 class="my-4 leading-tight text-4xl">Hi, I’m Jeremiah.</h1>
 
-I’m a Californian living in Stockholm, Sverige. [*More...*](/about/)
+<p class="mb-4">I’m a Californian living in Stockholm, Sverige. <a href="/about/" class="italic">More...</a>
 
-<ul>
+<ul class="list-outside list-disc mb-4 ml-4">
 <li><a href="/now/">Now</a></li>
 <li><a href="/posts/">Writing</a></li>
 <li><a href="/projects/">Projects</a></li>
@@ -20,13 +20,13 @@ I’m a Californian living in Stockholm, Sverige. [*More...*](/about/)
 <li><a href="/contact/">Contact</a></li>
 </ul>
 
-<h4>Also find me on…</h4>
+<h4 class="mb-4">Also find me on…</h4>
 
-<ul>
+<ul class="list-outside list-disc mb-4 ml-4">
 <li><a href="https://github.com/jeremiahlee" rel="me">Github</a></li>
 <li><a href="https://www.linkedin.com/in/jeremiahlee415" rel="me">LinkedIn</a></li>
 <li><a href="https://social.librem.one/@jeremiahlee" rel="me">Mastodon</a></li>
 <li><a href="https://twitter.com/jeremiahlee" rel="me">Twitter</a></li>
 </ul>
 
-Start simple. Dream big. Do good. Be well.
+<p>Start simple. Dream big. Do good. Be well.</p>

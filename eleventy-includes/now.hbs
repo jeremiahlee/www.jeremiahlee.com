@@ -21,24 +21,25 @@
 </head>
 <body>
 
-<div class="container mx-auto max-w-xl">
-    <nav>
-        <p><a href="/" title="Home" class="no-underline">←︎ Home</a></p>
-    </nav>
-</div>
+<nav><a class="md:absolute md:left-0 md:top-0 md:bg-purple-100 md:mt-4 p-2 md:z-20 text-purple-800" href="/" title="Home">←︎ Home</a></nav>
 
-<div class="container mx-auto max-w-xl">
-    <h1 class="mb-0 text-6xl" property="headline">What I’m Up To Now</h1>
-    <p class="text-sm">
-        Last updated on <time property="datePublished" datetime="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment collections.mostRecentNowPost.data.date 'LLLL'}}</time>
-    </p>
+<article class="relative py-16">
+    <div class="relative px-4 sm:px-6 lg:px-8">
+        <header class="text-lg max-w-prose mx-auto">
+            <h1 class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl" property="headline">What I’m Up To Now</h1>
+            <p class="text-center text-sm text-gray-500">Last updated on <time property="datePublished" datetime="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment collections.mostRecentNowPost.data.date 'LLLL'}}</time></p>
+        </header>
+        <div class="mt-6 prose prose-purple prose-lg text-gray-700 mx-auto">
+            {{{ collections.mostRecentNowPost.data.content }}}
+        </div>
+    </div>
+</article>
 
-    {{{ collections.mostRecentNowPost.data.content }}}
-</div>
-
-<footer class="container mx-auto max-w-xl">
-    <hr />
-    <p><small>Thanks to Derek Sivers for the <a href="http://nownownow.com/about">/now page</a> idea.</small></p>
+<footer class="prose prose-lg mx-auto text-center">
+    <div class="prose-sm">
+        <hr />
+        <p>Thanks to Derek Sivers for the <a href="http://nownownow.com/about">/now page</a> idea.</p>
+    </div>
 </footer>
 
 </body>

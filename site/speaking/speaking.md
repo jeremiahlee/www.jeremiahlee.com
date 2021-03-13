@@ -13,7 +13,7 @@ Over 15 conferences on four continents have invited me to speak about software e
 
 ## Want to have me talk at your event?
 
-Email *hello@* this webpage's domain name or [direct message me on Twitter](https://twitter.com/messages/compose?recipient_id=14538587).
+<a href="/contact/">Contact me</a>
 
 
 ## Previous engagements

@@ -11,7 +11,7 @@ I’m a Californian living in Stockholm, Sverige (Sweden). I have worked for Spo
 
 - I once shared my experience switching to Mac OS X in a commercial for Apple. I said my legal name in the commercial and I had an above average online presence in 2002. This resulted in much unwelcomed contact and criticism for a high school student who hadn't yet figured himself out. It also led to several incredible friendships and job opportunities. This was an experience that happened *to* me, as opposed to something I accomplished. It was exciting at the time, but I'd much rather talk about the active decisions, accomplishments, and failures in my life.
 
-- I popularized the phrase "developer experience" to describe the use of user experience research and design methodologies for developer-focused products. Prior to my [writing and speaking at conferences](/developer-experience/), there were no Google results for the use of this phrase in this manner.
+- I popularized the phrase "developer experience" to describe the use of user experience research and design methodologies for developer-focused products. Prior to my [writing and speaking at conferences](/speaking/), there were no Google results for the use of this phrase in this manner.
 
 - I have worked at three failed startups. I've been a co-founder (Digital Dandelion), a first hire (Awe.sm), and employee 50 (GoTV Networks). I now prefer companies that have both started and up'ed.
 
