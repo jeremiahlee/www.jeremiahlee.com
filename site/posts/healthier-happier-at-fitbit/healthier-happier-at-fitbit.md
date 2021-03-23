@@ -23,12 +23,12 @@ I was already a huge fan of Fitbit and its mission to help improve people’s he
 
 I look forward to learning from and contributing to Fitbit's continued design and technical excellence.
 
-(And you should totally get a [Fitbit](https://www.fitbit.com/) and send a [friend](https://www.fitbit.com/user/23RJ9B) request.)
+(And you should totally get a [Fitbit](https://www.fitbit.com/?ref=JeremiahLee) and send a [friend](https://www.fitbit.com/user/23RJ9B) request.)
 
 * * *
 
 <p id="footnote-1">
-  1: I bought my first Fitbit last September after <a href="http://jeremie.com/">Jeremie Miller</a> (the guy who created <a href="http://xmpp.org/">XMPP</a> and co-founded <a href="https://singly.com/">Singly</a>) rekindled my excitement about the quantified self. I bought my second Fitbit shortly thereafter when the <a href="https://www.amazon.com/gp/product/B0095PZHPE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&#038;camp=1789&#038;creative=9325&#038;creativeASIN=B0095PZHPE&#038;linkCode=as2&#038;tag=jeremiahlee-20">Fitbit One</a> with vibration alarm was announced. This really is a killer feature. The Fitbit One is one of my favorite products.
+  1: I bought my first Fitbit last September after <a href="http://jeremie.com/?ref=JeremiahLee">Jeremie Miller</a> (the guy who created <a href="http://xmpp.org/">XMPP</a> and co-founded <a href="https://singly.com/">Singly</a>) rekindled my excitement about the quantified self. I bought my second Fitbit shortly thereafter when the <a href="https://www.amazon.com/gp/product/B0095PZHPE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&#038;camp=1789&#038;creative=9325&#038;creativeASIN=B0095PZHPE&#038;linkCode=as2&#038;tag=jeremiahlee-20">Fitbit One</a> with vibration alarm was announced. This really is a killer feature. The Fitbit One is one of my favorite products.
 </p>
 
 <p id="footnote-2">

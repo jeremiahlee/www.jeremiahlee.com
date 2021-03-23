@@ -22,3 +22,6 @@ To exclude a post from the collection, add this to the front matter:
 
 
 <div class="mb-4 text-2xl text-center text-purple-500">— ❖ —</div>
+
+
+?ref=JeremiahLee

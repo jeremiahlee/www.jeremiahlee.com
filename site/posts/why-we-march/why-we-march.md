@@ -24,4 +24,4 @@ tags:
 
 —Sense 8, Episode 2: "I Am Also A We"
 
-<small>Header set in <a href="https://www.typewithpride.com/">Gilbert</a>.</small>
+<small>Header set in <a href="https://www.typewithpride.com/?ref=JeremiahLee">Gilbert</a>.</small>

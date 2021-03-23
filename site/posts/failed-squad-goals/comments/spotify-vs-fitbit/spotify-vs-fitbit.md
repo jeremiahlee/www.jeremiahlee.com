@@ -38,7 +38,7 @@ Some people seem to think Mr Cagan smartly countered the points in my article. N
 
 Unfortunately, Mr Cagan then fixated on 1 sentence at the end of my article:
 
-> The <a href="https://www.scaledagileframework.com/">Scaled Agile Framework</a> worked well for <a href="https://www.scaledagileframework.com/fitbit-case-study/" title="Case study: Fitbit’s Agile Development Journey">Fitbit</a> when I worked there.
+> The <a href="https://www.scaledagileframework.com/?ref=JeremiahLee">Scaled Agile Framework</a> worked well for <a href="https://www.scaledagileframework.com/fitbit-case-study/?ref=JeremiahLee" title="Case study: Fitbit’s Agile Development Journey">Fitbit</a> when I worked there.
 
 In hindsight, I wish I had not included this line because it distracted some people from the ~2,200 other words. I included it because I wanted to give people some direction of what to research next. I also included it because the entire time I worked at Spotify, I compared it to my experience working at Fitbit. I never thought of Fitbit as particularly fast or exceptionally well managed when working there, but the slow pace and less collaborative attitudes at Spotify made Fitbit seem outstanding by comparison.
 
@@ -47,7 +47,7 @@ In hindsight, I wish I had not included this line because it distracted some peo
 **A brief, incomplete list of actual reasons Spotify has succeeded:**
 
 1. Its innovative content licensing, legal, and finance teams (not product! music streaming is a commodity)
-2. A [shared investor](https://en.wikipedia.org/wiki/Sean_Parker) with Facebook got Spotify early exclusive access to its platform to introduce most Americans to music streaming and [other music services never caught up](https://techcrunch.com/2011/11/08/music-app-stats/ "Don’t Believe Facebook, Spotify’s The Only Open Graph Music App Winning")
+2. A [shared investor](https://en.wikipedia.org/wiki/Sean_Parker) with Facebook got Spotify early exclusive access to its platform to introduce most Americans to music streaming and [other music services never caught up](https://techcrunch.com/2011/11/08/music-app-stats/?ref=JeremiahLee "Don’t Believe Facebook, Spotify’s The Only Open Graph Music App Winning")
 3. Its ability to partner with so many companies due to less conflict of interest simply by not being part of Amazon, Apple, or Google
 
 **A brief, incomplete list of actual reasons Fitbit has struggled:**

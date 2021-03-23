@@ -80,7 +80,7 @@ I think it’s great that watchfaces can store arbitrary data on the device. I t
 
 ## Lesson 4:<br/> Use the CLI
 
-In the year between creating my first and second watchfaces, Fitbit introduced the <a href="https://dev.fitbit.com/build/guides/command-line-interface/">FitbitOS <abbr title="command line interface">CLI</abbr></a>. The CLI allows us to create watchfaces using the development tools we prefer to work with instead of the browser-based [Fitbit Studio](https://studio.fitbit.com/) <abbr title="Integrated Development Environment">IDE</abbr>. I prefer to use Microsoft Visual Studio Code as my code editor. Its TypeScript tooling particularly is excellent. Having the files locally means I can use Git for source control.
+In the year between creating my first and second watchfaces, Fitbit introduced the <a href="https://dev.fitbit.com/build/guides/command-line-interface/?ref=JeremiahLee">FitbitOS <abbr title="command line interface">CLI</abbr></a>. The CLI allows us to create watchfaces using the development tools we prefer to work with instead of the browser-based [Fitbit Studio](https://studio.fitbit.com/) <abbr title="Integrated Development Environment">IDE</abbr>. I prefer to use Microsoft Visual Studio Code as my code editor. Its TypeScript tooling particularly is excellent. Having the files locally means I can use Git for source control.
 
 The CLI also introduced a <a href="https://community.fitbit.com/t5/SDK-Development/How-to-use-repl-device/m-p/3222375"><abbr title="Read Eval Print Loop">REPL</abbr></a>. The REPL saved me a significant amount of time by allowing me to pixel fuck<sup><a href="#5">5</a></sup> in the FitbitOS Simulator instead of having to compile and reload to test every placement change.
 

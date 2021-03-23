@@ -117,11 +117,11 @@ The button could be placed alongside other status message composition settings. 
 * * *
 
 <p id="footnote-1">
-  1: <a href="https://dev.twitter.com/blog/changes-coming-to-twitter-api">Changes coming in Version 1.1 of the Twitter API</a>
+  1: <a href="https://dev.twitter.com/blog/changes-coming-to-twitter-api?ref=JeremiahLee">Changes coming in Version 1.1 of the Twitter API</a>
 </p>
 
 <p id="footnote-2">
-  2: <a href="http://arstechnica.com/information-technology/2011/03/twitter-tells-third-party-devs-to-stop-making-twitter-client-apps/">Twitter tells third-party devs to stop making Twitter client apps&#8221; Ars Technica</a>
+  2: <a href="http://arstechnica.com/information-technology/2011/03/twitter-tells-third-party-devs-to-stop-making-twitter-client-apps/?ref=JeremiahLee">Twitter tells third-party devs to stop making Twitter client apps&#8221; Ars Technica</a>
 </p>
 
 <p id="footnote-3">
@@ -129,7 +129,7 @@ The button could be placed alongside other status message composition settings. 
 </p>
 
 <p id="footnote-4">
-  4: <a href="https://dev.twitter.com/blog/upcoming-tco-changes">&ldquo;Upcoming t.co Changes&rdquo; Twitter Developers Blog</a>
+  4: <a href="https://dev.twitter.com/blog/upcoming-tco-changes?ref=JeremiahLee">&ldquo;Upcoming t.co Changes&rdquo; Twitter Developers Blog</a>
 </p>
 
 <p id="footnote-5">

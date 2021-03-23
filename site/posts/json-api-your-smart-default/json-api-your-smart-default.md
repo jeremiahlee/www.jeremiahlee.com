@@ -32,7 +32,7 @@ _This is an adaptation of my presentation at the Nordic APIs 2017 API Platform S
 		<img src="slide-3.png" loading="lazy" alt="" />
 	</div>
 	<div class="md:w-1/2">
-		<p>This is a talk about <a href="http://jsonapi.org/">JSON API a.k.a. the JSONAPI.org specification</a>, but I am not going to read the specification to you or lead a tutorial on how to use it. If you are unfamiliar with spec, that’s ok! Please stay for my talk. I hope that my talk convinces you to read more about it later today. Because ultimately, I hope to convince you that the JSONAPI.org specification should be your default style when designing Web APIs. It won't be best for every situation, but it is a great default starting point.</p>
+		<p>This is a talk about <a href="http://jsonapi.org/?ref=JeremiahLee">JSON API a.k.a. the JSONAPI.org specification</a>, but I am not going to read the specification to you or lead a tutorial on how to use it. If you are unfamiliar with spec, that’s ok! Please stay for my talk. I hope that my talk convinces you to read more about it later today. Because ultimately, I hope to convince you that the JSONAPI.org specification should be your default style when designing Web APIs. It won't be best for every situation, but it is a great default starting point.</p>
 		<p>I’m going to talk about the Web API problems Fitbit had and how and why the JSONAPI.org specification’s features helped. I have consulted with many companies on their Web API designs and I have seen common patterns emerge. While I am using Fitbit as an example, I suspect its problems will feel familiar to you.</p>
 	</div>
 </div>
@@ -133,8 +133,8 @@ _This is an adaptation of my presentation at the Nordic APIs 2017 API Platform S
 		<p>We agreed that betting on the future was a reasonable thing to do. We agreed that network performance was something getting better at a reasonable enough pace that making short term tradeoffs in order to take advantage of new advancements as soon as they became available on the server and client platforms would be acceptable.</p>
 		<p>We agreed to three hypotheses to test:</p>
 		<ol>
-			<li><strong>HTTP/2 would meaningfully reduce the overhead of multiple requests.</strong> Specifically, we were looking for <a href="https://blog.cloudflare.com/hpack-the-silent-killer-feature-of-http-2/" title="HPACK: the silent killer (feature) of HTTP/2">binary and compressed headers with HPACK to significantly reduced the overhead of multiple API requests</a>. Also, we hoped pipelining would make handling of multiple, concurrent requests easier on the client because they wouldn’t need to manage network connection pooling.</li>
-			<li><strong>TLS 1.3 would meaningfully reduce latency introduced by HTTPS.</strong> <a href="https://timtaubert.de/blog/2015/11/more-privacy-less-latency-improved-handshakes-in-tls-13/" title="More Privacy, Less Latency: Improved Handshakes in TLS version 1.3">It reduces the initial handshake in half</a> from 2 to 1 round trip. Once that happens, preshared key session resumption and zero-round trip resumption would make subsequent secure connections significantly faster to establish if the connection were interrupted. This would be a noticeable win for reducing latency for end users far away from Fitbit’s Texas datacenters.</li>
+			<li><strong>HTTP/2 would meaningfully reduce the overhead of multiple requests.</strong> Specifically, we were looking for <a href="https://blog.cloudflare.com/hpack-the-silent-killer-feature-of-http-2/?ref=JeremiahLee" title="HPACK: the silent killer (feature) of HTTP/2">binary and compressed headers with HPACK to significantly reduced the overhead of multiple API requests</a>. Also, we hoped pipelining would make handling of multiple, concurrent requests easier on the client because they wouldn’t need to manage network connection pooling.</li>
+			<li><strong>TLS 1.3 would meaningfully reduce latency introduced by HTTPS.</strong> <a href="https://timtaubert.de/blog/2015/11/more-privacy-less-latency-improved-handshakes-in-tls-13/?ref=JeremiahLee" title="More Privacy, Less Latency: Improved Handshakes in TLS version 1.3">It reduces the initial handshake in half</a> from 2 to 1 round trip. Once that happens, preshared key session resumption and zero-round trip resumption would make subsequent secure connections significantly faster to establish if the connection were interrupted. This would be a noticeable win for reducing latency for end users far away from Fitbit’s Texas datacenters.</li>
 			<li><strong>LTE network coverage would expand.</strong> LTE is not only a faster connection, but also a more resilient connection from its switch from a switch-based to a packet-based network.</li>
 		</ol>
 	</div>
@@ -145,7 +145,7 @@ _This is an adaptation of my presentation at the Nordic APIs 2017 API Platform S
 		<a href="#many-small-requests-are-ok"><img src="slide-23.png" loading="lazy" alt="" /></a>
 	</div>
 	<div class="md:w-1/2">
-		<p>We tested these assumptions. I wish I could share the data from them, but you can <a href="http://www.httpvshttps.com" title="HTTP vs HTTPS Test">find</a> <a href="http://www.http2demo.io/" title="HTTP/2 Technology Demo by ">more</a> <a href="http://vanseodesign.com/web-design/http2-performance/" title="How HTTP/2 Solves The Performance Issues Of HTTP/1.1">rigorous</a> <a href="http://ieeexplore.ieee.org/document/7745823/" title="HTTP/1.1 pipelining vs HTTP2 in-the-clear: Performance comparison">tests</a> that prove this better than what we did. The important part is that this allowed us to come to an agreement that small resources and lots of HTTP requests <em>can</em> be ok.</p>
+		<p>We tested these assumptions. I wish I could share the data from them, but you can <a href="http://www.httpvshttps.com/?ref=JeremiahLee" title="HTTP vs HTTPS Test">find</a> <a href="http://www.http2demo.io/?ref=JeremiahLee" title="HTTP/2 Technology Demo by ">more</a> <a href="http://vanseodesign.com/web-design/http2-performance/?ref=JeremiahLee" title="How HTTP/2 Solves The Performance Issues Of HTTP/1.1">rigorous</a> <a href="http://ieeexplore.ieee.org/document/7745823/?ref=JeremiahLee" title="HTTP/1.1 pipelining vs HTTP2 in-the-clear: Performance comparison">tests</a> that prove this better than what we did. The important part is that this allowed us to come to an agreement that small resources and lots of HTTP requests <em>can</em> be ok.</p>
 		<p>This was especially true on fragile network connections. If the responses were small, the hit for retrying a request was lower and the faster the response completed, the less exposure the response had to being interrupted and having to restart all over.</p>
 	</div>
 </div>
@@ -362,7 +362,7 @@ _This is an adaptation of my presentation at the Nordic APIs 2017 API Platform S
 		<a href="#graphql-pagination-inconsistency"><img src="slide-77.png" loading="lazy" alt="" /></a>
 	</div>
 	<div class="md:w-1/2">
-		<p>Another common use case not addressed by GraphQL is pagination. I didn’t talk about collection access with JSON API today, but <a href="http://jsonapi.org/format/#fetching-pagination">pagination</a> is part of it. <code>next</code> and <code>prev</code>ious links are provided to clients and clients simply request them. This enables the a JSON API-based server to specify a pagination strategy, as this is one of the areas where the database implementation details are difficult to hide.</p>
+		<p>Another common use case not addressed by GraphQL is pagination. I didn’t talk about collection access with JSON API today, but <a href="http://jsonapi.org/format/?ref=JeremiahLee#fetching-pagination">pagination</a> is part of it. <code>next</code> and <code>prev</code>ious links are provided to clients and clients simply request them. This enables the a JSON API-based server to specify a pagination strategy, as this is one of the areas where the database implementation details are difficult to hide.</p>
 		<p>Pagination in GraphQL is done by the client. This is unfortunate, because it makes it very easy for clients to make very expensive database queries. For example, when paginating with offset, many databases still needs to process all of the query results first and then apply the offset by only returning a portion of the computed results to the client. As the offset grows, the amount of processing on the server grows. I won’t get into a details about cursor strategies for pagination, but I do believe this should not be something clients should have to worry about. Again, <strong>I think the pagination use case is too important and too common to be an afterthought.</strong></p>
 	</div>
 </div>
@@ -372,7 +372,7 @@ _This is an adaptation of my presentation at the Nordic APIs 2017 API Platform S
 		<a href="#reflective-data-models-are-better"><img src="slide-78.png" loading="lazy" alt="" /></a>
 	</div>
 	<div class="md:w-1/2">
-		<p>Lastly, I believe there is an inherent advantage to clients and servers sharing a common data interface as much as possible. Reflective input/output makes composing create and update statements from the client much easier when the data model is shared. It also enables using <a href="http://jsonpatch.com/">JSON Patch</a> for incremental updates.</p>
+		<p>Lastly, I believe there is an inherent advantage to clients and servers sharing a common data interface as much as possible. Reflective input/output makes composing create and update statements from the client much easier when the data model is shared. It also enables using <a href="http://jsonpatch.com/?ref=JeremiahLee">JSON Patch</a> for incremental updates.</p>
 	</div>
 </div>
 
@@ -410,8 +410,8 @@ _This is an adaptation of my presentation at the Nordic APIs 2017 API Platform S
 		<img src="slide-82.png" loading="lazy" alt="" />
 	</div>
 	<div class="md:w-1/2">
-		<p>So that’s all for now. There are a <a href="http://jsonapi.org/format/#fetching-sorting">few</a> <a href="http://jsonapi.org/format/#fetching-filterin">other</a> <a href="http://jsonapi.org/format/upcoming/#document-links">features</a> that I didn’t have time to cover in this talk. There also is <a href="http://jsonapi.org/implementations/">great tooling available for every major app platform and framework</a>—if they want it. The best part is that clients can use a JSON API-based API without needing them.</p>
-		<p>Please go check out <a href="https://jsonapi.org/">JSON API</a>. Don’t hesitate to <a href="https://twitter.com/jeremiahlee">reach out on Twitter</a> if you have questions or create something cool with it.</p>
+		<p>So that’s all for now. There are a <a href="http://jsonapi.org/format/?ref=JeremiahLee#fetching-sorting">few</a> <a href="http://jsonapi.org/format/?ref=JeremiahLee#fetching-filterin">other</a> <a href="http://jsonapi.org/format/upcoming/?ref=JeremiahLee#document-links">features</a> that I didn’t have time to cover in this talk. There also is <a href="http://jsonapi.org/implementations/?ref=JeremiahLee">great tooling available for every major app platform and framework</a>—if they want it. The best part is that clients can use a JSON API-based API without needing them.</p>
+		<p>Please go check out <a href="https://jsonapi.org/?ref=JeremiahLee">JSON API</a>. Don’t hesitate to <a href="https://twitter.com/jeremiahlee">reach out on Twitter</a> if you have questions or create something cool with it.</p>
 	</div>
 </div>
 

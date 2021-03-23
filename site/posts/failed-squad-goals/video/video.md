@@ -6,7 +6,7 @@ excerptImage: video.jpg
 eleventyExcludeFromCollections: true
 ---
 
-Recording of my talk about practices at the <a href="https://www.leadingtheproduct.com/"><em>Leading the Product (Digital) 2020</em></a> conference on September 2, 2020. It was based on my article <a href="/posts/failed-squad-goals/"><em>Spotify’s Failed Squad Goals</em></a>.
+Recording of my talk about practices at the <a href="https://www.leadingtheproduct.com/?ref=JeremiahLee"><em>Leading the Product (Digital) 2020</em></a> conference on September 2, 2020. It was based on my article <a href="/posts/failed-squad-goals/"><em>Spotify’s Failed Squad Goals</em></a>.
 
 <iframe src="https://player.vimeo.com/video/464437708" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
