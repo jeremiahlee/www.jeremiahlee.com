@@ -86,14 +86,14 @@ I prefer 1Password over LastPass because of 1Password's architecture. 1Password 
 When I saw a label proclaiming a bright yellow sponge in a smiley face shape was "America's Favorite Sponge" in Sweden and named Scrub Daddy, I just had to buy it. Turns out, it's an incredible sponge and now this American's favorite.
 
 
-## Travel power strip: [Mogics Bagel](https://www.amazon.com/MOGICS-Bagel-White-Universal-Travel/dp/B01NH0B0X3/ref=as_li_ss_tl?linkCode=ll1&tag=onefzoof-20&linkId=16cd4fe677b8ef77575b4674894e6c42)
+## Travel power strip: [Mogics Bagel](https://www.amazon.com/MOGICS-Bagel-White-Universal-Travel/dp/B01NH0B0X3)
 
 The Mogics Bagel is a compact power strip with 4 univeral outlets and 2 USB ports. It can plug into UK, EU, AU, and US outlets. I have taken it all over the globe. The best way to make friends at an airport is to multiply the number of available power outlets.
 
 
 ## Web browser: [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/)
 
-[Mozilla Firefox](https://www.mozilla.org/en-US/firefox/) now is [faster than Chrome](https://www.wired.com/story/firefox-quantum-the-browser-built-for-2017/?mbid=social_twitter "Wired — Ciao, Chrome: Firefox Quantum Is The Browser Built for 2017"), while using less memory. [Firefox for iOS](https://www.mozilla.org/en-US/firefox/mobile/) has tab syncing and tab transfer that makes jumping between devices effortless. Also, [Mozilla is a non-profit](https://www.mozilla.org/en-US/mission/) organization dedicated to advancing the Internet as a global public resource, open and accessible to all. Unlike Google, Mozilla doesn't have an agenda to sell you out to advertisers.
+[Mozilla Firefox](https://www.mozilla.org/en-US/firefox/) now is [faster than Chrome](https://www.wired.com/story/firefox-quantum-the-browser-built-for-2017/ "Wired — Ciao, Chrome: Firefox Quantum Is The Browser Built for 2017"), while using less memory. [Firefox for iOS](https://www.mozilla.org/en-US/firefox/mobile/) has tab syncing and tab transfer that makes jumping between devices effortless. Also, [Mozilla is a non-profit](https://www.mozilla.org/en-US/mission/) organization dedicated to advancing the Internet as a global public resource, open and accessible to all. Unlike Google, Mozilla doesn't have an agenda to sell you out to advertisers.
 
 
 ## Web search: [DuckDuckGo](https://duckduckgo.com/)
@@ -101,9 +101,9 @@ The Mogics Bagel is a compact power strip with 4 univeral outlets and 2 USB port
 [DuckDuckGo](https://duckduckgo.com/) is a search engine that does not collect personal information. It does not track you or your search history. Therefore, it cannot share any such information with online advertisers or governments. Independent of its privacy-protecting architecture, DuckDuckGo is a good search engine. Google and Bing are still sometimes better, but I do all of my searches first with DuckDuckGo. If I don't get a strong result, I append `!g` or `!b` (called a ["bang"](https://duckduckgo.com/bang)) to get Bing or Google search results instead. I also frequently use `!w`, `!imdb`, and `!twitter` bangs for searching Wikipedia, IMDb, and Twitter quickly from the Firefox address bar.
 
 
-## Wi-Fi mesh network: [Netgear Orbi](https://www.amazon.com/dp/B01K4CZOBS//ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=jeremiahlee-20&linkId=9f6388c70a21fead739b3041c874c309)
+## Wi-Fi mesh network: [Netgear Orbi](https://www.netgear.com/home/wifi/mesh/tri-band/)
 
-Your Wi-Fi router should not require a cloud service to function. This detail for me is what separates [Netgear Orbi](https://www.amazon.com/dp/B01K4CZOBS//ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=jeremiahlee-20&linkId=9f6388c70a21fead739b3041c874c309) from Eero, Google Wifi, Luma, and Plume. A cloud service means reducing your local network's security and sometimes paying a monthly fee. [Netgear Orbi](https://www.amazon.com/dp/B01K4CZOBS//ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=jeremiahlee-20&linkId=9f6388c70a21fead739b3041c874c309) does not rely on a cloud service to operate and does not have a monthly fee. Orbi looks nice, functions well, and is often [the fastest in network speed tests](https://www.pcworld.com/article/3204644/network-router/eero-home-wifi-system-2-review-beacons-make-this-system-even-easier-to-install.html). I also like that the network satellites include ethernet, allowing network drives and devices connected to the same satellite to avoid wireless network communication.
+Your Wi-Fi router should not require a cloud service to function. This detail for me is what separates [Netgear Orbi](https://www.netgear.com/home/wifi/mesh/tri-band/) from Eero, Google Wifi, Luma, and Plume. A cloud service means reducing your local network's security and sometimes paying a monthly fee. [Netgear Orbi](https://www.netgear.com/home/wifi/mesh/tri-band/) does not rely on a cloud service to operate and does not have a monthly fee. Orbi looks nice, functions well, and is often [the fastest in network speed tests](https://www.pcworld.com/article/3204644/network-router/eero-home-wifi-system-2-review-beacons-make-this-system-even-easier-to-install.html). I also like that the network satellites include ethernet, allowing network drives and devices connected to the same satellite to avoid wireless network communication.
 
 
 #### Disclosure
