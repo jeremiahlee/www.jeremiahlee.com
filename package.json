@@ -3,16 +3,16 @@
     "dependencies": {},
     "description": "The website of Jeremiah Lee",
     "devDependencies": {
-        "@11ty/eleventy": "^0.11.1",
+        "@11ty/eleventy": "^0.12.1",
         "@11ty/eleventy-plugin-rss": "^1.1.0",
         "@fullhuman/postcss-purgecss": "^3.1.3",
         "@tailwindcss/typography": "^0.4.0",
         "autoprefixer": "^10.2.5",
         "cssnano": "^4.1.10",
         "moment": "^2.29.1",
-        "postcss": "^8.2.8",
+        "postcss": "^8.2.13",
         "postcss-cli": "^8.3.1",
-        "tailwindcss": "^2.0.3",
+        "tailwindcss": "^2.1.2",
         "tailwindcss-cli": "^0.1.2"
     },
     "keywords": [],
@@ -29,7 +29,9 @@
         "dev:spotify": "tailwindcss-cli build site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css --config site/posts/failed-squad-goals/tailwind.config.js",
         "build:spotify": "NODE_ENV=production tailwindcss-cli build site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css --config site/posts/failed-squad-goals/tailwind.config.js",
         "dev:burp": "tailwindcss-cli build site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css --config site/posts/last-burp-of-hope/tailwind.config.js",
-        "build:burp": "NODE_ENV=production tailwindcss-cli build site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css --config site/posts/last-burp-of-hope/tailwind.config.js"
+        "build:burp": "NODE_ENV=production tailwindcss-cli build site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css --config site/posts/last-burp-of-hope/tailwind.config.js",
+        "dev:raw": "cd site/posts/remote-async-work && NODE_ENV=development postcss remote-async-work.source.css -o remote-async-work.compiled.css -w",
+        "build:raw": "NODE_ENV=production tailwindcss-cli build site/posts/remote-async-work/remote-async-work.source.css -o site/posts/remote-async-work/remote-async-work.compiled.css --config site/posts/remote-async-work/tailwind.config.js"
     },
     "version": "4.0.0"
 }

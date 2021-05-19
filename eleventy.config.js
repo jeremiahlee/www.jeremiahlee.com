@@ -175,6 +175,7 @@ module.exports = function(eleventyConfig) {
             "njk",
             "png",
             "svg",
+            "ttf",
             "txt",
             "webmanifest",
             "webm",
