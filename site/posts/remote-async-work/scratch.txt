@@ -1,0 +1,44 @@
+css:
+  - ./last-burp-of-hope.compiled.css
+
+<li><a href="/posts/remote-async-work/practices/#scheduling">Scheduling</a></li>
+<li><a href="/posts/remote-async-work/practices/#intention">Declare an intention</a></li>
+<li><a href="/posts/remote-async-work/practices/#humanity">Acknowledge each others’ humanity</a></li>
+<li><a href="/posts/remote-async-work/practices/#post-meeting">Remember the time together</a></li>
+<li><a href="/posts/remote-async-work/practices/#agendaless-meetings">Agendaless meetings</a></li>
+<li><a href="/posts/remote-async-work/practices/#meeting-free-day">The Meeting Free Day Mistake</a></li>
+
+
+
+
+<ul>
+	<li><a href="/posts/remote-async-work/">Cover</a></li>
+	<li><a href="/posts/remote-async-work/uncanny-collaboration/">Uncanny collaboration</a></li>
+	<li><a href="/posts/remote-async-work/mindset/">Remote Asynchronous Work mindset</a></li>
+	<li><a href="/posts/remote-async-work/practices/">Async practices anyone can introduce</a></li>
+	<li><a href="/posts/remote-async-work/bonus/">Bonus content</a></li>
+	<li><a href="/posts/remote-async-work/epilogue/">Epilogue</a></li>
+</ul>
+
+
+<article>
+	<section class="spread pb-12">
+		<section class="verso h-screen flex justify-center items-center text-center sticky top-0">
+			<div>
+
+			</div>
+        </section>
+        <section class="recto">
+
+        </section>
+    </section>
+    <section class="spread">
+        <section class="verso">
+
+        </section>
+        <section class="recto">
+
+        </section>
+    </section>
+</article>
+
