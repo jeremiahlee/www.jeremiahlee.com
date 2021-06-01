@@ -7,7 +7,7 @@ excerpt: "My answers to a younger friend who later committed suicide."
 excerptImage: meaning-of-life-interview.jpg
 tags:
   - "posts"
-  - "interview"
+#   - "interview"
   - "journal"
 ---
 
