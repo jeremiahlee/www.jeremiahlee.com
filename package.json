@@ -15,6 +15,9 @@
         "tailwindcss": "^2.1.2",
         "tailwindcss-cli": "^0.1.2"
     },
+	"engines": {
+		"node": ">= 14.17.0"
+	},
     "keywords": [],
     "license": "UNLICENSED",
     "name": "www.jeremiahlee.com",
