@@ -12,3 +12,4 @@ layout: page-back.hbs
 <li>Twitter: <a href="https://twitter.com/jeremiahlee" rel="me">@JeremiahLee</a></li>
 </ul>
 
+<a href="https://www.getrevue.co/profile/jeremiahlee">Get email notifications of new content on my blog</a>

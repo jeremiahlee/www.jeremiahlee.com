@@ -7,12 +7,6 @@ title: "Developer Experience: The UX of APIs"
 <img src="/developer-experience/developer-experience-dx-logo.png" width="256" height="256" alt="Developer Experience (DX) logo" />
 <h1>Developer Experience: The UX of APIs</h1>
 
-<h3>Get notified when more DX stuff is available<br/><small>(my book, new research, and relevant resources)</small></h3>
-
-<form action="http://jeremiahlee.us5.list-manage.com/subscribe/post?u=9a50abb6382bd1fda4ebe34f5&amp;id=2b48e35c8e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <input class="border border-black p-4" type="email" value="" placeholder="Email address" name="EMAIL" id="mce-EMAIL"> <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="border border-black p-4">
-</form>
-
 <hr/>
 
 <iframe src="https://player.vimeo.com/video/95298306" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
