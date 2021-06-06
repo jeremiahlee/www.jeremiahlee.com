@@ -48,13 +48,14 @@ redirects.forEach(
 	}
 );
 
-fs.writeFile("./dist/vercel.json",
+fs.writeFile(
+	"./vercel.json",
 	JSON.stringify(nowConfig),
 	function (err) {
 		if (err) {
 			return console.log(err);
 		}
 
-		console.log("Writing ./dist/vercel.json");
+		console.log("Writing ./vercel.json");
 	}
 );
