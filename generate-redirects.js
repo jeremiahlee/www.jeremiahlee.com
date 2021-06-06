@@ -31,26 +31,20 @@ const redirects = [
 ];
 
 const nowConfig = {
-	version: 2,
+	redirects: [],
 	rewrites: [
 		{ "source": "/p/js/script.js", "destination": "https://plausible.io/js/plausible.outbound-links.js" },
 		{ "source": "/p/api/event", "destination": "https://plausible.io/api/event" }
 	],
-	routes: []
+	trailingSlash: true
 };
 
 redirects.forEach(
 	(redirect) => {
-		nowConfig.routes.push({
-			src: redirect[0],
-			status: 301,
-			headers: { "Location": redirect[1] }
-		});
-
-		nowConfig.routes.push({
-			src: redirect[0].slice(0, -1),
-			status: 301,
-			headers: { "Location": redirect[1] }
+		nowConfig.redirects.push({
+			source: redirect[0],
+			destination: redirect[1],
+			permanent: true
 		});
 	}
 );
