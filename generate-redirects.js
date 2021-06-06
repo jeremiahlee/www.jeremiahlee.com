@@ -35,8 +35,7 @@ const nowConfig = {
 	rewrites: [
 		{ "source": "/p/js/script.js", "destination": "https://plausible.io/js/plausible.outbound-links.js" },
 		{ "source": "/p/api/event", "destination": "https://plausible.io/api/event" }
-	],
-	trailingSlash: true
+	]
 };
 
 redirects.forEach(
@@ -56,6 +55,6 @@ fs.writeFile("./dist/vercel.json",
 			return console.log(err);
 		}
 
-		console.log("The file was saved!");
+		console.log("Writing ./dist/vercel.json");
 	}
 );

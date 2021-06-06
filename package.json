@@ -23,7 +23,7 @@
     "name": "www.jeremiahlee.com",
     "private": true,
     "scripts": {
-        "build": "npm run build:html && npm run build:css && npm run build:redirects",
+        "build": "npm run build:redirects && npm run build:html && npm run build:css",
         "build:css": "NODE_ENV=production tailwindcss-cli build css/style.css -o dist/soul-class-style-badass.css --config tailwind.config.js",
         "build:html": "eleventy --config=eleventy.config.js",
         "build:redirects": "node generate-redirects.js",
