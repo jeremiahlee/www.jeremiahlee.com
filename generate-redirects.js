@@ -30,11 +30,12 @@ const redirects = [
 	["/posts/failed-squad-goals", "/posts/failed-squad-goals/"]
 ];
 
+// https://github.com/easylist/easylist/commit/449d1e19a774132c66e53dad73a642de434b8dc7
 const nowConfig = {
 	redirects: [],
 	rewrites: [
-		{ "source": "/p/js/script.js", "destination": "https://plausible.io/js/plausible.outbound-links.js" },
-		{ "source": "/p/api/event", "destination": "https://plausible.io/api/event" }
+		{ "source": "/fanboynz.js", "destination": "https://plausible.io/js/plausible.outbound-links.js" },
+		{ "source": "/fanboynz-event", "destination": "https://plausible.io/api/event" }
 	]
 };
 
