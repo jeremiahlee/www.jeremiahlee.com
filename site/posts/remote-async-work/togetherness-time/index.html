@@ -43,7 +43,7 @@ tags:
 		</ul>
 
 		<h2 class="font-black my-4 text-center text-3xl">40 Questions</h2>
-		<p>40 questions in 20 minutes (because it’s a 25 minute meeting) is inspired by <a
+		<p>40 questions in 20 minutes (because it’s <a href="/posts/remote-async-work/practices/#sacred-meetings">a 25 minute meeting</a>) is inspired by <a
 				href="https://www.vogue.com/video/series/73-questions" target="_blank" rel="noopener">Vogue’s <em>73 Questions</em></a>. The interviewee has 30 seconds to answer each question.</p>
 		<p>Here are some example questions:</p>
 		<ol class="list-decimal list-outside ml-8">
@@ -171,13 +171,21 @@ tags:
 </footer>
 
 <script>
+	function showContent() {
+		document.getElementById("exclusive").classList.remove("hidden");
+		document.getElementById("pitch").classList.add("hidden");
+	}
+
 	if (document.monetization) {
 		document.monetization.addEventListener(
 			"monetizationstart",
-			() => {
-				document.getElementById("exclusive").classList.remove("hidden");
-				document.getElementById("pitch").classList.add("hidden");
-			}
+			showContent
 		);
-    }
+    } else {
+		const urlParameters = new URLSearchParams(document.location.search.substring(1));
+		const accessCode = urlParameters.get("accessCode");
+		if (accessCode === "ViaReal") {
+			showContent();
+		}
+	}
 </script>
