@@ -156,6 +156,7 @@ module.exports = function(eleventyConfig) {
     );
 
     eleventyConfig.addPassthroughCopy("scripts");
+	eleventyConfig.addPassthroughCopy("site/_redirects");
 
     eleventyConfig.addPlugin(pluginRss);
 
