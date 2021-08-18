@@ -96,7 +96,7 @@ module.exports = function(eleventyConfig) {
                 if (
                     post.data.tags.includes("featured") ||
                     post.data.tags.includes("conferenceTalk") ||
-                    post.data.tags.includes("interview")
+                    post.data.tags.includes("featuredInterview")
                 ) {
                     continue;
                 }
