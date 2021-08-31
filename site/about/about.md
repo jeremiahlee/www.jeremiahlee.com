@@ -5,7 +5,7 @@ title: About Jeremiah Lee
 
 # Hi, I'm Jeremiah.
 
-<p>I’m a Californian living in Stockholm, Sverige (Sweden). I have worked for InVision, Spotify, Fitbit, Disney, Apple, and a bunch of failed startups. I currently work for <a href="https://stripe.com/">Stripe</a> helping to increase the <abbr title="gross domestic product">GDP</a> of the Internet.</p>
+<p>I’m a Californian living in Stockholm, Sverige (Sweden). I have worked for InVision, Spotify, Fitbit, Disney, Apple, and a bunch of failed startups. I currently work for <a href="https://stripe.com/">Stripe</a> helping to increase the <abbr title="gross domestic product">GDP</abbr> of the Internet.</p>
 
 ## Tidbits
 
