@@ -3,18 +3,21 @@ date: 2017-04-18T11:24:00+02:00
 excerpt: "I’ve spoken at over 15 conferences on 4 contents about Web APIs, UX, and software engineering."
 layout: page-back.hbs
 title: Jeremiah Lee’s speaking engagements
-updated: 2020-10-14T08:00:00+02:00
+updated: 2021-09-09T17:45:00+02:00
 ---
 
 # Speaking
 
-Over 15 conferences on four continents have invited me to speak about software engineering, product management, business strategy, and [developer experience](/developer-experience/) of Web APIs. I've done 20–40 minute talks, in-depth workshops, and keynotes.
+Over 20 conferences on four continents have invited me to speak about software engineering, product management, business strategy, and [developer experience](/developer-experience/) of Web APIs. I've done 20–40 minute talks, in-depth workshops, and keynotes.
 
 
 ## Want to have me talk at your event?
 
 <a href="/contact/">Contact me</a>
 
+## Upcoming events
+
+- October 26–27, 2021: [IT Workplace of Tomorrow](https://itworkplace.letsmanageit.pl/) - RAW: Remote Async Work
 
 ## Previous engagements
 
