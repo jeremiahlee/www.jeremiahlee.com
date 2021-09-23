@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <title>{{title}}</title>
+    <link rel="canonical" href="https://www.jeremiahlee.com{{ page.url }}"/>
+{{> partial-css }}
+{{#if excerpt}}
+    <meta name="description" content="{{ excerpt }}"/>
+    <meta name="author" content="Jeremiah Lee"/>
+    <meta name="published_date" content="{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:creator" content="@JeremiahLee" />
+    <meta name="twitter:title" content="{{ title }}"/>
+    <meta name="twitter:description" content="{{ excerpt }}"/>
+    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:description" content="{{ excerpt }}"/>
+    {{#if excerptImage}}
+    <meta name="twitter:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"/>
+    <meta property="og:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"/>
+    {{/if}}
+{{/if}}
+{{> partial-head }}
+</head>
+<body class="lg:p-0">
+    <div class="absolute left-0 top-0 bg-purple text-white mt-4 p-2 z-20"><a href="/posts/" class="no-underline">←︎ Writing</a></div>
+
+{{{ content }}}
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Article",
+    "headline": "{{title}}",
+    "description": "{{ excerpt }}",
+    "author": {
+        "@type": "Person",
+        "name": "Jeremiah Lee"
+    },
+    "datePublished": "{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}",
+{{#if updated}}
+    "dateModified": "{{moment updated 'YYYY-MM-DDTHH:mm:ssZZ'}}",
+{{else}}
+    "dateModified": "{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}",
+{{/if}}
+{{#if excerptImage}}
+    "image": [
+        "https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"
+    ],
+{{/if}}
+    "copyrightYear": {{moment date 'YYYY'}}
+}
+</script>
+
+</body>
+</html>

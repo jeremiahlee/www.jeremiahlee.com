@@ -1,0 +1,55 @@
+@tailwind base;
+
+body {
+	@apply text-lg;
+	@apply font-sans;
+}
+
+h1, h2, h3, p, li {
+	@apply mb-4;
+}
+
+a {
+	@apply underline;
+}
+
+sup a {
+	@apply no-underline;
+	opacity: .5;
+	font-size: .8em;
+}
+sup a:hover {
+	@apply underline;
+}
+
+.bg-purple {
+	background-color: #6B33A4;
+}
+
+abbr[title] {
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+	text-decoration-color: rgba(0,0,0, .1);
+}
+
+/* Grid utilities */
+
+/* Custom base styles start */
+/* Small, Medium, Large breakpoints */
+@screen sm {
+}
+
+@screen md {
+}
+
+@screen lg {
+	.spread {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		box-sizing: border-box;
+	}
+}
+
+/* Custom base styles must come before components and utilities to avoid specificity issues */
+@tailwind components;
+@tailwind utilities;
