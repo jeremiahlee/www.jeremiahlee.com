@@ -25,3 +25,9 @@ To exclude a post from the collection, add this to the front matter:
 
 
 ?ref=JeremiahLee
+
+
+`tailwindcss-cli -i ./site/posts/lgbtq-erg/lgbtq-erg.source.css -o ./site/posts/lgbtq-erg/lgbtq-erg.compiled.css --config ./site/posts/lgbtq-erg/tailwind.config.js -w`
+
+
+tailwindcss-cli -i INPUT.css -o OUTPUT.css --config PATH/tailwind.config.js
