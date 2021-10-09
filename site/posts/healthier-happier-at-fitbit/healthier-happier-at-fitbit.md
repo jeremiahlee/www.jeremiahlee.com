@@ -13,7 +13,7 @@ I’m elated to announce that I will be joining [Fitbit](https://www.fitbit.com/
 
 <img src="re-sovo-lution-at-fitbit.png" alt="Fitbit Revolution" width="640" height="360" />
 
-My [CV](https://www.linkedin.com/in/jeremiahlee415) confuses some people. Software engineering without a computer science degree. Director of product after being an engineer. Graphic design awards? Articles, conference talks, and tweets about UX?? I have a good narrative to weave these together once I’m in an interview, but I&#8217;ve recently learned that every detail I had to explain on my CV worked against me when trying to get that first interview.<sup><a href="#footnote-2">2</a></sup>
+My [CV](https://www.linkedin.com/in/jeremiah-x-lee/) confuses some people. Software engineering without a computer science degree. Director of product after being an engineer. Graphic design awards? Articles, conference talks, and tweets about UX?? I have a good narrative to weave these together once I’m in an interview, but I&#8217;ve recently learned that every detail I had to explain on my CV worked against me when trying to get that first interview.<sup><a href="#footnote-2">2</a></sup>
 
 Fitbit _could_ have just offered me the front-end software engineer position that I applied for. Instead, they researched me and explored my passion for web service API design and developer experience. This speaks highly of their hiring process and the team leadership.
 
