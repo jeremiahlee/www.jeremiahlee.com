@@ -34,8 +34,8 @@ const redirects = [
 const nowConfig = {
 	redirects: [],
 	rewrites: [
-		{ "source": "/fanboynz.js", "destination": "https://plausible.io/js/plausible.outbound-links.js" },
-		{ "source": "/fanboynz-event", "destination": "https://plausible.io/api/event" }
+		{ "source": "/ryanbr.js", "destination": "https://plausible.io/js/plausible.outbound-links.js" },
+		{ "source": "/ryanbr-event", "destination": "https://plausible.io/api/event" }
 	]
 };
 
