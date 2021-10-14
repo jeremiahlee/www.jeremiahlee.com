@@ -37,20 +37,12 @@ const nowConfig = {
 			"source": "/(.*)",
 			"headers" : [
 				{
-					"key" : "X-Content-Type-Options",
-					"value" : "nosniff"
-				},
-				{
 					"key" : "X-Frame-Options",
 					"value" : "DENY"
 				},
 				{
-					"key" : "Strict-Transport-Security",
-					"value" : "max-age=15768000; includeSubDomains; preload;"
-				},
-				{
 					"key" : "Content-Security-Policy",
-					"value" : "form-action 'self' api.jeremiahlee.com; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' hcaptcha.com newassets.hcaptcha.com platform.twitter.com www.instagram.com; report-uri https://9d7aca2d869f1b1babd325b9430f2467.report-uri.com/r/d/csp/enforce"
+					"value" : "form-action 'self' https://api.jeremiahlee.com; frame-ancestors 'none'; frame-src https://hcaptcha.com https://*.hcaptcha.com https://player.vimeo.com https://cinnamon.video https://embed.ted.com https://www.youtube-nocookie.com; object-src 'none'; script-src 'self' https://hcaptcha.com https://*.hcaptcha.com https://platform.twitter.com https://www.instagram.com; style-src 'self' https://hcaptcha.com https://*.hcaptcha.com; report-uri https://9d7aca2d869f1b1babd325b9430f2467.report-uri.com/r/d/csp/enforce"
 				}
 			]
 		}
