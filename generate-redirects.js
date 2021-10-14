@@ -32,6 +32,29 @@ const redirects = [
 
 // https://github.com/easylist/easylist/commit/449d1e19a774132c66e53dad73a642de434b8dc7
 const nowConfig = {
+	headers: [
+		{
+			"source": "/(.*)",
+			"headers" : [
+				{
+					"key" : "X-Content-Type-Options",
+					"value" : "nosniff"
+				},
+				{
+					"key" : "X-Frame-Options",
+					"value" : "DENY"
+				},
+				{
+					"key" : "Strict-Transport-Security",
+					"value" : "max-age=63072000; includeSubDomains; preload;"
+				},
+				{
+					"key" : "Content-Security-Policy-Report-Only",
+					"value" : "form-action 'self' api.jeremiahlee.com; frame-ancestors 'none'; script-src 'self' hcaptcha.com platform.twitter.com www.instagram.com; report-uri https://9d7aca2d869f1b1babd325b9430f2467.report-uri.com/r/d/csp/reportOnly"
+				}
+			]
+		}
+	],
 	redirects: [],
 	rewrites: [
 		{ "source": "/ryanbr.js", "destination": "https://plausible.io/js/plausible.outbound-links.js" },
