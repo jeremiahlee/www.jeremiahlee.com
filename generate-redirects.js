@@ -50,7 +50,7 @@ const nowConfig = {
 				},
 				{
 					"key" : "Content-Security-Policy-Report-Only",
-					"value" : "form-action 'self' api.jeremiahlee.com; frame-ancestors 'none'; script-src 'self' hcaptcha.com platform.twitter.com www.instagram.com; report-uri https://9d7aca2d869f1b1babd325b9430f2467.report-uri.com/r/d/csp/reportOnly"
+					"value" : "form-action 'self' api.jeremiahlee.com; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' hcaptcha.com platform.twitter.com www.instagram.com; report-uri https://9d7aca2d869f1b1babd325b9430f2467.report-uri.com/r/d/csp/reportOnly"
 				}
 			]
 		}
