@@ -46,11 +46,11 @@ const nowConfig = {
 				},
 				{
 					"key" : "Strict-Transport-Security",
-					"value" : "max-age=63072000; includeSubDomains; preload;"
+					"value" : "max-age=15768000; includeSubDomains; preload;"
 				},
 				{
-					"key" : "Content-Security-Policy-Report-Only",
-					"value" : "form-action 'self' api.jeremiahlee.com; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' hcaptcha.com newassets.hcaptcha.com platform.twitter.com www.instagram.com; report-uri https://9d7aca2d869f1b1babd325b9430f2467.report-uri.com/r/d/csp/reportOnly"
+					"key" : "Content-Security-Policy",
+					"value" : "form-action 'self' api.jeremiahlee.com; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' hcaptcha.com newassets.hcaptcha.com platform.twitter.com www.instagram.com; report-uri https://9d7aca2d869f1b1babd325b9430f2467.report-uri.com/r/d/csp/enforce"
 				}
 			]
 		}
