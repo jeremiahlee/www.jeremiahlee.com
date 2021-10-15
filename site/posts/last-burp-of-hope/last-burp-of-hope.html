@@ -10,6 +10,8 @@ tags:
   - "posts"
 #  - "featured"
   - "politics"
+script:
+  - "/posts/last-burp-of-hope/last-burp-of-hope.js"
 ---
 
 <article>
@@ -205,15 +207,3 @@ tags:
 <div class="text-center py-10">
     <a class="p-4 text-3xl bg-blue text-white" href="/posts/">More of my writing</a>
 </div>
-
-<script type="text/javascript">
-    // Thank people who pay
-    if (document.monetization) {
-        document.monetization.addEventListener(
-            "monetizationstart",
-            () => {
-                document.getElementById("coil-pitch").innerHTML = `<strong>Thank you for supporting creators like me through your <a href="https://webmonetization.org/">Web Monetization</a> subscription!<strong>`;
-            }
-        );
-    }
-</script>

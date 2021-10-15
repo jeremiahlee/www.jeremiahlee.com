@@ -156,6 +156,7 @@ module.exports = function(eleventyConfig) {
     );
 
     eleventyConfig.addPassthroughCopy("scripts");
+	eleventyConfig.addPassthroughCopy("site/**/*.js");
 	eleventyConfig.addPassthroughCopy("site/_redirects");
 
     eleventyConfig.addPlugin(pluginRss);
@@ -165,7 +166,6 @@ module.exports = function(eleventyConfig) {
             "css",
             "hbs",
             "html",
-            "js",
             "json",
             "jpg",
             "m4v",

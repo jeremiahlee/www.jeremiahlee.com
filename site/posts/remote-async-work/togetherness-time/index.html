@@ -10,6 +10,8 @@ monetized: true
 tags:
   - "posts"
   - "remote work"
+script:
+  - "/posts/remote-async-work/togetherness-time/togetherness-time.js"
 ---
 
 <article>
@@ -169,23 +171,3 @@ tags:
 	<div class="bg-red-300 xl:block xl:col-start-5 xl:col-end-6 row-start-8 row-end-9 hidden"></div>
 	<div class="md:block md:col-start-6 md:col-end-7 hidden md:row-start-7 md:row-end-10"><img class="h-full w-full" alt="right arrow" src="/posts/remote-async-work/arrow-right.svg" width="80" height="100"/></div>
 </footer>
-
-<script>
-	function showContent() {
-		document.getElementById("exclusive").classList.remove("hidden");
-		document.getElementById("pitch").classList.add("hidden");
-	}
-
-	if (document.monetization) {
-		document.monetization.addEventListener(
-			"monetizationstart",
-			showContent
-		);
-    } else {
-		const urlParameters = new URLSearchParams(document.location.search.substring(1));
-		const accessCode = urlParameters.get("accessCode");
-		if (accessCode === "ViaReal") {
-			showContent();
-		}
-	}
-</script>

@@ -4,6 +4,8 @@ layout: index.hbs
 permalink: "404.html"
 css:
   - default
+script:
+  - "/404.js"
 ---
 
 <h1 class="text-red-600">That page seems to be missing</h1>
@@ -20,16 +22,3 @@ css:
 <li><a href="/speaking/">Speaking</a></li>
 <li><a href="/contact/">Contact</a></li>
 </ul>
-
-<script>
-window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };
-
-plausible(
-    "404",
-    {
-        props: {
-            path: document.location.pathname
-        }
-    }
-);
-</script>

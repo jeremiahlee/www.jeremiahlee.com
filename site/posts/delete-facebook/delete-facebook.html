@@ -11,6 +11,8 @@ tags:
   - "posts"
   - "featured"
   - "social media"
+script:
+  - "/posts/delete-facebook/delete-facebook.js"
 ---
 
 <div class="md:absolute md:left-0 md:top-0 md:bg-white md:mt-4 p-2 md:z-20"><a href="/posts/" class="no-underline">←︎ Writing</a></div>
@@ -359,26 +361,3 @@ tags:
         <p class="leading-6 flex-auto text-gray-600 text-sm m-0"><img class="inline" src="like.svg" alt="Like icon" width="18" height="18" /> Lawrence Lessig</p>
     </div>
 </div>
-
-<script>
-const form = document.getElementById("contactCardForm");
-
-form.addEventListener(
-    "submit",
-    function gracefullySubmitForm(event) {
-        fetch(
-            event.target.action,
-            {
-                method: "POST",
-                body: new URLSearchParams([...(new FormData(form))])
-            }
-        ).then((response) => {
-            alert("Thanks! I will email you my updated contact card.");
-        }).catch((error) => {
-            alert(error);
-        });
-
-        event.preventDefault();
-    }
-);
-</script>

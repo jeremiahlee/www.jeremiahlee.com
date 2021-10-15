@@ -1,18 +1,20 @@
 ---
-date: 2020-04-19T08:00:00+01:00
+date: "2020-04-19T08:00:00+01:00"
 excerpt: "“The Spotify model” got a bunch of companies talking like Taylor Swift about startup culture, but four former Spotify employees reveal the truth: its eponymous way of working failed before it scaled."
 title: "Spotify’s Failed #SquadGoals"
 headline: "Failed #SquadGoals"
 subheadline: "Spotify doesn’t use “the Spotify model” and neither should you."
-excerptImage: preview-card-wide.jpg
-excerptImageSquare: preview-card-square.jpg
-layout: failed-squad-goals.hbs
+excerptImage: "preview-card-wide.jpg"
+excerptImageSquare: "preview-card-square.jpg"
+layout: "failed-squad-goals.hbs"
 css:
-  - /posts/failed-squad-goals/failed-squad-goals.compiled.css
+  - "/posts/failed-squad-goals/failed-squad-goals.compiled.css"
 tags:
   - "posts"
   - "featured"
   - "management"
+script:
+  - "/posts/failed-squad-goals/failed-squad-goals.js"
 ---
 
 <!-- Spread 1 -->
@@ -298,24 +300,3 @@ tags:
 </div>
 </section>
 </section>
-
-<script type="text/javascript">
-// Turn the vidoes into still images for people who prefer reduced motion
-if (matchMedia("(prefers-reduced-motion: reduce)").matches === true) {
-    document.querySelectorAll("video").forEach(
-        (video) => {
-            video.pause();
-        }
-    );
-}
-
-// Thank people who pay
-if (document.monetization) {
-    document.monetization.addEventListener(
-        "monetizationstart",
-        () => {
-            document.getElementById("coil-pitch").innerHTML = `<strong>Thank you for supporting creators like me through your <a href="https://webmonetization.org/">Web Monetization</a> subscription!<strong>`;
-        }
-    );
-}
-</script>
