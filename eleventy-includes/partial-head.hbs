@@ -10,10 +10,10 @@
 	<link rel="alternate" type="application/json" title="JSON Feed" href="/feeds/jsonfeed.json"/>
 	<link rel="alternate" type="application/atom+xml" title="Atom RSS" href="/feeds/atom.xml"/>
 	<meta name="referrer" content="no-referrer-when-downgrade"/>
-	<script data-domain="jeremiahlee.com" data-api="/ryanbr-event" src="/ryanbr.js"></script>
-	<script src="/scripts/web-monetization-goal-conversion.js"></script>
+	<script defer data-domain="jeremiahlee.com" data-api="/ryanbr-event" src="/ryanbr.js"></script>
+	<script defer src="/scripts/web-monetization-goal-conversion.js"></script>
 {{#if script}}
 	{{#each script}}
-	<script src="{{this}}"></script>
+	<script defer src="{{this}}"></script>
 	{{/each}}
 {{/if}}
