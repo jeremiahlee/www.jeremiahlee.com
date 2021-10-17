@@ -42,7 +42,7 @@ const nowConfig = {
 				},
 				{
 					"key" : "Content-Security-Policy",
-					"value" : "default-src 'none'; base-uri 'none'; form-action 'self' https://api.jeremiahlee.com; frame-ancestors 'none'; frame-src https://hcaptcha.com https://*.hcaptcha.com https://player.vimeo.com https://cinnamon.video https://embed.ted.com https://www.instagram.com/ https://platform.twitter.com/ https://www.youtube-nocookie.com; object-src 'none'; script-src 'self' 'unsafe-inline' https://plausible.io https://hcaptcha.com https://*.hcaptcha.com https://platform.twitter.com https://www.instagram.com; style-src 'self' https://hcaptcha.com https://*.hcaptcha.com; report-uri https://9d7aca2d869f1b1babd325b9430f2467.report-uri.com/r/d/csp/enforce"
+					"value" : "base-uri 'none'; form-action 'self' https://api.jeremiahlee.com; frame-ancestors 'none'; frame-src https://hcaptcha.com https://*.hcaptcha.com https://player.vimeo.com https://cinnamon.video https://embed.ted.com https://www.instagram.com/ https://platform.twitter.com/ https://www.youtube-nocookie.com; object-src 'none'; script-src 'self' 'unsafe-inline' https://plausible.io https://hcaptcha.com https://*.hcaptcha.com https://platform.twitter.com https://www.instagram.com; style-src 'self' https://hcaptcha.com https://*.hcaptcha.com; report-uri https://9d7aca2d869f1b1babd325b9430f2467.report-uri.com/r/d/csp/enforce"
 				}
 			]
 		}
