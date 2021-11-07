@@ -26,8 +26,8 @@ const redirects = [
 	["/blog/2007/05/13/evvy-26/", "/posts/evvy-26/"],
 	["/blog/2005/07/30/explicitly-me/", "/posts/explicitly-me/"],
 	["/blog/2003/05/10/mom-monologue/", "/posts/mom-monologue/"],
-	["/rsvp", "https://jeremiahlee.typeform.com/to/xLt07lui"],
-	["/rsvp/", "https://jeremiahlee.typeform.com/to/xLt07lui"],
+	// ["/rsvp", "https://jeremiahlee.typeform.com/to/xLt07lui"],
+	// ["/rsvp/", "https://jeremiahlee.typeform.com/to/xLt07lui"],
 	["/posts/failed-squad-goals", "/posts/failed-squad-goals/"]
 ];
 
@@ -43,7 +43,7 @@ const nowConfig = {
 				},
 				{
 					"key" : "Content-Security-Policy",
-					"value" : "base-uri 'none'; form-action 'self' https://api.jeremiahlee.com; frame-ancestors 'none'; frame-src https://hcaptcha.com https://*.hcaptcha.com https://player.vimeo.com https://cinnamon.video https://embed.ted.com https://www.instagram.com/ https://platform.twitter.com/ https://www.youtube-nocookie.com; object-src 'none'; script-src 'self' 'unsafe-inline' https://plausible.io https://hcaptcha.com https://*.hcaptcha.com https://platform.twitter.com https://www.instagram.com; style-src 'self' https://hcaptcha.com https://*.hcaptcha.com; report-uri https://9d7aca2d869f1b1babd325b9430f2467.report-uri.com/r/d/csp/enforce"
+					"value" : "base-uri 'none'; form-action 'self' https://api.jeremiahlee.com; frame-ancestors 'none'; frame-src https://*.typeform.com/ https://hcaptcha.com https://*.hcaptcha.com https://player.vimeo.com https://cinnamon.video https://embed.ted.com https://www.instagram.com/ https://platform.twitter.com/ https://www.youtube-nocookie.com; object-src 'none'; script-src 'self' 'unsafe-inline' https://embed.typeform.com https://plausible.io https://hcaptcha.com https://*.hcaptcha.com https://platform.twitter.com https://www.instagram.com; style-src 'self' https://*.typeform.com https://hcaptcha.com https://*.hcaptcha.com; report-uri https://9d7aca2d869f1b1babd325b9430f2467.report-uri.com/r/d/csp/enforce"
 				}
 			]
 		}
