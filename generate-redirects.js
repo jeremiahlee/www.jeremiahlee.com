@@ -26,7 +26,8 @@ const redirects = [
 	["/blog/2007/05/13/evvy-26/", "/posts/evvy-26/"],
 	["/blog/2005/07/30/explicitly-me/", "/posts/explicitly-me/"],
 	["/blog/2003/05/10/mom-monologue/", "/posts/mom-monologue/"],
-	["/rsvp/", "https://jeremiahlee.typeform.com/to/tsZCL1"],
+	["/rsvp", "https://jeremiahlee.typeform.com/to/xLt07lui"],
+	["/rsvp/", "https://jeremiahlee.typeform.com/to/xLt07lui"],
 	["/posts/failed-squad-goals", "/posts/failed-squad-goals/"]
 ];
 
