@@ -7,15 +7,12 @@ css:
     - /index/style.css
 ---
 
-<h1 class="my-4 leading-tight text-4xl">Hi, I’m Jeremiah.</h1>
-
-<p class="mb-4">I’m a Californian living in Stockholm, Sverige. <a href="/about/" class="italic">More...</a>
+<h1 class="my-4 leading-tight text-4xl">Hi, I’m <a href="/about/">Jeremiah</a>.</h1>
 
 <ul class="list-outside list-disc mb-4 ml-4">
-<li><a href="/now/">Now</a></li>
+<li><a href="/now/">Now</a> & <a href="/then/">Then</a></li>
 <li><a href="/posts/">Writing</a></li>
 <li><a href="/projects/">Projects</a></li>
-<li><a href="/best-for-me/"><em>Best for me</em>, a series on products I love</a></li>
 <li><a href="/speaking/">Speaking</a></li>
 <li><a href="/contact/">Contact</a></li>
 </ul>

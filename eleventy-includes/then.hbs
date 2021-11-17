@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Then — Jeremiah Lee</title>
+	<meta name="description" content="Past /now page updates" />
+{{> partial-css }}
+	<meta name="author" content="Jeremiah Lee"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:creator" content="@JeremiahLee" />
+	<meta name="twitter:title" content="Then — Jeremiah Lee"/>
+	<meta name="twitter:description" content="Past /now page updates"/>
+	<meta property="og:title" content="{{ collections.mostRecentNowPost.data.title }}"/>
+	<meta property="og:description" content="Past /now page updates"/>
+	<meta name="twitter:image" content="https://www.jeremiahlee.com/now/now.jpg"/>
+	<meta property="og:image" content="https://www.jeremiahlee.com/now/now.jpg"/>
+{{> partial-head }}
+</head>
+
+<body>
+
+<nav><a class="md:absolute md:left-0 md:top-0 md:bg-purple-100 md:mt-4 p-2 md:z-20 text-purple-800" href="/" title="Home">←︎ Home</a></nav>
+
+<div class="relative py-16">
+	<div class="relative px-4 sm:px-6 lg:px-8">
+		<header class="text-lg max-w-prose mx-auto">
+			<h1 class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl" property="headline">What I Was Up To Then</h1>
+			<p class="text-center text-sm text-gray-500">/now page archive</p>
+		</header>
+		<div class="mt-6 prose prose-purple prose-lg text-gray-700 mx-auto">
+			<ul>
+{{#each (reverseArray collections.nowPageUpdates)}}
+				<li><a href="{{this.url}}">{{moment this.data.date 'YYYY-MM-DD'}}</a></li>
+{{/each}}
+			</ul>
+		</div>
+	</div>
+</div>
+
+<footer class="prose prose-lg mx-auto text-center">
+	<div class="prose-sm">
+		<hr />
+		<p>Thanks to Derek Sivers for the <a href="http://nownownow.com/about">/now page</a> idea.</p>
+	</div>
+</footer>
+
+</body>
+</html>

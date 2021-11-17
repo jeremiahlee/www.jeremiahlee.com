@@ -3,194 +3,202 @@ const defaultCssPath = "/soul-class-style-badass.css";
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addCollection(
-        "mostRecentNowPost",
-        function(collection) {
-            const postsTaggedNow = collection.getFilteredByTag("now");
-            const mostRecentPostTaggedNow = postsTaggedNow[postsTaggedNow.length - 1];
-            return mostRecentPostTaggedNow;
-        }
-    );
+	eleventyConfig.addCollection(
+		"mostRecentNowPost",
+		function(collection) {
+			const postsTaggedNow = collection.getFilteredByTag("now");
+			const mostRecentPostTaggedNow = postsTaggedNow[postsTaggedNow.length - 1];
+			return mostRecentPostTaggedNow;
+		}
+	);
 
-    eleventyConfig.addCollection(
-        "atomFeed",
-        function(collection) {
-            const postsTaggedBlog = collection.getFilteredByTag("posts");
+	eleventyConfig.addCollection(
+		"nowPageUpdates",
+		function(collection) {
+			const postsTaggedNow = collection.getFilteredByTag("now");
+			return postsTaggedNow;
+		}
+	);
 
-            const postsTaggedNow = collection.getFilteredByTag("now");
+	eleventyConfig.addCollection(
+		"atomFeed",
+		function(collection) {
+			const postsTaggedBlog = collection.getFilteredByTag("posts");
 
-            postsTaggedBlog.push(postsTaggedNow[postsTaggedNow.length - 1]);
+			const postsTaggedNow = collection.getFilteredByTag("now");
 
-            return postsTaggedBlog;
-        }
-    );
+			postsTaggedBlog.push(postsTaggedNow[postsTaggedNow.length - 1]);
 
-    // Like blogPostsByYear only excluding any featured/interviews/conference talks
-    eleventyConfig.addCollection(
-        "blogPostsByYear",
-        function(collection) {
-            /*
-                We assume collection.getFilteredByTag is sorted date ascending.
+			return postsTaggedBlog;
+		}
+	);
 
-                Return an array of objects containing `year` and `data` array of posts
-                sorted descending, example:
-                [
-                    {
-                        year: 1984,
-                        data: [
-                            posts here
-                        ]
-                    }, ...
-                ]
-            */
+	// Like blogPostsByYear only excluding any featured/interviews/conference talks
+	eleventyConfig.addCollection(
+		"blogPostsByYear",
+		function(collection) {
+			/*
+				We assume collection.getFilteredByTag is sorted date ascending.
 
-            const postsTaggedBlog = collection.getFilteredByTag("posts");
+				Return an array of objects containing `year` and `data` array of posts
+				sorted descending, example:
+				[
+					{
+						year: 1984,
+						data: [
+							posts here
+						]
+					}, ...
+				]
+			*/
 
-            const newCollection = [];
+			const postsTaggedBlog = collection.getFilteredByTag("posts");
 
-            let currentPostYearInCollection;
+			const newCollection = [];
 
-            for (let post of postsTaggedBlog) {
-                const postYear = new Date(post.date).getUTCFullYear();
+			let currentPostYearInCollection;
 
-                if (postYear !== currentPostYearInCollection) {
-                    newCollection.unshift({
-                        year: postYear,
-                        data: []
-                    });
-                    currentPostYearInCollection = postYear;
-                }
+			for (let post of postsTaggedBlog) {
+				const postYear = new Date(post.date).getUTCFullYear();
 
-                newCollection[0].data.unshift(post);
-            }
+				if (postYear !== currentPostYearInCollection) {
+					newCollection.unshift({
+						year: postYear,
+						data: []
+					});
+					currentPostYearInCollection = postYear;
+				}
 
-            return newCollection;
-        }
-    );
+				newCollection[0].data.unshift(post);
+			}
 
-    eleventyConfig.addCollection(
-        "otherPostsByYear",
-        function(collection) {
-            /*
-                We assume collection.getFilteredByTag is sorted date ascending.
+			return newCollection;
+		}
+	);
 
-                Return an array of objects containing `year` and `data` array of posts
-                sorted descending, example:
-                [
-                    {
-                        year: 1984,
-                        data: [
-                            posts here
-                        ]
-                    }, ...
-                ]
-            */
+	eleventyConfig.addCollection(
+		"otherPostsByYear",
+		function(collection) {
+			/*
+				We assume collection.getFilteredByTag is sorted date ascending.
 
-            const postsTaggedBlog = collection.getFilteredByTag("posts");
+				Return an array of objects containing `year` and `data` array of posts
+				sorted descending, example:
+				[
+					{
+						year: 1984,
+						data: [
+							posts here
+						]
+					}, ...
+				]
+			*/
 
-            const newCollection = [];
+			const postsTaggedBlog = collection.getFilteredByTag("posts");
 
-            let currentPostYearInCollection;
+			const newCollection = [];
 
-            for (let post of postsTaggedBlog) {
-                if (
-                    post.data.tags.includes("featured") ||
-                    post.data.tags.includes("conferenceTalk") ||
-                    post.data.tags.includes("featuredInterview")
-                ) {
-                    continue;
-                }
+			let currentPostYearInCollection;
 
-                const postYear = new Date(post.date).getUTCFullYear();
+			for (let post of postsTaggedBlog) {
+				if (
+					post.data.tags.includes("featured") ||
+					post.data.tags.includes("conferenceTalk") ||
+					post.data.tags.includes("featuredInterview")
+				) {
+					continue;
+				}
 
-                if (postYear !== currentPostYearInCollection) {
-                    newCollection.unshift({
-                        year: postYear,
-                        data: []
-                    });
-                    currentPostYearInCollection = postYear;
-                }
+				const postYear = new Date(post.date).getUTCFullYear();
 
-                newCollection[0].data.unshift(post);
-            }
+				if (postYear !== currentPostYearInCollection) {
+					newCollection.unshift({
+						year: postYear,
+						data: []
+					});
+					currentPostYearInCollection = postYear;
+				}
 
-            return newCollection;
-        }
-    );
+				newCollection[0].data.unshift(post);
+			}
 
-    eleventyConfig.addNunjucksFilter(
-        "json",
-        function(value) {
-            return JSON.stringify(value);
-        }
-    );
+			return newCollection;
+		}
+	);
 
-    eleventyConfig.addHandlebarsHelper(
-        "moment",
-        function(date, format) {
-            return moment(date).format(format);
-        }
-    );
+	eleventyConfig.addNunjucksFilter(
+		"json",
+		function(value) {
+			return JSON.stringify(value);
+		}
+	);
 
-    eleventyConfig.addHandlebarsHelper(
-        "reverseArray",
-        function(arr) {
-            return [...arr].reverse();
-        }
-    );
+	eleventyConfig.addHandlebarsHelper(
+		"moment",
+		function(date, format) {
+			return moment(date).format(format);
+		}
+	);
 
-    /*
-        If `css` defined in front matter, an array is needed by Handlebars template.
-        `css` may be a single item and therefore gets parsed as a string. Need to return it as an 1-element array.
-        If "default" is a value, replace with path to default CSS file.
-    */
-    eleventyConfig.addHandlebarsHelper(
-        "cssHelper",
-        function(stylesheet) {
-            if (stylesheet === "default") {
-                return defaultCssPath;
-            } else {
-                return stylesheet;
-            }
-        }
-    );
+	eleventyConfig.addHandlebarsHelper(
+		"reverseArray",
+		function(arr) {
+			return [...arr].reverse();
+		}
+	);
 
-    eleventyConfig.addPassthroughCopy("scripts");
+	/*
+		If `css` defined in front matter, an array is needed by Handlebars template.
+		`css` may be a single item and therefore gets parsed as a string. Need to return it as an 1-element array.
+		If "default" is a value, replace with path to default CSS file.
+	*/
+	eleventyConfig.addHandlebarsHelper(
+		"cssHelper",
+		function(stylesheet) {
+			if (stylesheet === "default") {
+				return defaultCssPath;
+			} else {
+				return stylesheet;
+			}
+		}
+	);
+
+	eleventyConfig.addPassthroughCopy("scripts");
 	eleventyConfig.addPassthroughCopy("site/**/*.js");
 	eleventyConfig.addPassthroughCopy("site/_redirects");
 
-    eleventyConfig.addPlugin(pluginRss);
+	eleventyConfig.addPlugin(pluginRss);
 
-    return {
-        templateFormats: [
-            "css",
-            "hbs",
-            "html",
-            "json",
-            "jpg",
-            "m4v",
-            "md",
-            "mp4",
-            "njk",
-            "png",
-            "svg",
-            "ttf",
-            "txt",
-            "webmanifest",
-            "webm",
-            "webp",
-            "woff",
-            "woff2",
-            "xml"
-        ],
+	return {
+		templateFormats: [
+			"css",
+			"hbs",
+			"html",
+			"json",
+			"jpg",
+			"m4v",
+			"md",
+			"mp4",
+			"njk",
+			"png",
+			"svg",
+			"ttf",
+			"txt",
+			"webmanifest",
+			"webm",
+			"webp",
+			"woff",
+			"woff2",
+			"xml"
+		],
 
-        markdownTemplateEngine: "liquid",
-        htmlTemplateEngine: "hbs",
-        passthroughFileCopy: true,
-        dir: {
-            includes: "../eleventy-includes",
-            input: "site",
-            output: "dist"
-        }
-    }
+		markdownTemplateEngine: "liquid",
+		htmlTemplateEngine: "hbs",
+		passthroughFileCopy: true,
+		dir: {
+			includes: "../eleventy-includes",
+			input: "site",
+			output: "dist"
+		}
+	}
 };

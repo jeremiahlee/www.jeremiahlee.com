@@ -1,45 +1,79 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8"/>
-    <title>{{ collections.mostRecentNowPost.data.title }}</title>
+	<meta charset="utf-8"/>
+	<title>{{title}}</title>
+	<link rel="canonical" href="https://www.jeremiahlee.com{{ page.url }}"/>
 {{> partial-css }}
-    <meta name="description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
-    <meta name="author" content="Jeremiah Lee"/>
-    <meta name="published_date" content="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="@JeremiahLee" />
-    <meta name="twitter:title" content="{{ collections.mostRecentNowPost.data.title }}"/>
-    <meta name="twitter:description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
-    <meta property="og:title" content="{{ collections.mostRecentNowPost.data.title }}"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
-    <meta name="twitter:image" content="https://www.jeremiahlee.com/now/now.jpg"/>
-    <meta property="og:image" content="https://www.jeremiahlee.com/now/now.jpg"/>
+{{#if excerpt}}
+	<meta name="description" content="{{ excerpt }}"/>
+	<meta name="author" content="Jeremiah Lee"/>
+	<meta name="published_date" content="{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}">
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:creator" content="@JeremiahLee"/>
+	<meta name="twitter:title" content="{{ title }}"/>
+	<meta name="twitter:description" content="{{ excerpt }}"/>
+	<meta property="og:title" content="{{ title }}"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:description" content="{{ excerpt }}"/>
+	{{#if excerptImage}}
+	<meta name="twitter:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"/>
+	<meta property="og:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"/>
+	{{/if}}
+{{/if}}
 {{> partial-head }}
 </head>
 <body>
 
-<nav><a class="md:absolute md:left-0 md:top-0 md:bg-purple-100 md:mt-4 p-2 md:z-20 text-purple-800" href="/" title="Home">←︎ Home</a></nav>
+<nav><a class="md:absolute md:left-0 md:top-0 md:bg-purple-100 md:mt-4 p-2 md:z-20 text-purple-800" href="/then/" title="Writing">←︎ Now &amp; Then</a></nav>
 
 <article class="relative py-16">
-    <div class="relative px-4 sm:px-6 lg:px-8">
-        <header class="text-lg max-w-prose mx-auto">
-            <h1 class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl" property="headline">What I’m Up To Now</h1>
-            <p class="text-center text-sm text-gray-500">Last updated on <time property="datePublished" datetime="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment collections.mostRecentNowPost.data.date 'LLLL'}}</time></p>
-        </header>
-        <div class="mt-6 prose prose-purple prose-lg text-gray-700 mx-auto">
-            {{{ collections.mostRecentNowPost.data.content }}}
-        </div>
-    </div>
+	<div class="relative px-4 sm:px-6 lg:px-8">
+		<header class="text-lg max-w-prose mx-auto">
+			<h1 class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl" property="headline">What I Was Up To Then</h1>
+			<p class="text-center text-sm text-gray-500">
+				<time property="datePublished" datetime="{{moment date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment date 'dddd, MMMM Do YYYY'}}</time>
+			</p>
+		</header>
+		<div class="mt-6 prose prose-purple prose-lg text-gray-700 mx-auto">
+			{{{ content }}}
+		</div>
+	</div>
 </article>
 
+<hr />
+
 <footer class="prose prose-lg mx-auto text-center">
-    <div class="prose-sm">
-        <hr />
-        <p>Thanks to Derek Sivers for the <a href="http://nownownow.com/about">/now page</a> idea.</p>
-    </div>
+	<div class="prose-sm prose-purple">
+		<p>Support creators across the Web with a single $5/month subscription to Coil. <a class="font-bold" href="https://coil.com/?ref=JeremiahLee.com">Learn more ➜</a></p>
+		<p class="pb-4 text-gray-500">© {{moment date 'YYYY'}} <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Jeremiah Lee</span>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a>.</p>
+	</div>
 </footer>
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "Article",
+	"headline": "{{title}}",
+	"description": "{{ excerpt }}",
+	"author": {
+		"@type": "Person",
+		"name": "Jeremiah Lee"
+	},
+	"datePublished": "{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}",
+{{#if updated}}
+	"dateModified": "{{moment updated 'YYYY-MM-DDTHH:mm:ssZZ'}}",
+{{else}}
+	"dateModified": "{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}",
+{{/if}}
+{{#if excerptImage}}
+	"image": [
+		"https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"
+	],
+{{/if}}
+	"copyrightYear": {{moment date 'YYYY'}}
+}
+</script>
 
 </body>
 </html>
