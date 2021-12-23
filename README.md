@@ -34,12 +34,6 @@ tailwindcss-cli -i INPUT.css -o OUTPUT.css --config PATH/tailwind.config.js
 
 
 
-# CLOUDFLARE TODO
+# CLOUDFLARE
 
 `npx wrangler pages dev ./dist --binding sendgrid_api_key=`
-
-- [x] Redirects _redirects file
-- [x] Custom headers _headers file
-- [ ] Plausible rewrite proxies: ready to test in prod
-- [x] Secrets
-- [ ] sendmail function from api.jeremiahlee.com: ready to test in prod
