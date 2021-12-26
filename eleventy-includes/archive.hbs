@@ -11,7 +11,7 @@
 
 <body class="p-4">
 
-<nav><a class="md:absolute md:left-0 md:top-0 md:bg-purple-100 md:mt-4 p-2 md:z-20 text-purple-800" href="/" title="Home">←︎ Home</a></nav>
+<nav><a class="md:absolute md:left-0 md:top-0 md:bg-violet-100 md:mt-4 p-2 md:z-20 text-violet-800" href="/" title="Home">←︎ Home</a></nav>
 
 <div class="relative max-w-7xl mx-auto py-16">
 	<h1 class="my-2 text-3xl text-center font-extrabold tracking-tight text-gray-900 sm:text-4xl">Expressions, mostly written</h1>
@@ -20,7 +20,7 @@
 	<div class="max-w-lg mb-12 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 
 {{#each (reverseArray collections.featured)}}
-		<a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-purple-600 hover:shadow-2xl" href="{{this.url}}">
+		<a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-violet-600 hover:shadow-2xl" href="{{this.url}}">
 			<div class="flex-shrink-0">
 				<img class="w-full object-cover" src="{{this.url}}{{#if this.data.excerptImageSquare}}{{this.data.excerptImageSquare}}{{else}}{{this.data.excerptImage}}{{/if}}" alt="">
 			</div>
@@ -41,7 +41,7 @@
 	<h2 class="my-2 text-3xl tracking-tight text-gray-900 text-center lg:text-left">Featured conference talks</h2>
 	<div class="max-w-lg mb-12 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 {{#each (reverseArray collections.conferenceTalk)}}
-		<a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-purple-600 hover:shadow-2xl" href="{{this.url}}">
+		<a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-violet-600 hover:shadow-2xl" href="{{this.url}}">
 			<div class="flex-shrink-0">
 				<img class="w-full object-cover" src="{{this.url}}{{this.data.excerptImage}}" alt="">
 			</div>
@@ -63,7 +63,7 @@
 	<div class="max-w-lg mb-12 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 
 {{#each (reverseArray collections.featuredInterview)}}
-		<a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-purple-600 hover:shadow-2xl" href="{{this.url}}">
+		<a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-violet-600 hover:shadow-2xl" href="{{this.url}}">
 			<div class="flex-shrink-0">
 				<img class="w-full object-cover" src="{{this.url}}{{this.data.excerptImage}}" alt="">
 			</div>
@@ -81,13 +81,13 @@
 	</div>
 
 	<h2 class="my-2 text-3xl tracking-tight text-gray-900 text-center lg:text-left">And everything else</h2>
-	<div class="prose-purple text-lg">
+	<div class="prose prose-violet max-w-none text-lg">
 		{{#each collections.otherPostsByYear}}
 		<h3 class="text-xl mb-4">{{this.year}}</h3>
 		<ul class="list-outside list-disc ml-4 mb-4">{{#each this.data}}
 			<li class="mb-4">
 				<a class="block no-underline" href="{{this.url}}">
-					<p class="m-0"><span class="font-bold underline">{{this.data.title}}</span> <span class="bg-purple-100 inline-block px-2 py-1 ml-2 rounded text-xs text-purple">{{this.data.tags.[1]}}</span></p>
+					<p class="m-0"><span class="font-bold underline">{{this.data.title}}</span> <span class="bg-violet-100 inline-block px-2 py-1 ml-2 rounded text-xs text-violet">{{this.data.tags.[1]}}</span></p>
 					<p class="mt-0 text-gray-600">{{this.data.excerpt}}</p>
 				</a>
 			</li>

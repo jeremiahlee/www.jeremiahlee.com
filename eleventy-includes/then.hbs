@@ -20,7 +20,7 @@
 
 <body>
 
-<nav><a class="md:absolute md:left-0 md:top-0 md:bg-purple-100 md:mt-4 p-2 md:z-20 text-purple-800" href="/" title="Home">←︎ Home</a></nav>
+<nav><a class="md:absolute md:left-0 md:top-0 md:bg-violet-100 md:mt-4 p-2 md:z-20 text-violet-800" href="/" title="Home">←︎ Home</a></nav>
 
 <div class="relative py-16">
 	<div class="relative px-4 sm:px-6 lg:px-8">
@@ -28,7 +28,7 @@
 			<h1 class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl" property="headline">What I Was Up To Then</h1>
 			<p class="text-center text-sm text-gray-500">/now page archive</p>
 		</header>
-		<div class="mt-6 prose prose-purple prose-lg text-gray-700 mx-auto">
+		<div class="mt-6 prose prose-violet prose-lg text-gray-700 mx-auto">
 			<ul>
 {{#each (reverseArray collections.nowPageUpdates)}}
 				<li><a href="{{this.url}}">{{moment this.data.date 'YYYY-MM-DD'}}</a></li>

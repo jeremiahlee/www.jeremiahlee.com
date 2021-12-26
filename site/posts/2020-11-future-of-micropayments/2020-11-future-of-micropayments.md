@@ -16,7 +16,7 @@ tags:
     <h2>Transcript</h2>
 </div>
 
-<div id="intro" class="border-solid border-b border-purple-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
+<div id="intro" class="border-solid border-b border-violet-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
 	<div class="pb-4 md:pb-0 md:pr-8 md:w-1/2 lg:w-1/3">
 		<a href="#intro"><img loading="lazy" src="/posts/2020-11-future-of-micropayments/slide-2.png" alt="Slide. Screenshot of TechCrunch article. Headline: PayPal to launch micropayments product at developer conference: October 6, 2010" /></a>
 	</div>
@@ -25,7 +25,7 @@ tags:
 	</div>
 </div>
 
-<div id="intro2" class="border-solid border-b border-purple-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
+<div id="intro2" class="border-solid border-b border-violet-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
 	<div class="pb-4 md:pb-0 md:pr-8 md:w-1/2 lg:w-1/3">
 		<a href="#intro2"><img loading="lazy" src="/posts/2020-11-future-of-micropayments/slide-1.png" alt="Slide. 3 things Web Monetization needs to succeed in 2021" /></a>
 	</div>
@@ -35,7 +35,7 @@ tags:
 	</div>
 </div>
 
-<div id="more-providers" class="border-solid border-b border-purple-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
+<div id="more-providers" class="border-solid border-b border-violet-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
 	<div class="pb-4 md:pb-0 md:pr-8 md:w-1/2 lg:w-1/3">
 		<a href="#more-providers"><img loading="lazy" src="/posts/2020-11-future-of-micropayments/slide-3.png" alt="Slide. More providers" /></a>
 	</div>
@@ -45,7 +45,7 @@ tags:
 	</div>
 </div>
 
-<div id="first-follower" class="border-solid border-b border-purple-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
+<div id="first-follower" class="border-solid border-b border-violet-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
 	<div class="pb-4 md:pb-0 md:pr-8 md:w-1/2 lg:w-1/3">
 		<iframe src="https://embed.ted.com/talks/derek_sivers_how_to_start_a_movement" width="854" height="480" class="w-full" frameborder="0" scrolling="no" allowfullscreen></iframe>
 	</div>
@@ -55,7 +55,7 @@ tags:
 	</div>
 </div>
 
-<div id="next-providers" class="border-solid border-b border-purple-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
+<div id="next-providers" class="border-solid border-b border-violet-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
 	<div class="pb-4 md:pb-0 md:pr-8 md:w-1/2 lg:w-1/3">
 		<a href="#next-providers"><img loading="lazy" src="/posts/2020-11-future-of-micropayments/slide-4.png" alt="Slide. More providers. Logos of Flattr, uBlock Origin, Brave. Text: You? Me?" /></a>
 	</div>
@@ -64,7 +64,7 @@ tags:
 	</div>
 </div>
 
-<div id="better-branding" class="border-solid border-b border-purple-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
+<div id="better-branding" class="border-solid border-b border-violet-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
 	<div class="pb-4 md:pb-0 md:pr-8 md:w-1/2 lg:w-1/3">
 		<a href="#better-branding"><img loading="lazy" src="/posts/2020-11-future-of-micropayments/slide-5.png" alt="Slide. Better branding. Screenshot of WebMonetization.org with Coil logo as only provider." /></a>
 	</div>
@@ -74,7 +74,7 @@ tags:
 	</div>
 </div>
 
-<div id="multipass" class="border-solid border-b border-purple-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
+<div id="multipass" class="border-solid border-b border-violet-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
 	<div class="pb-4 md:pb-0 md:pr-8 md:w-1/2 lg:w-1/3">
 		<a href="#multipass"><img loading="lazy" src="/posts/2020-11-future-of-micropayments/slide-6.png" alt="Slide. Button with text: Get access with a Web Multipass" /></a>
 	</div>
@@ -83,7 +83,7 @@ tags:
 	</div>
 </div>
 
-<div id="established-creators" class="border-solid border-b border-purple-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
+<div id="established-creators" class="border-solid border-b border-violet-700 container max-w-screen-lg mx-auto md:flex pb-4 mb-4">
 	<div class="pb-4 md:pb-0 md:pr-8 md:w-1/2 lg:w-1/3">
 		<a href="#established-creators"><img loading="lazy" src="/posts/2020-11-future-of-micropayments/slide-7.png" alt="Slide. Established creators supported by viewers like you. Logos of NPR, PBS, Wikimedia Foundation" /></a>
 	</div>

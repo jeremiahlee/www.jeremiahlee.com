@@ -1,15 +1,10 @@
 module.exports = {
-    mode: "jit",
-    purge: {
-        enabled: true,
-        content: [
-            "./*.html",
-            "./**/*.html",
-            "../../../eleventy-includes/remote-async-work.hbs"
-        ],
-    },
-    darkMode: false, // or 'media' or 'class'
-    theme: {
+	content: [
+		"./*.html",
+		"./**/*.html",
+		"../../../eleventy-includes/remote-async-work.hbs"
+	],
+	theme: {
 		extend: {
 			colors: {
 				red: {},
@@ -35,11 +30,8 @@ module.exports = {
 				"11": "11"
 			}
 		}
-    },
-    variants: {
-        extend: {},
-    },
-    plugins: [
-        require("@tailwindcss/typography")
-    ]
+	},
+	plugins: [
+		require("@tailwindcss/typography")
+	]
 }

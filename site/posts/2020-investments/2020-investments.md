@@ -25,7 +25,7 @@ As of now, there are only 40 franchise opportunities still available in Bengalur
 
 <iframe class="my-4 w-full" width="560" height="315" src="https://www.youtube-nocookie.com/embed/0jBBtYw-FwE" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 
-<div class="mb-4 text-2xl text-center text-purple-500">— ❖ —</div>
+<div class="mb-4 text-2xl text-center text-violet-500">— ❖ —</div>
 
 <h2 id="aptera"><a href="https://www.aptera.us/?ref=JeremiahLee">Aptera Motors</a></h2>
 
@@ -39,7 +39,7 @@ I no longer live in a place where I need a car, but I believe affordable electri
 
 <iframe  class="my-4 w-full" width="560" height="315" src="https://www.youtube-nocookie.com/embed/jbLQ6Z0u_qo" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 
-<div class="mb-4 text-2xl text-center text-purple-500">— ❖ —</div>
+<div class="mb-4 text-2xl text-center text-violet-500">— ❖ —</div>
 
 <h2 id="easy-solar"><a href="https://trine.com/loan/easy-solar-2?ref=JeremiahLee">Easy Solar</a></h2>
 
