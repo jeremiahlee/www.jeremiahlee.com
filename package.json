@@ -2,14 +2,13 @@
 	"author": "Jeremiah Lee",
 	"description": "The website of Jeremiah Lee",
 	"devDependencies": {
-		"@11ty/eleventy": "^0.12.1",
+		"@11ty/eleventy": "^1.0.0",
 		"@11ty/eleventy-plugin-rss": "^1.1.0",
 		"@cloudflare/workers-types": "^3.2.0",
 		"@percy/cli": "^1.0.0-beta.71",
 		"@tailwindcss/typography": "^0.5.0",
 		"moment": "^2.29.1",
-		"tailwindcss": "^3.0.7",
-		"wrangler": "^0.0.0-072566f"
+		"tailwindcss": "^3.0.7"
 	},
 	"engines": {
 		"node": ">= 14.17.0"
