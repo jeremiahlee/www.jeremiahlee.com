@@ -55,9 +55,9 @@ I used the Quirky PowerCurl to keep my MacBook Pro cable tidy in my laptop bag f
 [Signal](https://signal.org/) by Open Whisper Systems is Edward Snowden approved for privacy. It is technically architected in a way that prevents the company—or anyone else—from being able to access the content of messages between people. In addition to being open source, Open Whisper Systems has proven this position [legally](https://www.techdirt.com/articles/20161004/06454935701/feds-gagged-encrypted-communications-firm-open-whisper-systems-over-massively-overbroad-subpoena.shtml "Techdirt — Feds Gagged Encrypted Communications Firm Open Whisper Systems Over Massively Overbroad Subpoena").
 
 
-## Money transfer: [TransferWise](https://transferwise.com/u/jeremiahc1)
+## Money transfer: [Wise](https://wise.com/invite/spu/jeremiahc1)
 
-[TransferWise](https://transferwise.com/u/jeremiahc1) is cheaper and easier than traditional bank and other commercial services for transfering money internationally. My credit union wanted me to complete a bunch of paperwork, email it to them, and wait days to complete a large international transfer when I moved to Sweden. [TransferWise](https://transferwise.com/u/jeremiahc1) got it done quickly and correctly.
+[Wise](https://wise.com/invite/spu/jeremiahc1) is cheaper and easier than traditional bank and other commercial services for transfering money internationally. My credit union wanted me to complete a bunch of paperwork, email it to them, and wait days to complete a large international transfer when I moved to Sverige. [TransferWise](https://wise.com/invite/spu/jeremiahc1) got it done quickly and correctly.
 
 
 ## Multi-room audio: [Heos by Denon](https://usa.denon.com/us/heos)
