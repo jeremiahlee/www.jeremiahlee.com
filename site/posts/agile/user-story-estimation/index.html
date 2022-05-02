@@ -1,0 +1,131 @@
+---
+date: "2022-05-02T23:00:00+02:00"
+excerpt: "A guide for estimating work using story points"
+title: "Agile User Story Estimation"
+tags:
+  - "posts"
+  - "agile"
+---
+
+<p>Estimate user stories by thinking about the solution effort, additional testing effort, and risk level. Assess the solution effort, then increase the estimate if testing effort or risks exceed typical levels.</p>
+
+<h2>Solution effort</h2>
+
+<table>
+	<thead>
+		<tr>
+			<th scope="col">Story Points</th>
+			<th scope="col">Guidance</th>
+			<th scope="col">Solution</th>
+			<th scope="col">Effort</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row" class="text-xl">1</th>
+			<td><strong>Tiny</strong>, one line change; typo</td>
+			<td>Obvious; <strong>0</strong> unknowns</td>
+			<td><strong>Very low</strong>; I could do many of these in a day</td>
+		</tr>
+		<tr>
+			<th scope="row" class="text-xl">2</th>
+			<td><strong>Minor</strong> change; configuration updates</td>
+			<td>Known; <strong>little to 0</strong> unknowns</td>
+			<td><strong>Not demanding</strong>; soundness check level code review</td>
+		</tr>
+		<tr>
+			<th scope="row" class="text-xl">3</th>
+			<td><strong>Small</strong>, scoped feature; requires <strong>insignificant</strong> research or cross-team coordination</td>
+			<td>Generally known; <strong>few</strong> unknowns</td>
+			<td>Will have to <strong>focus</strong>, requires meaningful <strong>code review and tests</strong>, needs <strong>1</strong> session of concentration</td>
+		</tr>
+		<tr>
+			<th scope="row" class="text-xl">5</th>
+			<td><strong>Complex</strong> feature; requires <strong>little</strong> research or cross-team coordination</td>
+			<td>Have an idea; <strong>limited research</strong> of known unknowns</td>
+			<td>Complexity or amount of work to be done requires a <strong>couple</strong> sessions of concentration</td>
+		</tr>
+		<tr>
+			<th scope="row" class="text-xl">8</th>
+			<td><strong>Large</strong>, complex feature; requires <strong>some</strong> research or cross-team coordination</td>
+			<td>Concept and the goals <strong>understood</strong>; solution requires <strong>some research</strong> that can only be done as part of the work</td>
+			<td>Complexity or amount of work to be done requires <strong>several</strong> sessions of concentration</td>
+		</tr>
+		<tr>
+			<th scope="row" class="text-xl">13</th>
+			<td><strong>Very large</strong>, complex feature; requires <strong>significant</strong> research or cross-team coordination</td>
+			<td>Concept and the goals <strong>understood</strong>; solution requires <strong>significant research</strong> that can only be done as part of the work</td>
+			<td>Complexity or amount of work to be done requires <strong>many</strong> of sessions of concentration</td>
+		</tr>
+		<tr>
+			<th scope="row" class="text-xl">≥ 21</th>
+			<td colspan="3">Anything you feel would be greater than 13 story points should be broken down into smaller tasks or time-boxed instead.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Testing effort</h2>
+
+<table>
+	<thead>
+		<tr>
+			<th scope="col">Bump&nbsp;ups</th>
+			<th scope="col">Testing effort</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Baseline</th>
+			<td><strong>Zero additional</strong> testing effort beyond standard practice</td>
+		</tr>
+		<tr>
+			<th scope="row">+1 step</th>
+			<td>Testing effort <strong>exceeds standard practice</strong> and is equal to the effort of the implementation</td>
+		</tr>
+		<tr>
+			<th scope="row">+2 steps</th>
+			<td>Testing effort <strong>exceeds standard practice</strong> and is <strong>greater</strong> than the effort of the implementation</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Risk level</h2>
+
+<table>
+	<thead>
+		<tr>
+			<th scope="col">Bump ups</th>
+			<th scope="col">Risk level</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Baseline</th>
+			<td>All risks <strong>owned</strong> outside of this ticket, <strong>accepted</strong>, <strong>resolved</strong>, or <strong>mitigated</strong></td>
+		</tr>
+		<tr>
+			<th scope="row">+1 step</th>
+			<td><strong>Low to moderate</strong> risk <strong>owned</strong> and <strong>accepted</strong> as part of this ticket</td>
+		</tr>
+		<tr>
+			<th scope="row">+2 steps</th>
+			<td><strong>Moderate to high</strong> risk <strong>owned</strong> and <strong>accepted</strong> as part of this ticket</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Risks should be explicitly stated and actions to address each categories with <abbr title="Resolved, Owned, Accepted, Mitigated">ROAM</abbr>.</p>
+<dl>
+	<dt class="font-medium">Resolved</dt>
+	<dd>the risk is known and should be stated, but does not need action now</dd>
+	<dt class="font-medium">Owned</dt>
+	<dd>someone has taken ownership of addressing the risk, but not yet resolved</dd>
+	<dt class="font-medium">Accepted</dt>
+	<dd>the risk cannot be resolved, so it has to be understood and accepted for what it is</dd>
+	<dt class="font-medium">Mitigated</dt>
+	<dd>a plan has been created to eradicate the risk</dd>
+</dl>
+
+<p><strong>Remember:</strong> Bugs don’t get points because fixing what’s broken is not delivering new value. Otherwise we could get double accounting for a feature poorly completed.</p>
+
+<p>Rubric created by Jeremiah Lee and <a href="https://www.linkedin.com/in/chesleybrown/">Chesley Brown</a>. <a href="http://creativecommons.org/licenses/by-sa/4.0/">(CC BY-SA 4.0)</a></p>
