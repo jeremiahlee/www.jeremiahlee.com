@@ -2,7 +2,7 @@
 	"author": "Jeremiah Lee",
 	"description": "The website of Jeremiah Lee",
 	"devDependencies": {
-		"@11ty/eleventy": "^1.0.0",
+		"@11ty/eleventy": "^1.0.1",
 		"@11ty/eleventy-plugin-rss": "^1.1.0",
 		"@cloudflare/workers-types": "^3.2.0",
 		"@percy/cli": "^1.0.0-beta.71",
@@ -22,9 +22,9 @@
 	"scripts": {
 		"build": "npm run build:html && npm run build:css",
 		"build:css": "npx tailwindcss --minify -i css/style.css -o dist/soul-class-style-badass.css --config tailwind.config.js",
-		"build:html": "eleventy --config=eleventy.config.js",
+		"build:html": "npx @11ty/eleventy --config=eleventy.config.js",
 		"dev:css": "npx tailwindcss --watch -i css/style.css -o dist/soul-class-style-badass.css --config tailwind.config.js",
-		"dev:serve": "ELEVENTY_ENV=development eleventy --config=eleventy.config.js --serve",
+		"dev:serve": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve",
 		"dev:cloudflare": "npx wrangler pages dev ./dist",
 		"dev:spotify": "npx tailwindcss build -i site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css --config site/posts/failed-squad-goals/tailwind.config.js",
 		"build:spotify": "npx tailwindcss build --minify -i site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css --config site/posts/failed-squad-goals/tailwind.config.js",
