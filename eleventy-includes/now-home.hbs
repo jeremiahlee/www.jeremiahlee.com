@@ -17,6 +17,9 @@
     <meta name="twitter:image" content="https://www.jeremiahlee.com/now/now.jpg"/>
     <meta property="og:image" content="https://www.jeremiahlee.com/now/now.jpg"/>
 {{> partial-head }}
+{{#each collections.mostRecentNowPost.data.script}}
+	<script defer src="{{this}}"></script>
+{{/each}}
 </head>
 <body>
 
