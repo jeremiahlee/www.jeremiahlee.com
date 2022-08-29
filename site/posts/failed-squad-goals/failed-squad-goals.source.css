@@ -35,6 +35,9 @@
 .border-green {
     border-color: var(--green);
 }
+.border-violet {
+    border-color: var(--violet);
+}
 .text-violet {
     color: var(--violet);
 }
