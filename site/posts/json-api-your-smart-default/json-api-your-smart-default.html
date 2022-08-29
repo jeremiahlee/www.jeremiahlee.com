@@ -14,7 +14,9 @@ tags:
 
 <div class="container mx-auto">
 
-_This is an adaptation of my presentation at the Nordic APIs 2017 API Platform Summit in Stockholm, Sweden on October 10, 2017. I updated it for APIDays Paris on January 30, 2018 and expanded it for API Conference London on April 11, 2018 and WeAreDevelopers World Congress in Vienna, Austria on May 16, 2018._
+<p class="italic">This is an adaptation of my presentation at the Nordic APIs 2017 API Platform Summit in Stockholm, Sweden on October 10, 2017. I updated it for APIDays Paris on January 30, 2018 and expanded it for API Conference London on April 11, 2018 and WeAreDevelopers World Congress in Vienna, Austria on May 16, 2018.</p>
+
+<p><a href="https://www.youtube.com/watch?v=LLe7Fi-wM3Q" title="JSON:API your smart default at WeAreDevelopers World Congress 2018">Video</a></p>
 
 </div>
 
@@ -325,7 +327,7 @@ _This is an adaptation of my presentation at the Nordic APIs 2017 API Platform S
 	</div>
 	<div class="md:w-1/2">
 		<p>Let’s put it all together. What does this look like in practice? The Fitbit news feed is a great example of data with mixed caching scenarios.</p>
-		<p>Most of the data is news feed stories, which is a mostly ephemeral experience. People are unlikely to see the exact same content more than once because new content is always being created. The stories are unlikely to be cached. However, the stories have related content that *is* likely to be cached and repeatedly accessed: the story creators, i.e. your friends.</p>
+		<p>Most of the data is news feed stories, which is a mostly ephemeral experience. People are unlikely to see the exact same content more than once because new content is always being created. The stories are unlikely to be cached. However, the stories have related content that <em>is</em> likely to be cached and repeatedly accessed: the story creators, i.e. your friends.</p>
 		<p>If there are 20 news feed stories by 15 friends, that would mean that the client can save downloading up to 5 friends’ basic profile data multiple times. And if the user had viewed their friend leaderboard prior loading the news feed, the app would not need to re-download any of their friends’ basic profile data. This is a nice performance benefit from having normalized data with defined relationships. It adds up across the multiple experiences within the app!</p>
 	</div>
 </div>
@@ -417,17 +419,19 @@ _This is an adaptation of my presentation at the Nordic APIs 2017 API Platform S
 
 <div class="container mx-auto">
 
-# Photo credits
+<h1>Photo credits</h1>
 
-- ["Construction site and caution"](https://unsplash.com/photos/v_CxSroHKWg) by Matthew Hamilton,
-- ["Tree, forest, question and bark"](https://unsplash.com/photos/i--IN3cvEjg) by Evan Dennis
-- ["Green cat eyes photo"](https://unsplash.com/photos/OvLBv6F6DGE) by Paul
-- ["Begin Here"](https://unsplash.com/photos/ILlmVlkNcHU) by Tyler Lastovich
+<ul>
+<li><a href="https://unsplash.com/photos/v_CxSroHKWg">“Construction site and caution”</a> by Matthew Hamilton,</li>
+<li><a href="https://unsplash.com/photos/i--IN3cvEjg">“Tree, forest, question and bark”</a> by Evan Dennis</li>
+<li><a href="https://unsplash.com/photos/OvLBv6F6DGE">“Green cat eyes photo”</a> by Paul</li>
+<li><a href="https://unsplash.com/photos/ILlmVlkNcHU">“Begin Here”</a> by Tyler Lastovich</li>
+</ul>
 
-# Compatibility notes
+<h1>Compatibility notes</h1>
 
-This post contains animations in the APNG format.
+<p>This post contains animations in the APNG format.</p>
 
-This post contains a video in MPEG-4 H.264. I hope one day we will have a patent-unincumbered[universally supported](https://caniuse.com/#search=video%20format) FOSS option instead.
+<p>This post contains a video in MPEG-4 H.264. I hope one day we will have a patent-unincumbered<a href="https://caniuse.com/#search=video%20format">universally supported</a> FOSS option instead.</p>
 
 </div>
