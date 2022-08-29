@@ -1,15 +1,26 @@
 ---
 layout: page-back.hbs
+script:
+  - "/contact/contact.js"
 ---
 
-<h1>Contact me</h1>
+<h1 class="mx-4">Contact me</h1>
 
 <ul>
-<li>Email: <em>hello@</em> this webpage's domain name</li>
-<li>Github: <a href="https://github.com/jeremiahlee" rel="me">jeremiahlee</a></li>
-<li><a href="https://www.linkedin.com/in/jeremiah-x-lee/" rel="me">LinkedIn</a></li>
-<li>Fediverse: <a href="https://social.librem.one/@jeremiahlee" rel="me">@jeremiahlee@social.librem.one</a></li>
-<li>Twitter: <a href="https://twitter.com/jeremiahlee" rel="me">@JeremiahLee</a></li>
+	<li>Email: <span id="emailPlaceholder"><em>hello@</em> this webpage's domain name</span></li>
+	<li>Github: <a href="https://github.com/jeremiahlee" rel="me">jeremiahlee</a></li>
+	<li><a href="https://www.linkedin.com/in/jeremiah-x-lee/" rel="me">LinkedIn</a></li>
+	<li>Fediverse: <a href="https://social.librem.one/@jeremiahlee" rel="me">@jeremiahlee@social.librem.one</a></li>
+	<li>Twitter: <a href="https://twitter.com/jeremiahlee" rel="me">@JeremiahLee</a></li>
+	<li><a href="/feeds/jsonfeed.json">JSON Feed</a> —or— <a href="/feeds/atom.xml">Atom RSS</a></li>
 </ul>
 
-<a href="https://www.getrevue.co/profile/jeremiahlee">Get email notifications of new content on my blog</a>
+<p class="mx-4"><a href="https://www.getrevue.co/profile/jeremiahlee">Get email notifications of new content on my blog</a></p>
+<form action="https://www.getrevue.co/profile/jeremiahlee/add_subscriber" method="post" id="revue-form" name="revue-form" target="_blank" class="mt-5 sm:flex sm:items-center mx-4">
+	<div class="w-full sm:max-w-xs">
+		<label for="member_email" class="sr-only">Email</label>
+		<input class="shadow-sm focus:ring-violet-500 focus:border-gray-500 block w-full sm:text-sm border-violet rounded-md" placeholder="sam@fastmail.com" type="email" name="member[email]" id="member_email" />
+	</div>
+	<button type="submit" value="Subscribe" name="member[subscribe]" id="member_submit" class="mt-3 w-full inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Subscribe</button>
+</form>
+<p class="mt-2 mx-4 max-w-xl text-sm text-gray-500">By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</p>
