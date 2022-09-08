@@ -8,6 +8,10 @@ hr {
     margin: 1rem;
 }
 
+.pt-16\:9 {
+	padding-top: 56.25%; /* 9/16 for a 16:9 ratio iframe */
+}
+
 /* Custom base styles must come before components and utilities to avoid specificity issues */
 @tailwind components;
 @tailwind utilities;
