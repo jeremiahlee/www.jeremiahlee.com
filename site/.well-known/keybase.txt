@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jeremiahlee
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.jeremiahlee.com
+  * I am jeremiahlee (https://keybase.io/jeremiahlee) on keybase.
+  * I have a public key ASC4Zb8HK26bwDlGm53q4msip0H_VP4eJmn1kst8liyqwAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120b865bf072b6e9bc039469b9deae26b22a741ff54fe1e2669f592cb7c962caac00a",
+      "host": "keybase.io",
+      "kid": "0120b865bf072b6e9bc039469b9deae26b22a741ff54fe1e2669f592cb7c962caac00a",
+      "uid": "d9a7b171c6450a70fb586ba2812cdd00",
+      "username": "jeremiahlee"
+    },
+    "merkle_root": {
+      "ctime": 1666782067,
+      "hash": "c6d4cbe5100f8e5a6a5412677d574c2d4dec9bfa6e542f40efb0fa9249fa6a942cb558bc4b9d5ba86e7c9ff57763ee06c67e9f27796643c3a83597611d391ef3",
+      "hash_meta": "11508887de1021e4dbc2ab53cd50d5ff9b0251944a6c63a02fc97e18eab50594",
+      "seqno": 23435401
+    },
+    "service": {
+      "entropy": "5YfyMeEB+ZRQQCQ98C9R8f7p",
+      "hostname": "www.jeremiahlee.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1666782108,
+  "expire_in": 504576000,
+  "prev": "da4db76fbda7e1c44613e7a6779a35cca2895dc454ae0708a245163f3119af14",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEguGW/Bytum8A5Rpud6uJrIqdB/1T+HiZp9ZLLfJYsqsAKp3BheWxvYWTESpcCBMQg2k23b72n4cRGE+emd5o1zKKJXcRUrgcIokUWPzEZrxTEIASr7FQeD3vpwxqJ631YO5iPrJXa68HNCENwQA+ZMTvCAgHCo3NpZ8RAz9+Yw/tSpv0BkkktftI/lkBU7WfGc+AJKt6rAI45FFarIn9VfZfyZDYXvO/yxSjWSvdbhzRfja0f4ILzi8AxCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGo2glb9dHEo9WTcnpgWEZMRlvRdoOCOPoRtg2H6C0MRo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jeremiahlee
+
+==================================================================
