@@ -165,6 +165,7 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy("functions");
 	eleventyConfig.addPassthroughCopy("scripts");
+	eleventyConfig.addPassthroughCopy("campaigns");
 	eleventyConfig.addPassthroughCopy("site/**/*.js");
 	eleventyConfig.addPassthroughCopy("site/_headers");
 	eleventyConfig.addPassthroughCopy("site/_redirects");

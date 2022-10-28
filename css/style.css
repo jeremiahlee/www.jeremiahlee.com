@@ -12,6 +12,14 @@ hr {
 	padding-top: 56.25%; /* 9/16 for a 16:9 ratio iframe */
 }
 
+/* Switch to Firefox promotion */
+.firefox-promotion-bg {
+	background-image: url(/campaigns/firefox/bg.svg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 /* Custom base styles must come before components and utilities to avoid specificity issues */
 @tailwind components;
 @tailwind utilities;
