@@ -3,11 +3,13 @@
 	padding: 0;
 }
 html,
-body,
-#wrapper {
+body{
 	width: 100%;
 	height: 100%;
+	background-color: rgb(255, 240, 217);
 }
 iframe {
 	border-radius: 0 !important;
+	width: 100%;
+	height: 100%;
 }
