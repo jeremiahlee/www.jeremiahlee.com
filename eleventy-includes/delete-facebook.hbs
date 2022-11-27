@@ -8,15 +8,10 @@
 {{#if excerpt}}
     <meta name="description" content="{{ excerpt }}"/>
     <meta name="author" content="Jeremiah Lee"/>
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:creator" content="@JeremiahLee" />
-    <meta name="twitter:title" content="{{ title }}"/>
-    <meta name="twitter:description" content="{{ excerpt }}"/>
     <meta property="og:title" content="{{ title }}"/>
     <meta property="og:type" content="article"/>
     <meta property="og:description" content="{{ excerpt }}"/>
     {{#if excerptImage}}
-    <meta name="twitter:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"/>
     <meta property="og:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"/>
     {{/if}}
 {{/if}}

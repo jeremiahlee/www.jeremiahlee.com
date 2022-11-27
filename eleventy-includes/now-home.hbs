@@ -7,14 +7,9 @@
     <meta name="description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
     <meta name="author" content="Jeremiah Lee"/>
     <meta name="published_date" content="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="@JeremiahLee" />
-    <meta name="twitter:title" content="{{ collections.mostRecentNowPost.data.title }}"/>
-    <meta name="twitter:description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
     <meta property="og:title" content="{{ collections.mostRecentNowPost.data.title }}"/>
     <meta property="og:type" content="article"/>
     <meta property="og:description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
-    <meta name="twitter:image" content="https://www.jeremiahlee.com/now/now.jpg"/>
     <meta property="og:image" content="https://www.jeremiahlee.com/now/now.jpg"/>
 {{> partial-head }}
 {{#each collections.mostRecentNowPost.data.script}}
