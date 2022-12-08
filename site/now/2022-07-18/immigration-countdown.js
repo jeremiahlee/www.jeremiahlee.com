@@ -1,7 +1,8 @@
 window.addEventListener(
 	"DOMContentLoaded",
 	(event) => {
-		const today = new Date();
+		// Once citizenship approved, replaced the calculation with the realized number of days waiting.
+		const today = new Date("2022-11-22T20:20:00+02:00"); // new Date();
 
 		const applicationDate = new Date("2022-04-11T20:20:00+02:00");
 
@@ -13,8 +14,6 @@ window.addEventListener(
 		} else {
 			daysSinceApplying = Math.floor((today.valueOf() - applicationDate.valueOf()) / 1000 / 60 / 60 / 24).toString();
 		}
-
-		// TODO: Once citizenship approved, replace the calculation with the realized number of days waiting.
 
 		const element = document.getElementById("immigration-status");
 
