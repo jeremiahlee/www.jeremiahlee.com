@@ -1,11 +1,12 @@
 ---
 date: 2016-08-30T22:34:03+00:00
 layout: page-back.hbs
-title: "Developer Experience: The UX of APIs"
+title: "Developer Experience (DX)"
+excerpt: "Jeremiah Lee first wrote about developer experience in 2011."
 ---
 
 <img src="/developer-experience/developer-experience-dx-logo.png" width="256" height="256" alt="Developer Experience (DX) logo" />
-<h1>Developer Experience: The UX of APIs</h1>
+<h1>Developer Experience: when developers are the users</h1>
 
 <hr/>
 
