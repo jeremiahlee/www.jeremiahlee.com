@@ -1,0 +1,136 @@
+---
+date: 2023-02-02T22:45:00-06:00
+title: "Unambiguous date & time"
+excerpt: "Communicating with a globally distributed team requires clarity. Fortunately, there is an ISO standard for date and time."
+excerptImage: "yyyy-mm-dd-1x1.png"
+tags:
+  - "posts"
+  - "opinion"
+css:
+  - "default"
+  - "/posts/yyyy-mm-dd/yyyy-mm-dd.css"
+script:
+  - "/posts/yyyy-mm-dd/temporal-polyfill.js"
+  - "/posts/yyyy-mm-dd/yyyy-mm-dd.js"
+---
+
+<p>If I gave you an assignment due on <i>3/4</i>, would you complete it by <i>March 4</i> or <i>April 3</i>? US Americans would assume March 4, but Europeans would assume April 3.</p>
+
+<p>Communicating with a globally distributed team requires clarity. Fortunately, the International Organization for Standardization (ISO) provided a common date format to remove ambiguity in 1988.</p>
+
+<h2><span id="dynamicToday">2023-03-28</span></h2>
+
+<p>The <a href="https://en.wikipedia.org/wiki/ISO_8601" rel="noopener">ISO date format</a> is human readable and visually sortable with the components arranged largest to smallest.</p>
+
+<div class="grid grid-cols-1 md:grid-cols-3 md:gap-8">
+	<div class="prose-p:my-0">
+		<p><strong>Traditional US American</strong></p>
+		<p><span class="month dynamicMonthNoPad">3</span>/<span class="day dynamicDayNoPad">28</span>/<span class="year dynamicYear">2023</span> <span class="hours dynamicMeridiemHours">14</span>:<span class="minutes dynamicMinutes">56</span>:<span class="seconds dynamicSeconds">30</span> <span class="hours dynamicMeridiem">PM</span></p>
+		<div class="not-prose max-w-xs my-4">
+			<img src="/posts/yyyy-mm-dd/month.svg" width="1020" height="170" alt="month" />
+			<img src="/posts/yyyy-mm-dd/day.svg" width="1020" height="170" alt="day" />
+			<img src="/posts/yyyy-mm-dd/year.svg" width="1020" height="170" alt="year" />
+			<img src="/posts/yyyy-mm-dd/hours.svg" width="1020" height="170" alt="hours" />
+			<img src="/posts/yyyy-mm-dd/minutes.svg" width="1020" height="170" alt="minutes" />
+			<img src="/posts/yyyy-mm-dd/seconds.svg" width="1020" height="170" alt="seconds" />
+		</div>
+	</div>
+	<div class="prose-p:my-0">
+		<p><strong>Traditional European</strong></p>
+		<p><span class="day dynamicDayNoPad">28</span>.<span class="month dynamicMonthNoPad">3</span>.<span class="year dynamicYear">2023</span> <span class="hours dynamicHours">14</span>:<span class="minutes dynamicMinutes">56</span>:<span class="seconds dynamicSeconds">30</span></p>
+		<div class="not-prose max-w-xs my-4">
+			<img src="/posts/yyyy-mm-dd/day.svg" width="1020" height="170" alt="day" />
+			<img src="/posts/yyyy-mm-dd/month.svg" width="1020" height="170" alt="month" />
+			<img src="/posts/yyyy-mm-dd/year.svg" width="1020" height="170" alt="year" />
+			<img src="/posts/yyyy-mm-dd/hours.svg" width="1020" height="170" alt="hours" />
+			<img src="/posts/yyyy-mm-dd/minutes.svg" width="1020" height="170" alt="minutes" />
+			<img src="/posts/yyyy-mm-dd/seconds.svg" width="1020" height="170" alt="seconds" />
+		</div>
+	</div>
+	<div class="prose-p:my-0">
+		<p><strong>ISO 8601 standard</strong></p>
+		<p><span class="year dynamicYear">2023</span>-<span class="month dynamicMonth">03</span>-<span class="day dynamicDay">28</span>T<span class="hours dynamicHours">14</span>:<span class="minutes dynamicMinutes">56</span>:<span class="seconds dynamicSeconds">30</span></p>
+		<div class="not-prose max-w-xs my-4">
+			<img src="/posts/yyyy-mm-dd/year.svg" width="1020" height="170" alt="year" />
+			<img src="/posts/yyyy-mm-dd/month.svg" width="1020" height="170" alt="month" />
+			<img src="/posts/yyyy-mm-dd/day.svg" width="1020" height="170" alt="day" />
+			<img src="/posts/yyyy-mm-dd/hours.svg" width="1020" height="170" alt="hours" />
+			<img src="/posts/yyyy-mm-dd/minutes.svg" width="1020" height="170" alt="minutes" />
+			<img src="/posts/yyyy-mm-dd/seconds.svg" width="1020" height="170" alt="seconds" />
+		</div>
+	</div>
+</div>
+
+<h2 id="week-numbers">Week numbers: <em id="dynamicWeek">2023-W13</em></h2>
+
+<p>Week number dates are used commonly in manufacturing and by Europeans. They are indicated after a year with a W and a 2 digit week number.</p>
+
+<p>I appreciate them as a progress indicator through the 52 weeks in a year.</p>
+
+<progress id="yearProgressInWeeks" max="52"></progress>
+
+<p>Calendar apps typically have a way to show week numbers. Look for it under settings.</p>
+
+<p>Keep in mind that ISO weeks start on Monday and week 1 of the year is the first week with a Thursday in it. Some years have 53 ISO weeks because Gregorian calendars do not evenly divide by 7.</p>
+
+<h2 id="quarter-numbers">Quarter numbers: <em id="dynamicQuarter">2023-Q1</em></h2>
+
+<p>This is non-standard, but still useful. Similar to week numbers, yearly quarter numbers can be indicated after a year with a Q and the quarter number.</p>
+
+<progress id="yearProgressInQuarters" max="4"></progress>
+
+<hr />
+
+<h2 id="more">Further reading for software developers</h2>
+<h3 id="time">Time</h3>
+
+<p>Time can be appended to a date. The standard provides increasing levels of <em>optional</em> specificity in the pattern of <span class="year">YYYY</span>-<span class="month">MM</span>-<span class="day">DD</span>T<span class="hours">HH</span>:<span class="minutes">MM</span>:<span class="seconds">SS.000</span>.</p>
+
+<p>Examples:</p>
+<ul class="prose-p:my-0">
+	<li>
+		<p><em><span class="year dynamicYear">2023</span>-<span class="month dynamicMonth">03</span>-<span class="day dynamicDay">28</span>T<span class="hours dynamicHours">14</span>:<span class="minutes dynamicMinutes">56</span></em></p>
+		<p>base time with hours and minutes</p>
+	</li>
+	<li>
+		<p><em><span class="year dynamicYear">2023</span>-<span class="month dynamicMonth">03</span>-<span class="day dynamicDay">28</span>T<span class="hours dynamicHours">14</span>:<span class="minutes dynamicMinutes">56</span>:<span class="seconds dynamicSeconds">30</span></em></p>
+		<p>with seconds</p>
+	</li>
+	<li>
+		<p><em><span class="year dynamicYear">2023</span>-<span class="month dynamicMonth">03</span>-<span class="day dynamicDay">28</span>T<span class="hours dynamicHours">14</span>:<span class="minutes dynamicMinutes">56</span>:<span class="seconds"><span class="dynamicSeconds">30</span>.<span class="dynamicMilliseconds">123</span></span></em></p>
+		<p>with milliseconds</p>
+	</li>
+</ul>
+
+<h3 id="time-zones">Time zones</h3>
+
+<p>Time zones are location and season dependent. However, time <em>offset</em> from Coordinated Universal Time (UTC) can be specified.</p>
+
+<p>Examples of the same moment in time:</p>
+<ul class="prose-p:my-0">
+	<li>
+		<p><em id="dynamicUTC"><span class="year">2023</span>-<span class="month">03</span>-<span class="day">28</span>T<span class="hours">14</span>:<span class="minutes">56</span>Z</em></p>
+		<p>Z = zero offset, a shortcut for UTC</p>
+	</li>
+	<li>
+		<p><em id="dynamicDublin"><span class="year">2023</span>-<span class="month">03</span>-<span class="day">28</span>T<span class="hours">14</span>:<span class="minutes">56</span>+00:00</em></p>
+		<p>Dublin standard time. 0 offset is always positive.</p>
+	</li>
+	<li>
+		<p><em id="dynamicSanFrancisco"><span class="year">2023</span>-<span class="month">03</span>-<span class="day">28</span>T<span class="hours">06</span>:<span class="minutes">56</span>-08:00</em></p>
+		<p>San Francisco standard time, negative 8 hours offset.</p>
+	</li>
+	<li>
+		<p><em id="dynamicSanFranciscoDST"><span class="year">2023</span>-<span class="month">03</span>-<span class="day">28</span>T<span class="hours">07</span>:<span class="minutes">56</span>-07:00</em></p>
+		<p>San Francisco daylight saving time, negative 7 hours offset.</p>
+	</li>
+</ul>
+
+<h3>References</h3>
+
+<ul>
+	<li><a href="https://en.wikipedia.org/wiki/ISO_8601" rel="noopener">ISO 8601 on Wikipedia</a></li>
+	<li><a href="https://en.wikipedia.org/wiki/ISO_week_date" rel="noopener">ISO week date on Wikipedia</a></li>
+	<li><a href="https://www.rfc-editor.org/rfc/rfc3339" rel="noopener">IETC RFC 3339</a></li>
+	<li><a href="https://xkcd.com/1179/" rel="noopener">xkcd comic</a></li>
+</ul>

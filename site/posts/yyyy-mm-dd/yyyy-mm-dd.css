@@ -1,0 +1,18 @@
+.year {
+	color: hsl(270 50% 30%);
+}
+.month {
+	color: hsl(270 50% 45%);
+}
+.day {
+	color: hsl(270 50% 55%);
+}
+.hours {
+	color: hsl(270 50% 60%);
+}
+.minutes {
+	color: hsl(270 50% 65%);
+}
+.seconds {
+	color: hsl(270 50% 70%);
+}
