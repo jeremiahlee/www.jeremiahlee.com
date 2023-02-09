@@ -20,7 +20,7 @@ Instead, please use “Internet security”, “Internet attacks”, and “bull
 
 Word choice matters. I know you know this, so please opt for specificity and phrasing that elicits rationality over fear.
 
-Best regards,<br/>
+Best regards,<br>
 Jeremiah
 
 <small>* And every other news media outlet, but I sent this to NPR.</small>

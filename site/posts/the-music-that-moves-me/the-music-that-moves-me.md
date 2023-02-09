@@ -9,7 +9,7 @@ tags:
   - "journal"
 ---
 
-<img src="2016-12-10.jpg" />
+<img src="2016-12-10.jpg">
 
 Arthur and I are moving to Stockholm, Sverige. Arthur accepted a job at Spotify. The position is exciting and a next-level opportunity for his career.<sup><a href="#1">1</a></sup>
 

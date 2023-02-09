@@ -12,7 +12,7 @@ tags:
 
 <p>Using <a href="https://plausible.io/?ref=JeremiahLee.com" target="_blank" rel="noopener">Plausible Analytics</a>, I am able to track this data. Plausible has the ability to track page views and events that happen on a page. When a person with a Coil subscription visits a page, a “monetization start” event is emitted in the browser. The webpage can detect this event using JavaScript and register it as a “<a href="https://plausible.io/docs/custom-event-goals" target="_blank" rel="noopener">goal conversion</a>” in Plausible. This tutorial will show you how to do it in 3 steps.</p>
 
-<img class="max-w-sm mx-auto" alt="Screenshot of Coil browser extension when paying. Arrow pointing to screenshot of a page goal conversion in Plausible." src="/posts/web-monetization-events-in-plausible/web-monetization-events-in-plausible-transparent.png" width="1024" height="1024" />
+<img class="max-w-sm mx-auto" alt="Screenshot of Coil browser extension when paying. Arrow pointing to screenshot of a page goal conversion in Plausible." src="/posts/web-monetization-events-in-plausible/web-monetization-events-in-plausible-transparent.png" width="1024" height="1024">
 
 <h2>Background</h2>
 
@@ -38,7 +38,7 @@ tags:
 	<li>Tap <em>Add goal</em></li>
 </ul>
 
-<img class="max-w-xl mx-auto" alt="Screenshot of Plausible UI when adding a custom goal event" src="/posts/web-monetization-events-in-plausible/add-custom-event-animated.png" width="1200" height="1022" />
+<img class="max-w-xl mx-auto" alt="Screenshot of Plausible UI when adding a custom goal event" src="/posts/web-monetization-events-in-plausible/add-custom-event-animated.png" width="1200" height="1022">
 
 <p><strong>3. Add the following goal conversion code to every page on which you want to track monetization.</strong></p>
 
@@ -110,5 +110,5 @@ if (document.monetization) {
 
 <p>When someone visits your website with a browser that supports Web Monetization, the “MonetizationStart” goal will appear in your Plausible Analytics dashboard. The breakdown by path shows the number of unique visitors and total conversions per URL.</p>
 
-<img class="max-w-xl mx-auto border" alt="Screenshot of Plausible conversion goals UI. Table. Goal: MonetizationStart. Uniques 1. Total 2. Row: Breakdown by: path. Row: posts slash why-we-march. Uniques 1. Total 1. Row posts slash remote-async-work. Uniques 1. Total 1." src="/posts/web-monetization-events-in-plausible/monetizationstart-results.png" width="1176" height="752" />
+<img class="max-w-xl mx-auto border" alt="Screenshot of Plausible conversion goals UI. Table. Goal: MonetizationStart. Uniques 1. Total 2. Row: Breakdown by: path. Row: posts slash why-we-march. Uniques 1. Total 1. Row posts slash remote-async-work. Uniques 1. Total 1." src="/posts/web-monetization-events-in-plausible/monetizationstart-results.png" width="1176" height="752">
 

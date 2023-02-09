@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8">
     <title>{{ collections.mostRecentNowPost.data.title }}</title>
 {{> partial-css }}
-    <meta name="description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
-    <meta name="author" content="Jeremiah Lee"/>
+    <meta name="description" content="{{ collections.mostRecentNowPost.data.excerpt }}">
+    <meta name="author" content="Jeremiah Lee">
     <meta name="published_date" content="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">
-    <meta property="og:title" content="{{ collections.mostRecentNowPost.data.title }}"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:description" content="{{ collections.mostRecentNowPost.data.excerpt }}"/>
-    <meta property="og:image" content="https://www.jeremiahlee.com/now/now.jpg"/>
+    <meta property="og:title" content="{{ collections.mostRecentNowPost.data.title }}">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="{{ collections.mostRecentNowPost.data.excerpt }}">
+    <meta property="og:image" content="https://www.jeremiahlee.com/now/now.jpg">
 {{> partial-head }}
 {{#each collections.mostRecentNowPost.data.script}}
 	<script defer src="{{this}}"></script>
@@ -35,7 +35,7 @@
 
 <footer class="prose prose-lg mx-auto text-center">
     <div class="prose-sm">
-        <hr />
+        <hr>
         <p>Thanks to Derek Sivers for the <a href="http://nownownow.com/about">/now page</a> idea.</p>
     </div>
 </footer>

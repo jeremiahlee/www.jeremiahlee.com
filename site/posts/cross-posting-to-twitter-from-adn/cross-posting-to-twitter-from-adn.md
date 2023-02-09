@@ -58,7 +58,7 @@ My proposed interaction design requirements:
 
 ## Demonstration Video
 
-<video controls="controls" preload="none" poster="adn-twitter-crosspost-ui.jpg"><source src="adn-twitter-crosspost-ui.mp4" type="video/mp4" /><source src="adn-twitter-crosspost-ui.webm" type="video/webm" />Your browser does not support the video element. You can download the video [here](adn-twitter-crosspost-ui.mp4).</video>
+<video controls="controls" preload="none" poster="adn-twitter-crosspost-ui.jpg"><source src="adn-twitter-crosspost-ui.mp4" type="video/mp4"><source src="adn-twitter-crosspost-ui.webm" type="video/webm">Your browser does not support the video element. You can download the video [here](adn-twitter-crosspost-ui.mp4).</video>
 
 ### Twitter Character Counting
 

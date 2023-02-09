@@ -10,7 +10,7 @@ tags:
   - "journal"
 ---
 
-<img src="why-we-march-16x9.png" alt="Why we march"/>
+<img src="why-we-march-16x9.png" alt="Why we march">
 
 > "I’ve been thinking about my life and all of the mistakes that I’ve made, the ones that stay with me or the ones that I regret are the ones that I made because of fear. For a long time I was afraid to be who I am because I was taught by my parents that there’s something wrong with someone like me – something offensive, something you will avoid, maybe even pity.
 >

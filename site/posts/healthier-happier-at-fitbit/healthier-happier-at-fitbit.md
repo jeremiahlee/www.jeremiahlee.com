@@ -11,7 +11,7 @@ tags:
 
 I’m elated to announce that I will be joining [Fitbit](https://www.fitbit.com/) as its full time API engineer next week. I’ve never been more excited about a job. Not only does Fitbit make an incredible product that I love,<sup><a href="#footnote-1">1</a></sup> but they created a role specifically for me.
 
-<img src="re-sovo-lution-at-fitbit.png" alt="Fitbit Revolution" width="640" height="360" />
+<img src="re-sovo-lution-at-fitbit.png" alt="Fitbit Revolution" width="640" height="360">
 
 My [CV](https://www.linkedin.com/in/jeremiah-x-lee/) confuses some people. Software engineering without a computer science degree. Director of product after being an engineer. Graphic design awards? Articles, conference talks, and tweets about UX?? I have a good narrative to weave these together once I’m in an interview, but I&#8217;ve recently learned that every detail I had to explain on my CV worked against me when trying to get that first interview.<sup><a href="#footnote-2">2</a></sup>
 

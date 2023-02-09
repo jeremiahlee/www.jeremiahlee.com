@@ -9,7 +9,7 @@ tags:
   - "side project"
 ---
 
-<img src="page-translator-is-dead.png" alt="Screenshot of Firefox add-ons manager. White text over red background: Page Translator has been disabled due to security or stability issues." />
+<img src="page-translator-is-dead.png" alt="Screenshot of Firefox add-ons manager. White text over red background: Page Translator has been disabled due to security or stability issues.">
 
 _**Summary:** Firefox has made the Web less accessible to people who need to access information in another language, taken an absolutist position, and removed freedom of users to extend their browser._
 
@@ -24,7 +24,7 @@ Then, Mozilla killed it without discussion.
 Mozilla tightened its add-on rules to not permit extensions from loading external JavaScript. Until some point recently, that rule only applied to add-ons distributed through addons.mozilla.org. Mozilla said I could self-distribute it as a side-loaded add-on. They don’t have a way to convert an add-on from a Mozilla-hosted add-on to a self-distributed add-on, so I created a new add-on in order to sign the code for distribution. I made it available for installation from [its Github repository](https://github.com/jeremiahlee/page-translator/).
 
 <figure class="mb-4 text-sm">
-    <img src="mozilla-policy-2018-march.png" alt="Screenshot of Mozilla Add-Ons policy table. Execute remote code is prohibited for listed add-ons and permitted for unlisted add-ons."/>
+    <img src="mozilla-policy-2018-march.png" alt="Screenshot of Mozilla Add-Ons policy table. Execute remote code is prohibited for listed add-ons and permitted for unlisted add-ons.">
     <figcaption><em>Screenshot of Mozilla Add-ons policy when Page Translator was last released, via the <a href="https://web.archive.org/web/20180311125311/https://developer.mozilla.org/en-US/Add-ons/AMO/Policy/Reviews">Internet Archive</a>.</em></figcaption>
 </figure>
 

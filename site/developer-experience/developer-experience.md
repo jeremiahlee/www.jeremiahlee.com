@@ -5,10 +5,10 @@ title: "Developer Experience (DX)"
 excerpt: "Jeremiah Lee first wrote about developer experience in 2011."
 ---
 
-<img src="/developer-experience/developer-experience-dx-logo.png" width="256" height="256" alt="Developer Experience (DX) logo" />
+<img src="/developer-experience/developer-experience-dx-logo.png" width="256" height="256" alt="Developer Experience (DX) logo">
 <h1>Developer Experience: when developers are the users</h1>
 
-<hr/>
+<hr>
 
 <iframe src="https://player.vimeo.com/video/95298306" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <p><a href="https://vimeo.com/95298306">UX Research Methods for Web API Design</a> from <a href="https://vimeo.com/jeremiahlee">Jeremiah</a> on <a href="https://vimeo.com">Vimeo</a>.</p>

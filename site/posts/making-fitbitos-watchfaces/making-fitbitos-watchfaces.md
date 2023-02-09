@@ -22,7 +22,7 @@ Your browser does not support HTML5 video in WebM with AV1 or MP4 with H.264.
 </video>
 
 
-## Lesson 1:<br/> Raster Rules or Bitmap is Best
+## Lesson 1:<br> Raster Rules or Bitmap is Best
 
 FitbitOS uses SVG and CSS for implementing UI and TypeScript / JavaScript for application logic. I assumed I would have access to everything I was accustomed to using in a Web browser. That was a reasonable, but tragically incorrect, assumption. FitbitOS has minimum viable subset of CSS and SVG features for drawing on the screen. This led to many wasted hours and frustration.
 
@@ -44,10 +44,10 @@ Your browser does not support HTML5 video in WebM with AV1 or MP4 with H.264.
 
 Here is what the Sketch<sup><a href="#4">4</a></sup> file looked like. Each layer is in a separate artboard because Sketch does not have a way to export a layer the size of the artboard. Sketch exports the smallest dimension of the layer possible, which is reasonable when not having to precisely position 7 images on top of each other.
 
-<img src="rainbow-ripple-sketch-screenshot.png" alt="Screenshot of Sketch app showing 7 layers for each number" />
+<img src="rainbow-ripple-sketch-screenshot.png" alt="Screenshot of Sketch app showing 7 layers for each number">
 
 
-## Lesson 2:<br/> Only compute when the display is on
+## Lesson 2:<br> Only compute when the display is on
 
 The party doesn’t stop just because the display is off. Watchface creators need to listen for `display` `change` events. I incorrectly assumed a watchface’s execution was paused and resumed by FitbitOS. I only learned this was not true when I saw `console.log` messages continue when the display was off. This _really_ should be more prominently noted in the documentation. I suspect many of the complaints from users about certain watchfaces draining their device batteries are due to watchface creators overlooking this detail.
 
@@ -60,7 +60,7 @@ The confetti animation uses a 50ms timeout loop that moves 1 of 12 squares to ra
 When the watch display is not on, calculating these animations is pointless. Listening for the `display` `change` events allowed me to clear the timeout loop and save people’s batteries.
 
 
-## Lesson 3:<br/> Store app settings twice
+## Lesson 3:<br> Store app settings twice
 
 This hole in the developer experience is so big that I could throw a Fitbit Aria 2 scale thru it. It’s an excellent example of APIs that are functional but independently incomplete. I will describe how it works and then how Fitbit should improve it.
 
@@ -78,7 +78,7 @@ Fitbit did create a way out of this situation. FitbitOS provides a way for smart
 I think it’s great that watchfaces can store arbitrary data on the device. I think it’s great that settings data is stored in the companion app automatically. But FitbitOS developers should not need to coordinate settings storage across two apps. The smartwatch app should have an API (built on top of the current APIs) for setting, reading, and being notified of changes to settings without having to deal with sockets and file systems.
 
 
-## Lesson 4:<br/> Use the CLI
+## Lesson 4:<br> Use the CLI
 
 In the year between creating my first and second watchfaces, Fitbit introduced the <a href="https://dev.fitbit.com/build/guides/command-line-interface/?ref=JeremiahLee">FitbitOS <abbr title="command line interface">CLI</abbr></a>. The CLI allows us to create watchfaces using the development tools we prefer to work with instead of the browser-based [Fitbit Studio](https://studio.fitbit.com/) <abbr title="Integrated Development Environment">IDE</abbr>. I prefer to use Microsoft Visual Studio Code as my code editor. Its TypeScript tooling particularly is excellent. Having the files locally means I can use Git for source control.
 
@@ -86,11 +86,11 @@ The CLI also introduced a <a href="https://community.fitbit.com/t5/SDK-Developme
 
 Fitbit sends mixed signals to developers new to its smartwatch platform. We can use Fitbit Studio or the FitbitOS CLI. We can use JavaScript or TypeScript. Different tutorials use different setups. Few of the examples are in TypeScript. The CLI is better documented in the forum than in the developer documentation. Fitbit should focus on one golden path for developers. I think it should focus solely on improving its CLI with TypeScript boilerplate templates.
 
-## Lesson 5:<br/> Use the support forum
+## Lesson 5:<br> Use the support forum
 
 [Fitbit’s SDK Development community forum](https://community.fitbit.com/t5/SDK-Development/bd-p/sdk) has been the best place to get support when I have gotten stuck. Many times, my question has already been asked and answered by someone else. Fitbit employees often answer questions here.
 
-## Lesson 6:<br/> Make formal feature requests
+## Lesson 6:<br> Make formal feature requests
 
 The best job I have ever had was 4 years at Fitbit. I felt satisfied when I left, but I still often wonder about how much more I could have accomplished if still there. The current developer experience of FitbitOS is a mix of cursing in frustration and awe when things actually work. I wish I still had influence internally to improve the situation. But here I am, no longer on the inside and with ideas relentlessly nagging me to come into existence.
 
@@ -114,11 +114,11 @@ I haven’t done this for every feature request below, but I hope to get around 
 - Add ability to change color behind device or specify background image in FitbitOS Simulator
 - License example code as [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/) so creators do not have to cite the copyright of documentation examples when used
 
-<hr />
+<hr >
 
-<img src="rainbow-ripple-submission-screenshot.png" alt="Screenshot of app submission form. Field text: If there is anything you would like the App Review team to know please let us know now. Input form text: Best tested while wearing a rainbow feather boa. No reason. You'll just look more fabulous." width="490" height="124" />
+<img src="rainbow-ripple-submission-screenshot.png" alt="Screenshot of app submission form. Field text: If there is anything you would like the App Review team to know please let us know now. Input form text: Best tested while wearing a rainbow feather boa. No reason. You'll just look more fabulous." width="490" height="124">
 
-<hr />
+<hr >
 
 <sup id="1">1</sup>: It was originally named “Pride” but I renamed it because other creators later released watchfaces also named Pride.
 

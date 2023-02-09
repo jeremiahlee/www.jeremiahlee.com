@@ -9,7 +9,7 @@ tags:
   - "journal"
 ---
 
-<img title="Mark Vinoskey Cohick" src="mom.jpg" width="160" height="236" />
+<img title="Mark Vinoskey Cohick" src="mom.jpg" width="160" height="236">
 
 Tell me about my mother,<br>
 because I have to come to terms with her.

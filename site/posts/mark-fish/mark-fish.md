@@ -23,4 +23,4 @@ He was the biggest cheerleader I have ever had and likely will ever have. He pro
 
 I loved him dearly. I often felt we were regular gifts to each other. My narrative is better because he was a character in it.
 
-<img src="2017-09-09-mark-fish.jpg" height="595" width="395" alt="Mark and me in a photobooth" />
+<img src="2017-09-09-mark-fish.jpg" height="595" width="395" alt="Mark and me in a photobooth">

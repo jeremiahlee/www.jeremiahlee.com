@@ -17,7 +17,7 @@ tags:
 
 <div class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#introduction"><img src="slide-1.png" loading="lazy" alt="Slide with text. Can an API make the world move?" /></a>
+		<a href="#introduction"><img src="slide-1.png" loading="lazy" alt="Slide with text. Can an API make the world move?"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>This is an adaptation of my presentation at the <a href="https://apistrat.com/">API Strategy & Practice Conference</a> in Boston, Massachusetts, US on November 3, 2016.</p>
@@ -28,7 +28,7 @@ tags:
 
 <div id="biography" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#biography"><img src="slide-3.jpg" loading="lazy" alt="Background photo of the Golden Gate Bridge. Three photos of Jeremiah running races. The second photo is of multiple Fitbit employees before a race wearing shirts with the Fitbit logo." /></a>
+		<a href="#biography"><img src="slide-3.jpg" loading="lazy" alt="Background photo of the Golden Gate Bridge. Three photos of Jeremiah running races. The second photo is of multiple Fitbit employees before a race wearing shirts with the Fitbit logo."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Hi, I’m Jeremiah Lee. I live in San Francisco, California and for the last 3.5 years, I have had the best job. I started as the lead engineer and am currently the technical product manager for the Fitbit Web API.</p>
@@ -37,7 +37,7 @@ tags:
 
 <div id="company-overview" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#company-overview"><img src="slide-4.jpg" loading="lazy" alt="Fitbit product line of activity trackers, smart watches, scale, and guided workouts" /></a>
+		<a href="#company-overview"><img src="slide-4.jpg" loading="lazy" alt="Fitbit product line of activity trackers, smart watches, scale, and guided workouts"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Fitbit is the global leader in activity trackers. We also make a Wi-Fi connected scale and an interactive guided workout product. The company is 9 years old and sells products in 50,000 retail stores in 63 countries.</p>
@@ -46,7 +46,7 @@ tags:
 
 <div id="company-mission" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#company-mission"><img src="slide-5.png" loading="lazy" alt="Text of Fitbit’s mission statement: to empower and inspire you to live a healthier, more active life. We design products and experiences that fit seamlessly into your life so you can achieve your health and fitness goals, whatever they may be." /></a>
+		<a href="#company-mission"><img src="slide-5.png" loading="lazy" alt="Text of Fitbit’s mission statement: to empower and inspire you to live a healthier, more active life. We design products and experiences that fit seamlessly into your life so you can achieve your health and fitness goals, whatever they may be."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Fitbit does not think of itself as a consumer electronics company. Fitbit is a personal health and wellness company. We just happen to use technology to achieve that mission. The products are working for a lot of people. At the end of 2015, there were over 29 million active Fitbit users.</p>
@@ -55,7 +55,7 @@ tags:
 
 <div id="lets-go" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#lets-go"><img src="slide-8.png" loading="lazy" alt="Text: Strategy and Practice" /></a>
+		<a href="#lets-go"><img src="slide-8.png" loading="lazy" alt="Text: Strategy and Practice"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Today, being the <em>API Strategy & Practice Conference</em>, I’m excited to share my experience as a practitioner with you. I am also excited to share stats about the Fitbit Web API that have never been shared outside of the company before.</p>
@@ -68,7 +68,7 @@ tags:
 
 <div id="strategy-origin" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#strategy-origin"><img src="slide-9.png" loading="lazy" alt="Text: Strategy" /></a>
+		<a href="#strategy-origin"><img src="slide-9.png" loading="lazy" alt="Text: Strategy"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Let’s start with strategy. What should we build and for who?</p>
@@ -78,7 +78,7 @@ tags:
 
 <div id="seek-understanding" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#seek-understanding"><img src="slide-10.png" loading="lazy" alt="Quote: 'Seek first to understand, then to be understood.' From 'The 7 Habits of Highly Effective People' by Stephen Covey" /></a>
+		<a href="#seek-understanding"><img src="slide-10.png" loading="lazy" alt="Quote: 'Seek first to understand, then to be understood.' From 'The 7 Habits of Highly Effective People' by Stephen Covey"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>I thought about this Stephen Covey quote: “Seek first to understand, then to be understood.”</p>
@@ -90,7 +90,7 @@ tags:
 <div id="api-launch" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
 		<video playsinline muted loop autoplay preload="auto" src="slide-12.mp4" poster="slide-12.jpg" class="contain-video">
-			<img src="slide-12.jpg" loading="lazy" alt="Screenshot of the blog post announcing the Fitbit Web API" />
+			<img src="slide-12.jpg" loading="lazy" alt="Screenshot of the blog post announcing the Fitbit Web API">
 		</video>
 	</div>
 	<div class="md:w-1/2">
@@ -101,7 +101,7 @@ tags:
 
 <div id="api-now" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#api-now"><img src="slide-13.png" loading="lazy" alt="Text: Nearly 4,000,000,000 Web API requests a day" /></a>
+		<a href="#api-now"><img src="slide-13.png" loading="lazy" alt="Text: Nearly 4,000,000,000 Web API requests a day"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>How did the Fitbit Web API go from this humble beginning to five years later responding to nearly <strong>4 billion API requests a day</strong> and sending <strong>over 75 million webhook requests a day</strong>?</p>
@@ -110,7 +110,7 @@ tags:
 
 <div id="fitbit-apps" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#fitbit-apps"><img src="slide-15.jpg" loading="lazy" alt="Screenshot of blog post announcing the Fitbit iPhone app" /></a>
+		<a href="#fitbit-apps"><img src="slide-15.jpg" loading="lazy" alt="Screenshot of blog post announcing the Fitbit iPhone app"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>For starters, Fitbit started using its own API! 7 months after the Fitbit Web API became available, Fitbit released its first mobile app for iPhone.</p>
@@ -121,7 +121,7 @@ tags:
 
 <div id="fitbit-group-health" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#fitbit-group-health"><img src="slide-17.jpg" loading="lazy" alt="Screenshot of Fitbit Group Health marketing website" /></a>
+		<a href="#fitbit-group-health"><img src="slide-17.jpg" loading="lazy" alt="Screenshot of Fitbit Group Health marketing website"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Fitbit has another product called <a href="https://healthsolutions.fitbit.com/">Fitbit Group Health</a>. It’s like Fitbit for your workplace. It has over 1,000 enterprise customers. One of the biggest is Target, which offered a Fitbit device to its 300,000 employees. The idea is that a more active workforce is a healthier workforce.</p>
@@ -130,7 +130,7 @@ tags:
 
 <div id="corporate-wellness" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#corporate-wellness"><img src="slide-19.jpg" loading="lazy" alt="8 logos of companies providing corporate wellness programs: Vitality, StayWell, Virgin Pulse, Humana, Cerner, Redbrick Health, LiveHealthier, Viverae" /></a>
+		<a href="#corporate-wellness"><img src="slide-19.jpg" loading="lazy" alt="8 logos of companies providing corporate wellness programs: Vitality, StayWell, Virgin Pulse, Humana, Cerner, Redbrick Health, LiveHealthier, Viverae"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>But Fitbit isn’t alone in providing this sort of product.</p>
@@ -141,7 +141,7 @@ tags:
 
 <div id="group-health-success" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#group-health-success"><img src="slide-20.png" loading="lazy" alt="Text: Over 2.6 million people use a group health product enabled by the Fitbit Web API" /></a>
+		<a href="#group-health-success"><img src="slide-20.png" loading="lazy" alt="Text: Over 2.6 million people use a group health product enabled by the Fitbit Web API"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Over 2.6 million people use a group health product enabled by the Fitbit Web API. That’s a big business opportunity created from an API that launched without much direction.</p>
@@ -150,7 +150,7 @@ tags:
 
 <div id="third-party-extensions" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#third-party-extensions"><img src="slide-22.jpg" loading="lazy" alt="Screenshots of a walk with location data appearing as a map in both the Fitbit and Strava apps" /></a>
+		<a href="#third-party-extensions"><img src="slide-22.jpg" loading="lazy" alt="Screenshots of a walk with location data appearing as a map in both the Fitbit and Strava apps"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>But that’s not the only thing being built with the Fitbit API. <strong>There are also many companies extending the core product, making Fitbit products more valuable for people.</strong></p>
@@ -160,7 +160,7 @@ tags:
 
 <div id="walgreens" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#walgreens"><img src="slide-25.jpg" loading="lazy" alt="Screenshot of Walgreens rewards program marketing website" /></a>
+		<a href="#walgreens"><img src="slide-25.jpg" loading="lazy" alt="Screenshot of Walgreens rewards program marketing website"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>There are connected apps that provide customer rewards. <a href="https://www.walgreens.com/steps/brhc-loggedout.jsp">Walgreens</a> is a pharmacy. When it started selling Fitbit products, it added a new way to earn discounts through its customer loyalty program. It lets you turn your steps into store credit.</p>
@@ -169,7 +169,7 @@ tags:
 
 <div id="thermos" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#thermos"><img src="slide-27.jpg" loading="lazy" alt="Photo of Thermos smart water bottle and screenshot of Thermos app syncing water consumption data to the Fitbit app" /></a>
+		<a href="#thermos"><img src="slide-27.jpg" loading="lazy" alt="Photo of Thermos smart water bottle and screenshot of Thermos app syncing water consumption data to the Fitbit app"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Manual water and food logging are beloved features in the Fitbit app. The <a href="https://www.thermos.com/smartlid">Thermos Smart Lid</a> makes tracking hydration effortless by automatically logging water consumption for you.</p>
@@ -178,7 +178,7 @@ tags:
 
 <div id="alexa" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#alexa"><img src="slide-29.jpg" loading="lazy" alt="Photo of Amazon Echo smart speaker with speech bubbles. Alexa, ask Fitbit how I slept last night. You fell asleep at 10:55 pm and awoke at 7:05 am. You met your sleep goal of 8 hours." /></a>
+		<a href="#alexa"><img src="slide-29.jpg" loading="lazy" alt="Photo of Amazon Echo smart speaker with speech bubbles. Alexa, ask Fitbit how I slept last night. You fell asleep at 10:55 pm and awoke at 7:05 am. You met your sleep goal of 8 hours."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>The Web API also enables new, additional ways to meaningfully interact with Fitbit. Amazon’s Alexa platform has a <a href="https://help.fitbit.com/articles/en_US/Help_article/2009" title="Can Alexa tell me my Fitbit stats?">Fitbit Skill</a>. You can say things like, “Alexa, ask Fitbit how I slept last night,” and it will reply with information.</p>
@@ -187,7 +187,7 @@ tags:
 
 <div id="fitabase" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#fitabase"><img src="slide-30.jpg" loading="lazy" alt="Screenshot of Fitabase marketing website" /></a>
+		<a href="#fitabase"><img src="slide-30.jpg" loading="lazy" alt="Screenshot of Fitabase marketing website"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>The Web API enables researchers to use Fitbit devices in their studies.</p>
@@ -198,7 +198,7 @@ tags:
 
 <div id="10000-apps" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#10000-apps"><img src="slide-31.png" loading="lazy" alt="Text: more than 10,000 apps" /></a>
+		<a href="#10000-apps"><img src="slide-31.png" loading="lazy" alt="Text: more than 10,000 apps"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>There are over 10,000 apps <a href="https://dev.fitbit.com/" title="Fitbit developer portal">registered</a> to use the Fitbit Web API today that have at least 1 user. <strong>There is a long tail of enthusiastic customers with some programming skill wanting to play with their data.</strong></p>
@@ -207,7 +207,7 @@ tags:
 
 <div id="ifttt" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#ifttt"><img src="slide-32.png" loading="lazy" alt="Screenshot of Fitbit channel on IFTTT" /></a>
+		<a href="#ifttt"><img src="slide-32.png" loading="lazy" alt="Screenshot of Fitbit channel on IFTTT"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>And we love that. That’s why we created an <a href="https://ifttt.com/fitbit"><abbr title="If This Then That">IFTTT</abbr> channel</a>: to allow anyone, even people who don’t know how to program, to take advantage of the Web API. It lets people use APIs by completing a simple sentence. For example: if there is a new daily activity summary, then automatically log it to a Google Sheet.</p>
@@ -216,7 +216,7 @@ tags:
 
 <div id="api-strategy" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#api-strategy"><img src="slide-38.png" loading="lazy" alt="Text: What is the Fitbit Web API strategy?" /></a>
+		<a href="#api-strategy"><img src="slide-38.png" loading="lazy" alt="Text: What is the Fitbit Web API strategy?"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>So that’s how the API is being used. <strong>What’s the strategy?</strong></p>
@@ -234,7 +234,7 @@ tags:
 
 <div id="adoption" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#adoption"><img src="slide-39.jpg" loading="lazy" alt="Text: 1 in 7 Fitbit users has connected a third-party app." /></a>
+		<a href="#adoption"><img src="slide-39.jpg" loading="lazy" alt="Text: 1 in 7 Fitbit users has connected a third-party app."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>It’s a strategy that seems to be working. 1 in 7 Fitbit users has connected a third-party app.</p>
@@ -243,7 +243,7 @@ tags:
 
 <div id="traffic" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#traffic"><img src="slide-40.png" loading="lazy" alt="17% of Web API requests are from third-party apps." /></a>
+		<a href="#traffic"><img src="slide-40.png" loading="lazy" alt="17% of Web API requests are from third-party apps."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p><strong>Third-party apps are meaningful to Fitbit as a business and its customers.</strong></p>
@@ -260,7 +260,7 @@ tags:
 
 <div id="scaling-practice" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#scaling-practice"><img src="slide-42.png" loading="lazy" alt="Text: Practice" /></a>
+		<a href="#scaling-practice"><img src="slide-42.png" loading="lazy" alt="Text: Practice"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>So that’s a little about our Web API strategy. Now let’s talk about what it takes to build and use the API at scale. This is a bit of MTIV, <em>making the invisible visible</em>.</p>
@@ -271,7 +271,7 @@ tags:
 
 <div id="apirates" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#apirates"><img src="slide-43.jpg" loading="lazy" alt="Group of people dressed as pirates in the Fitbit office: the APIrates." /></a>
+		<a href="#apirates"><img src="slide-43.jpg" loading="lazy" alt="Group of people dressed as pirates in the Fitbit office: the APIrates."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>My team calls itself the API-rates. We are team responsible for core API infrastructure.</p>
@@ -281,7 +281,7 @@ tags:
 
 <div id="team-structure" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#team-structure"><img src="slide-44.png" loading="lazy" alt="Text: how Fitbit uses Fitbit" /></a>
+		<a href="#team-structure"><img src="slide-44.png" loading="lazy" alt="Text: how Fitbit uses Fitbit"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Fitbit structures its product and engineering teams in two ways. The first way is called a “feature team”. It has a product manager, a designer, a lead engineer, backend engineers, and a QA engineer. It also has an Android, iOS, Web, and Windows client engineers. We call this a “full stack team”.</p>
@@ -294,7 +294,7 @@ tags:
 
 <div id="easy-correctness" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#easy-correctness"><img src="slide-45.jpg" loading="lazy" alt="Background photo of stairs cut into the side of a hill and people carrying daypacks casually hiking. Text overlaid: Make it easy to do the right thing." /></a>
+		<a href="#easy-correctness"><img src="slide-45.jpg" loading="lazy" alt="Background photo of stairs cut into the side of a hill and people carrying daypacks casually hiking. Text overlaid: Make it easy to do the right thing."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p><strong>My primary strategy for coordinating Web APIs across the company has been: make it easy to create the right thing.</strong></p>
@@ -307,7 +307,7 @@ tags:
 
 <div id="guardrails" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#guardrails"><img src="slide-46.jpg" loading="lazy" alt="Background photo of a shirtless, moderately buff man doing a pullup. Text overlaid: Make it hard to break anything." /></a>
+		<a href="#guardrails"><img src="slide-46.jpg" loading="lazy" alt="Background photo of a shirtless, moderately buff man doing a pullup. Text overlaid: Make it hard to break anything."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p><strong>We’re also using process to make it harder to break things.</strong></p>
@@ -319,7 +319,7 @@ tags:
 
 <div id="preventative-action" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#preventative-action"><img src="slide-47.png" loading="lazy" alt="Text: If two people fail at something, fix the system so a third person doesn’t." /></a>
+		<a href="#preventative-action"><img src="slide-47.png" loading="lazy" alt="Text: If two people fail at something, fix the system so a third person doesn’t."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>A big thing is just being on the lookout for patterns. <strong>If two people fail at something, fix the system so a third person doesn’t.</strong></p>
@@ -330,7 +330,7 @@ tags:
 
 <div id="do-hard-things-once" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#do-hard-things-once"><img src="slide-48.png" loading="lazy" alt="Text: I don’t care if you think it’s hard to create an API if it’s easy for the client to use. Hard things should be hard once—for the API provider—instead of hard many times for every client that uses it." /></a>
+		<a href="#do-hard-things-once"><img src="slide-48.png" loading="lazy" alt="Text: I don’t care if you think it’s hard to create an API if it’s easy for the client to use. Hard things should be hard once—for the API provider—instead of hard many times for every client that uses it."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>One recurring sentiment that I’ve had to address is one where backend engineers argue for a suboptimal API design because it’s easier for them. And I’ve had to tell them: <strong>I don’t care if you think it’s hard to create an API if it’s easy for the client to use. Hard things should be hard once—for the API provider—instead of hard many times for every client that uses it.</strong></p>
@@ -341,7 +341,7 @@ tags:
 
 <div id="office-hours" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#office-hours"><img src="slide-49.png" loading="lazy" alt="Hanging door sign with text: Come in, we're open." /></a>
+		<a href="#office-hours"><img src="slide-49.png" loading="lazy" alt="Hanging door sign with text: Come in, we're open."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Another way we consult with feature teams is by having open office hours regularly. Sometimes no one shows up, but it’s typically filled with at least a couple meaningful conversations that might not have otherwise happened.</p>
@@ -355,7 +355,7 @@ tags:
 
 <div id="partner-success" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#partner-success"><img src="slide-51.png" loading="lazy" alt="Text surrounded by football play diagram: coaching third-party apps to success." /></a>
+		<a href="#partner-success"><img src="slide-51.png" loading="lazy" alt="Text surrounded by football play diagram: coaching third-party apps to success."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>As I mentioned earlier, Fitbit is highly intentional about its API strategy. When we find a partner we want to work with, we want to do everything we can to make that integration successful.</p>
@@ -364,7 +364,7 @@ tags:
 
 <div id="partner-playbook" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#partner-playbook"><img src="slide-53.png" loading="lazy" alt="The software development life cycle by Dave Corby (2010) based on Guide to the Software Engineering Body of Knowledge (SWEBOK) by IEEE Computer Society (2004)" /></a>
+		<a href="#partner-playbook"><img src="slide-53.png" loading="lazy" alt="The software development life cycle by Dave Corby (2010) based on Guide to the Software Engineering Body of Knowledge (SWEBOK) by IEEE Computer Society (2004)"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>And we do that by understanding the software development lifecycle. I break it down into 3 phases: planning, active development, and maintenance. My team works with partners in all three.
@@ -382,7 +382,7 @@ tags:
 
 <div class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#change-management"><img src="slide-54.png" loading="lazy" alt="Quote by Heraclitus: The only thing that is constant is change." /></a>
+		<a href="#change-management"><img src="slide-54.png" loading="lazy" alt="Quote by Heraclitus: The only thing that is constant is change."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>But change happens. Fitbit’s core product evolves and sometimes that means breaking changes happen. Deeply understanding how apps use the Fitbit Web API helps us evaluate the impact of a given change. We typically can provide 30–90 days notice of a breaking change to apps.</p>
@@ -391,7 +391,7 @@ tags:
 
 <div id="oauth-change" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#oauth-change"><img src="slide-61.png" loading="lazy" alt="Timeline of events. Fall 2014: Fitbit Connect 2.0. May 2015: OAuth 2.0 public beta. October 2015: OAuth 2.0 released. March 2016: 1 hour blackout test. April 2016: OAuth 1.0a registrations stopped. August 2016: OAuth 1.0a removed." /></a>
+		<a href="#oauth-change"><img src="slide-61.png" loading="lazy" alt="Timeline of events. Fall 2014: Fitbit Connect 2.0. May 2015: OAuth 2.0 public beta. October 2015: OAuth 2.0 released. March 2016: 1 hour blackout test. April 2016: OAuth 1.0a registrations stopped. August 2016: OAuth 1.0a removed."></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Let’s talk about the biggest change I’ve overseen at Fitbit: the transition from OAuth 1.0a to OAuth 2.0. It affected the entire ecosystem.</p>
@@ -412,7 +412,7 @@ tags:
 
 <div class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#conclusion"><img src="slide-8.png" loading="lazy" alt="Text: Strategy & Practice" /></a>
+		<a href="#conclusion"><img src="slide-8.png" loading="lazy" alt="Text: Strategy & Practice"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>Again, scaling an API is much more than just adding servers. You have to think about what it means to have many people creating and using the APIs. Make it easy to do the right thing. Make it hard to break anything. Act as servant leader coaches as much as possible.</p>
@@ -426,7 +426,7 @@ tags:
 
 <div id="ethics" class="container mx-auto md:flex pb-4">
 	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
-		<a href="#ethics"><img src="slide-64.jpg" loading="lazy" alt="Comic panel from Amazing Fantasy #15: Spider-Man!. Text: And a lean, silent figure slow fades into the gathering darkness, aware at last that in this world, with great power there must also come great responsibility!" /></a>
+		<a href="#ethics"><img src="slide-64.jpg" loading="lazy" alt="Comic panel from Amazing Fantasy #15: Spider-Man!. Text: And a lean, silent figure slow fades into the gathering darkness, aware at last that in this world, with great power there must also come great responsibility!"></a>
 	</div>
 	<div class="md:w-1/2">
 		<p>This final thought is coming from me, as Jeremiah, not from my employer.</p>

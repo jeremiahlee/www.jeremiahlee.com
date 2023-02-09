@@ -17,9 +17,9 @@ I admit that I am in the minority of iPhone users. I don’t like having apps in
 Facebook’s and Twitter’s mobile Web apps are fantastic. So is LinkedIn’s. But unlike Facebook and Twitter, LinkedIn seems to dislike how great its mobile Web app is. This was my experience using LinkedIn’s mobile Web app today:
 
 <div class="flex my-8 col-start-1 col-end-13">
-    <div class="w-1/3 px-4"><img src="2017-09-17-linkedin-1.png" alt="Screenshot of LinkedIn mobile Web app with a full screen modal promoting its iPhone app" /></div>
-    <div class="w-1/3 px-4"><img src="2017-09-17-linkedin-2.png" alt="Screenshot of LinkedIn mobile Web app with a top banner promoting its iPhone app" /></div>
-    <div class="w-1/3 px-4"><img src="2017-09-17-linkedin-3.png" alt="Screenshot of LinkedIn mobile Web app with a bottom banner promoting its iPhone app" /></div>
+    <div class="w-1/3 px-4"><img src="2017-09-17-linkedin-1.png" alt="Screenshot of LinkedIn mobile Web app with a full screen modal promoting its iPhone app"></div>
+    <div class="w-1/3 px-4"><img src="2017-09-17-linkedin-2.png" alt="Screenshot of LinkedIn mobile Web app with a top banner promoting its iPhone app"></div>
+    <div class="w-1/3 px-4"><img src="2017-09-17-linkedin-3.png" alt="Screenshot of LinkedIn mobile Web app with a bottom banner promoting its iPhone app"></div>
 </div>
 
 1. I went to [LinkedIn.com](https://www.linkedin.com/). **A full screen modal window appeared.** It proclaimed that LinkedIn “works better” in its iPhone app. The proclamation was not accompanied by evidence of *how* the iOS app works better. I don’t trust random modals on the Internet, so I tapped “Not now”.

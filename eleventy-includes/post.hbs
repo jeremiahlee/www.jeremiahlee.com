@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
 	<title>{{title}}</title>
-	<link rel="canonical" href="https://www.jeremiahlee.com{{ page.url }}"/>
+	<link rel="canonical" href="https://www.jeremiahlee.com{{ page.url }}">
 {{> partial-css }}
 {{#if excerpt}}
-	<meta name="description" content="{{ excerpt }}"/>
-	<meta name="author" content="Jeremiah Lee"/>
+	<meta name="description" content="{{ excerpt }}">
+	<meta name="author" content="Jeremiah Lee">
 	<meta name="published_date" content="{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}">
-	<meta property="og:title" content="{{ title }}"/>
-	<meta property="og:type" content="article"/>
-	<meta property="og:description" content="{{ excerpt }}"/>
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:type" content="article">
+	<meta property="og:description" content="{{ excerpt }}">
 	{{#if excerptImage}}
-	<meta property="og:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"/>
+	<meta property="og:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}">
 	{{/if}}
 {{/if}}
 {{> partial-head }}
@@ -40,7 +40,7 @@
 	</div>
 </article>
 
-<hr />
+<hr>
 
 <footer class="prose prose-lg mx-auto text-center">
 	<div class="prose-sm prose-violet">

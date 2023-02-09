@@ -28,7 +28,7 @@ The biggest differences between the organizations were that Fitbit had widesprea
 
 In Mr Cagan’s argument, “empowered product teams” produce innovation and innovation is rewarded by the market. A company with a well performing stock must have collaboration processes that are effective and a company with a poor performing stock must not have collaboration processes that produce the innovation required to dominate the market. **Besides being a false cause logical fallacy, it is a meritocracy argument that ignores reality.** Businesses sometimes fail even with a great team and sometimes businesses succeed even with terrible collaboration and cultures.
 
-<hr/>
+<hr>
 
 ## Actual premise
 
@@ -56,17 +56,17 @@ In hindsight, I wish I had not included this line because it distracted some peo
 2. Apple’s anticompetitive practice of not sharing iOS APIs it uses for Apple Watch with other smart watch makers
 3. Its biggest competitors (Apple, Samsung) have significant supply chain advantages, far more employees, and can tolerate more risk due to product portfolio diversity
 
-<hr />
+<hr >
 
 ## A note on stock performance and definition of success
 
-<img class="w-full" src="/posts/failed-squad-goals/comments/spotify-vs-fitbit/spot-stock-performance.png" alt="Graph of SPOT stock performance showing price below IPO most of the time"/>
+<img class="w-full" src="/posts/failed-squad-goals/comments/spotify-vs-fitbit/spot-stock-performance.png" alt="Graph of SPOT stock performance showing price below IPO most of the time">
 
 Spotify’s stock has traded below its IPO price for most of its time as a publicly traded company. The giant spike recently was not due to some empowered product team win, but from Spotify securing exclusive licensing to a popular podcast.
 
 There is no denying Fitbit’s IPO was terribly mismanaged by a since-ousted CFO. But Fitbit’s stock price has little to do with how well it has been able to compete against industry giants Apple and Samsung. Google is in the process of acquiring Fitbit because **Fitbit has succeeded in maintaining competitiveness with Apple and Samsung, something allegedly empowered product teams at Google were unable to do with Android Wear.** Pending regulatory approval, Fitbit will be Google’s second largest acquisition ever.
 
-<hr />
+<hr >
 
 <ol>
 <li id="footnote-1"><a href="/posts/failed-squad-goals/comments/" title="Reactions to “Spotify’s Failed Squad Goals”">My clarification in response to original article</a> <a href="#footnote-1-ref" title="Jump back to footnote 1 in the text.">↩︎</a></li>

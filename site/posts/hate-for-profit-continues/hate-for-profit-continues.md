@@ -13,7 +13,7 @@ Did your company join the [#StopHateForProfit advertise boycott](https://www.sto
 
 Join me in asking the executive leaders at your company to commit to continuing the boycott. Here is a template for raising the issue on whatever forum your company uses to address employee concerns.
 
-<hr/>
+<hr>
 
 1. Is *CompanyName* committed to continuing its boycott of Facebook advertising until the [demands](https://www.stophateforprofit.org/productrecommendations "Recommended Next Steps") of the [*Stop Hate for Profit* protest](https://www.stophateforprofit.org/) are met?
 

@@ -12,10 +12,10 @@ tags:
 ---
 
 <!-- <div class="">
-    <img id="header1" src="net-magazine-tab-tosser-header-how-to-use.png" alt="" role="presentation" />
-    <img id="header2" src="net-magazine-tab-tosser-header-landing-page.png" alt="" role="presentation" />
-    <img id="header3" src="net-magazine-tab-tosser-header-tab-overload-1.png" alt="" role="presentation" />
-    <img id="header4" src="net-magazine-tab-tosser-header-tab-overload-2.png" alt="" role="presentation" />
+    <img id="header1" src="net-magazine-tab-tosser-header-how-to-use.png" alt="" role="presentation">
+    <img id="header2" src="net-magazine-tab-tosser-header-landing-page.png" alt="" role="presentation">
+    <img id="header3" src="net-magazine-tab-tosser-header-tab-overload-1.png" alt="" role="presentation">
+    <img id="header4" src="net-magazine-tab-tosser-header-tab-overload-2.png" alt="" role="presentation">
 </div> -->
 
 From my journal: July 19, 2017:

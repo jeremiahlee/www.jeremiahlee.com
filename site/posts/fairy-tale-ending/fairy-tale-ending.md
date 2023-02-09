@@ -9,7 +9,7 @@ tags:
   - "journal"
 ---
 
-<img src="atheist.jpg" alt="Spoon balanced on finger. The spoon fades out of existence over the finger. A dotted outline is around the spoon."/>
+<img src="atheist.jpg" alt="Spoon balanced on finger. The spoon fades out of existence over the finger. A dotted outline is around the spoon.">
 
 *“Do not try and bend the spoon. That’s impossible. Instead, only try to realize the truth: there is no spoon.” —[The Matrix](https://www.youtube.com/watch?v=uAXtO5dMqEI)*
 
