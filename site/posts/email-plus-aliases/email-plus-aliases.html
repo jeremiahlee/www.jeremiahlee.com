@@ -1,0 +1,67 @@
+---
+date: 2023-02-27T14:09:17+01:00
+excerpt: "Your email address has a hidden super power for blocking annoying marketers and protecting you in data breaches"
+title: "Email plus aliases"
+excerptImage: "email-plus-aliases.jpg"
+tags:
+  - "posts"
+  - "tips"
+---
+
+<p>Have you ever hesitated to give your email address because you feared the company would share it with others and you would get all sorts of email you didn't want? I felt this every time I bought from a new online store, made a donation, or attended a conference. Fortunately, your email address contains a feature to deal with this problem.</p>
+
+<p>Email plus aliases (also technically known as "<a href="https://www.rfc-editor.org/rfc/rfc5233" rel="noopener">subaddresses</a>") allow you to create unlimited unique email addresses by putting a <em>+</em> and word after your user name. For example, if my email address was <em>jeremiah@example.com</em>, I could create a plus alias of <em>jeremiah+BigBookStore@example.com</em> when I bought from Big Book Store. Any email sent to the plus alias would arrive in my inbox just like any email sent to my standard email address.</p>
+
+<p><img src="/posts/email-plus-aliases/email-plus-aliases-examples.svg" alt="Examples of plus aliases: jeremiah+randomShopifySeller@example.com, jeremiah+experian@example.com, jeremiah+wedding@example.com, jeremiah+testUser3@example.com" width="2000" height="600"></p>
+
+<p>You can create as many plus aliases as you need without setting them up before using them. Creating a unique alias for each website or service you sign up for enables several benefits.</p>
+
+<p id="benefit-1"><strong>1. Aliases allow you to track who shares your email address without your consent.</strong></p>
+
+<p>If one of your aliases starts to receive spam, scams, or other unexpected email, you can identify who shared your email address. Then, you can inform the responsible party of your displeasure and block further email to the alias from reaching your inbox.</p>
+
+<p id="benefit-2"><strong>2. Aliases reduce risk after security breaches.</strong></p>
+
+<p>People often reuse the same password across multiple services. Because of this, scammers will try email address and password combinations obtained from one data breach on other popular services in order to gain even more access into their victims&rsquo; lives. Aliases allow you to have a unique email address for each service you use, not just a unique password. This double uniqueness limits potential damage to only the account affected by a data breach.</p>
+
+<p id="benefit-3"><strong>3. Aliases allow you to organize your inbox more easily.</strong></p>
+
+<p>Inbox rules can filter and take actions based on the alias used. For example, I could create an alias for a project and then have all email messages sent to that alias marked as important or moved to a specific folder automatically.</p>
+
+<p id="benefit-4"><strong>4. Aliases allow you to create multiple accounts on the same service more easily.</strong></p>
+
+<p>As a software engineer, I have needed to create multiple accounts on the same service for testing purposes. Email plus aliases allowed me to do this without having to create multiple email accounts as well.</p>
+
+<h2 id="limitations">Limitations &amp; potential gotchas</h2>
+
+<ul>
+	<li>Anyone can determine your base email address simply by ignoring the plus alias. Therefore, email plus aliases are not an effective deterrent for general spam.</li>
+	<li>Some forms erroneously will reject an email plus alias as an invalid email address. Those forms are incorrect according to Internet standards, but sometimes one must simply accept others' flaws.</li>
+	<li>Some systems break even after they accept a plus alias. I do not recommend using a plus alias with antiquated industries like airlines. My husband spent days with SAS customer support trying to change his email address to not use a plus alias after one of its internal systems could not properly handle the plus sign.</li>
+</ul>
+
+<h2 id="related">Related features &amp; alternatives</h2>
+
+<p>If you own your own domain name:</p>
+
+<ul>
+	<li><em>Catch-all</em> or <em>wildcard</em> aliases allow any unused user name on the server to be routed to a specific email account. For example, if I owned <em>example.com</em>, I could have <em>whatever@example.com</em> routed to <em>jeremiah@example.com</em> without having to set up <em>whatever@example.com</em> as an alias before use. This gets around the many issues caused by bad programming not properly handling the plus symbol.</li>
+	<li><a href="https://www.fastmail.help/hc/en-us/articles/4406536368911-Masked-Email" rel="noopener">Masked email</a> is a feature of Fastmail and 1Password that generates unique random username aliases before use. It works similarly to a wildcard alias, but limits inbound email to only known addresses.</li>
+</ul>
+
+<p>If you don't own your own domain name, email obfuscation services like <a href="https://support.apple.com/en-us/HT210425" rel="noopener">Apple Hide My Email</a>, <a href="https://simplelogin.io/?ref=JeremiahLee.com" rel="noopener">SimpleLogin</a>, and <a href="https://duckduckgo.com/email/faq?ref=JeremiahLee.com" rel="noopener">Duck.com</a> generate unique random email addresses that forward email to your real email address. This fully hides your actual email address and offers the same benefit of having a unique address for each service you use.</p>
+
+<h2 id="providers">Email providers with plus alias support</h2>
+
+<p>The most popular email service providers support plus aliases, but not all do. If your provider is not listed, send a test email to yourself using a plus alias.</p>
+
+<ul>
+	<li>Apple iCloud Mail</li>
+	<li><a href="https://www.fastmail.help/hc/en-us/articles/360060591053-Plus-addressing-and-subdomain-addressing" rel="noopener">Fastmail</a></li>
+	<li><a href="https://gmail.googleblog.com/2008/03/2-hidden-ways-to-get-more-from-your.html" rel="noopener">Google Gmail</a></li>
+	<li>Microsoft 365 <a href="https://learn.microsoft.com/en-us/exchange/recipients-in-exchange-online/plus-addressing-in-exchange-online" rel="noopener">Exchange Online</a> and Outlook.com (<abbr title="formerly known as">fka</abbr> Hotmail)</li>
+	<li><a href="https://proton.me/blog/what-is-email-alias#creating-email-aliases" rel="noopener">Proton Mail</a></li>
+	<li>Zoho Mail</li>
+</ul>
+
+<p><small>Thank you to <a href="https://blog.sonofsuntzu.org.uk/?ref=JeremiahLee.com">Nick Drage</a> and the <a href="https://www.foster.co/?ref=JeremiahLee.com">Foster writing community</a> for reviewing drafts of this post. Article image generated with DALL·E by OpenAI with prompt “3D envelope with a postage stamp of a plus sign against a background of space”.</small></p>
