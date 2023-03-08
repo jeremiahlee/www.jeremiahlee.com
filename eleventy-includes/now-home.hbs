@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <title>{{ collections.mostRecentNowPost.data.title }}</title>
+	<meta charset="utf-8">
+	<title>{{ collections.mostRecentNowPost.data.title }}</title>
 {{> partial-css }}
-    <meta name="description" content="{{ collections.mostRecentNowPost.data.excerpt }}">
-    <meta name="author" content="Jeremiah Lee">
-    <meta name="published_date" content="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">
-    <meta property="og:title" content="{{ collections.mostRecentNowPost.data.title }}">
-    <meta property="og:type" content="article">
-    <meta property="og:description" content="{{ collections.mostRecentNowPost.data.excerpt }}">
-    <meta property="og:image" content="https://www.jeremiahlee.com/now/now.jpg">
+	<meta name="description" content="{{ collections.mostRecentNowPost.data.excerpt }}">
+	<meta name="author" content="Jeremiah Lee">
+	<meta property="article:published_time" content="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">
+	<meta property="og:title" content="{{ collections.mostRecentNowPost.data.title }}">
+	<meta property="og:type" content="article">
+	<meta property="og:description" content="{{ collections.mostRecentNowPost.data.excerpt }}">
+	<meta property="og:image" content="https://www.jeremiahlee.com/now/now.jpg">
 {{> partial-head }}
 {{#each collections.mostRecentNowPost.data.script}}
 	<script defer src="{{this}}"></script>
@@ -22,22 +22,22 @@
 <nav><a class="md:absolute md:left-0 md:top-0 md:bg-violet-100 md:mt-4 p-2 md:z-20 text-violet-800" href="/then/">←︎ Now &amp; Then</a></nav>
 
 <article class="relative py-16">
-    <div class="relative px-4 sm:px-6 lg:px-8">
-        <header class="text-lg max-w-prose mx-auto">
-            <h1 class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl" property="headline">What I’m Up To Now</h1>
-            <p class="text-center text-sm text-gray-500">Last updated on <time property="datePublished" datetime="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment collections.mostRecentNowPost.data.date 'LLLL'}}</time></p>
-        </header>
-        <div class="mt-6 prose prose-violet prose-lg text-gray-700 mx-auto">
-            {{{ collections.mostRecentNowPost.data.content }}}
-        </div>
-    </div>
+	<div class="relative px-4 sm:px-6 lg:px-8">
+		<header class="text-lg max-w-prose mx-auto">
+			<h1 class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl" property="headline">What I’m Up To Now</h1>
+			<p class="text-center text-sm text-gray-500">Last updated on <time property="datePublished" datetime="{{moment collections.mostRecentNowPost.data.date 'YYYY-MM-DDTHH:mm:ssZZ'}}">{{moment collections.mostRecentNowPost.data.date 'LLLL'}}</time></p>
+		</header>
+		<div class="mt-6 prose prose-violet prose-lg text-gray-700 mx-auto">
+			{{{ collections.mostRecentNowPost.data.content }}}
+		</div>
+	</div>
 </article>
 
 <footer class="prose prose-lg mx-auto text-center">
-    <div class="prose-sm">
-        <hr>
-        <p>Thanks to Derek Sivers for the <a href="http://nownownow.com/about">/now page</a> idea.</p>
-    </div>
+	<div class="prose-sm">
+		<hr>
+		<p>Thanks to Derek Sivers for the <a href="http://nownownow.com/about">/now page</a> idea.</p>
+	</div>
 </footer>
 
 </body>

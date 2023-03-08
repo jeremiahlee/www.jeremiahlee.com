@@ -8,7 +8,10 @@
 {{#if excerpt}}
 	<meta name="description" content="{{ excerpt }}">
 	<meta name="author" content="Jeremiah Lee">
-	<meta name="published_date" content="{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}">
+	<meta property="article:published_time" content="{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}">
+	{{#if updated}}
+	<meta property="article:modified_time" content="{{ moment updated 'YYYY-MM-DDTHH:mm:ssZZ' }}">
+	{{/if}}
 	<meta property="og:title" content="{{ title }}">
 	<meta property="og:type" content="article">
 	<meta property="og:description" content="{{ excerpt }}">

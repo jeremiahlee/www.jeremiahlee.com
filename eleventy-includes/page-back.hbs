@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <title>{{title}}</title>
+	<meta charset="utf-8">
+	<title>{{title}}</title>
 {{> partial-css }}
 {{#if excerpt}}
-    <meta name="description" content="{{ excerpt }}">
-    <meta name="author" content="Jeremiah Lee">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:type" content="article">
-    <meta property="og:description" content="{{ excerpt }}">
-    {{#if excerptImage}}
-    <meta property="og:image" content="https://www.jeremiahlee.com{{ permalink }}{{ excerptImage }}">
-    {{/if}}
+	<meta name="description" content="{{ excerpt }}">
+	<meta name="author" content="Jeremiah Lee">
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:type" content="article">
+	<meta property="og:description" content="{{ excerpt }}">
+	{{#if excerptImage}}
+	<meta property="og:image" content="https://www.jeremiahlee.com{{ permalink }}{{ excerptImage }}">
+	{{/if}}
 {{/if}}
 {{> partial-head permalink=permalink }}
 	<script defer src="/scripts/switch-to-firefox.js"></script>
@@ -22,7 +22,7 @@
 <nav><a class="md:absolute md:left-0 md:top-0 md:bg-violet-100 md:mt-4 p-2 md:z-20 text-violet-800" href="/" title="Home">←︎ Home</a></nav>
 
 <div class="prose prose-violet mx-auto my-8">
-    {{{ content }}}
+	{{{ content }}}
 </div>
 
 </body>
