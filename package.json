@@ -2,16 +2,16 @@
 	"author": "Jeremiah Lee",
 	"description": "The website of Jeremiah Lee",
 	"devDependencies": {
-		"@11ty/eleventy": "^1.0.1",
+		"@11ty/eleventy": "^2.0.1",
 		"@11ty/eleventy-plugin-rss": "^1.1.0",
-		"@cloudflare/workers-types": "^3.2.0",
-		"@percy/cli": "^1.14.0",
+		"@cloudflare/workers-types": "^4.20230321.0",
+		"@percy/cli": "^1.21.0",
 		"@tailwindcss/forms": "^0.5.2",
-		"@tailwindcss/typography": "^0.5.1",
-		"autoprefixer": "^10.4.2",
+		"@tailwindcss/typography": "^0.5.9",
+		"autoprefixer": "^10.4.14",
 		"moment": "^2.29.1",
-		"postcss": "^8.4.6",
-		"tailwindcss": "^3.0.12"
+		"postcss": "^8.4.21",
+		"tailwindcss": "^3.3.0"
 	},
 	"engines": {
 		"node": ">= 16.0.0"
@@ -22,18 +22,18 @@
 	"private": true,
 	"scripts": {
 		"build": "npm run build:html && npm run build:css",
-		"build:css": "npx tailwindcss --minify -i css/style.css -o dist/soul-class-style-badass.css --config tailwind.config.js",
-		"build:html": "npx @11ty/eleventy --config=eleventy.config.js",
-		"dev:css": "npx tailwindcss --watch -i css/style.css -o dist/soul-class-style-badass.css --config tailwind.config.js",
-		"dev:serve": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve",
+		"build:css": "npx tailwindcss --minify -i css/style.css -o dist/soul-class-style-badass.css --config tailwind.config.ts",
+		"build:html": "npx @11ty/eleventy",
+		"dev:css": "npx tailwindcss --watch -i css/style.css -o dist/soul-class-style-badass.css --config tailwind.config.ts",
+		"dev:serve": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
 		"dev:cloudflare": "npx wrangler pages dev ./dist",
-		"dev:spotify": "npx tailwindcss build -i site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css --config site/posts/failed-squad-goals/tailwind.config.js",
-		"build:spotify": "npx tailwindcss build --minify -i site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css --config site/posts/failed-squad-goals/tailwind.config.js",
-		"dev:burp": "npx tailwindcss build -i site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css --config site/posts/last-burp-of-hope/tailwind.config.js",
-		"build:burp": "npx tailwindcss build --minify -i site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css --config site/posts/last-burp-of-hope/tailwind.config.js",
+		"dev:spotify": "npx tailwindcss build -i site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css --config site/posts/failed-squad-goals/tailwind.config.ts",
+		"build:spotify": "npx tailwindcss build --minify -i site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css --config site/posts/failed-squad-goals/tailwind.config.ts",
+		"dev:burp": "npx tailwindcss build -i site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css --config site/posts/last-burp-of-hope/tailwind.config.ts",
+		"build:burp": "npx tailwindcss build --minify -i site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css --config site/posts/last-burp-of-hope/tailwind.config.ts",
 		"dev:raw": "cd site/posts/remote-async-work && NODE_ENV=development postcss remote-async-work.source.css -o remote-async-work.compiled.css -w",
-		"build:raw": "npx tailwindcss build --minify -i site/posts/remote-async-work/remote-async-work.source.css -o site/posts/remote-async-work/remote-async-work.compiled.css --config site/posts/remote-async-work/tailwind.config.js",
-		"build:erg": "npx tailwindcss build --minify -i site/posts/lgbtq-erg/lgbtq-erg.source.css -o site/posts/lgbtq-erg/lgbtq-erg.compiled.css --config site/posts/lgbtq-erg/tailwind.config.js"
+		"build:raw": "npx tailwindcss build --minify -i site/posts/remote-async-work/remote-async-work.source.css -o site/posts/remote-async-work/remote-async-work.compiled.css --config site/posts/remote-async-work/tailwind.config.ts",
+		"build:erg": "npx tailwindcss build --minify -i site/posts/lgbtq-erg/lgbtq-erg.source.css -o site/posts/lgbtq-erg/lgbtq-erg.compiled.css --config site/posts/lgbtq-erg/tailwind.config.ts"
 	},
 	"version": "5.0.0"
 }

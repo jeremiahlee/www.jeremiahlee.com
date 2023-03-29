@@ -24,4 +24,6 @@ To exclude a post from the collection, add this to the front matter:
 
 # Percy
 
+`npm run dev:serve`
+
 `PERCY_TOKEN= npx percy snapshot percy.yaml --dry-run`
