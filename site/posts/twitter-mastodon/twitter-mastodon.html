@@ -1,6 +1,6 @@
 ---
 date: 2022-11-14T22:00:00+01:00
-updated: 2023-04-03T16:17:04+02:00
+updated: 2023-07-30T18:10:00+02:00
 title: "How to migrate from Twitter to Mastodon"
 excerpt: "Elon killed Twitter, but he didn’t kill tweeting."
 excerptImage: "twitter-mastodon.jpg"
@@ -13,54 +13,63 @@ tags:
 
 <p>Elon killed Twitter, but he didn’t kill tweeting.</p>
 
+<p>When Elon Musk started changing Twitter’s policies in November 2022, millions of people decided to leave Twitter for <a href="https://joinmastodon.org/">Mastodon</a>. Mastodon is a new type of social network that allows you to follow friends and interesting people without intrusive advertising, questionable algorithms deciding what you should see, or a petulant billionaire banning you arbitrarily.</p>
+
 <h2>The fedi-what?</h2>
 
-<p>The <em>fediverse</em> is shorthand for a “federated social network”. Instead of a single company, there is a network of networks. Each social network is independent, but can work together easily with others.</p>
+<p>The biggest difference between Mastodon and Twitter is that it is decentralized. No single company controls the social network. Instead, Mastodon uses a network of thousands of independently managed community servers. Once you join a server, you can interact with people who use any other server. It’s similar to how we can send email to each other without having to all use Gmail.</p>
 
-<p>Another example of a federated computer network is e-mail. Gmail is a popular email service. People who use Gmail can communicate with people who use Hotmail or Yahoo Mail because all of the email services use the same technical standard. The fediverse is similar, just for <a href="https://activitypub.rocks/">social media</a> instead of email.</p>
+<p>This decentralized technical architecture is called <em>federation</em>. Each server is autonomous, but uses the same <a href="https://activitypub.rocks/">technology standards</a> to be able to work together for the greater good. <em>Fediverse</em> is shorthand for a “federated social network”. It’s also sometimes called <em>the social Web</em> because any website now can add social networking features.</p>
 
-<p><a href="https://joinmastodon.org/">Mastodon</a> is the most popular fediverse server software. It was inspired by Twitter. There are others, such as <a href="https://pixelfed.org/">Pixelfed</a> (inspired by Instagram) and <a href="https://joinpeertube.org/">PeerTube</a> (inspired by YouTube). They all interoperate with each other even though they have different primary user experiences.</p>
+<p>Mastodon is the most popular type of community server. It was inspired by Twitter. There are others, such as <a href="https://pixelfed.org/">Pixelfed</a> (inspired by Instagram) and <a href="https://joinpeertube.org/">PeerTube</a> (inspired by YouTube). They all interoperate with each other even though they have different primary user experiences.</p>
 
-<h2>Step 1: Pick a server.</h2>
+<h2 id="step-1">Step 1: Pick a community server.</h2>
 
-<p>Mastodon runs on many servers around the world. Your user account lives on one server, but you can interact with everyone regardless of the server they are on.</p>
+<p>There are <a href="https://fedidb.org/software/mastodon" title="Current number of Mastodon servers">thousands</a> of Mastodon community servers around the world. Some servers gather people with similar interests. Others are general interest. Each server is a community that sets its own rules, like what behaviors are acceptable on the server and how to handle bad behavior on other servers. Some servers are free to join, while others require a small fee. You need to find a server that aligns with your ideals.</p>
 
-<p>Some servers gather people with similar interests. Others are general interest. Each server is a community that sets its own rules, like moderation policies for what people can and cannot post. Some servers are free to join, while others require a small fee. </p>
+<p>Your user account lives on one server, but you can interact with everyone regardless of the server they are on.</p>
 
-<p>You are not locked into a server. If you want to move to a different server in the future, <a href="https://blog.joinmastodon.org/2019/06/how-to-migrate-from-one-server-to-another/">changing is easy</a> and you will not lose your data or social connections.</p>
+<p>You are not locked into a server. If you want to move to a different server in the future, <a href="https://blog.joinmastodon.org/2019/06/how-to-migrate-from-one-server-to-another/" title="How to migrate from one Mastodon server to another">changing is straightforward</a> and you will not lose your social connections.</p>
 
 <p>If you have friends who have joined a Mastodon server, ask them if they would recommend the server they joined. Or use <a href="https://joinmastodon.org/servers">this directory of Mastodon servers</a> and filter by criteria that matter to you.</p>
 
-<p>My server recommendations:</p>
+<p>My general interest community server recommendations:</p>
 <ul>
-	<li><a href="https://getmammoth.app/">Mammoth</a> is an excellent iOS app + server for the general population.</li>
-	<li>I personally use <a href="https://alpaca.gold/">Alpaca.gold</a> run by my friend <a href="https://seldo.com/">Laurie</a>.</li>
-	<li>I use <a href="https://mastodon.green/">Mastodon.green</a> for my <a href="https://mastodon.green/@SunOfStockholm">Sun of Stockholm</a> account. (€1.50/month with anything beyond the server operation cost donated to tree planting.)</li>
+	<li><a href="https://getmammoth.app/">Mammoth</a> is an excellent iOS app and server combination (free, backed by <a href="https://mozilla.vc/">Mozilla Ventures</a>)</li>
+	<li><a href="https://mastodon.green/">Mastodon.green</a> is a carbon-negative service (€1.50/month)</li>
 </ul>
 
-<h2>Step 2: Put your fediverse profile link in your Twitter bio.</h2>
+<p>Note that if you primarily use Twitter for <abbr title="not safe for work">NSFW</abbr> content, you should join a <a href="https://en.wikipedia.org/wiki/Sex-positive_movement" title="Wikipedia: Sex-positive movement">sex-positive</a> server. <a href="https://medium.com/@qblueheart/getting-off-on-mastodon-8eb439db5afa" title="Amazing Tips for Easily Getting Off on Mastodon Social">Find some here.</a> Not all Mastodon server operators share Twitter’s more tolerant adult content policies, either for moral or increased legal risk reasons.</p>
 
-<p>After you sign up for a server, edit your Twitter profile bio to include a link to your Mastodon profile. It will look like <a href="https://alpaca.gold/@Jeremiah">https://alpaca.gold/@Jeremiah</a>. This will help people who follow you on Twitter find you in the fediverse.</p>
+<h2>Step 2: Put your Mastodon profile link in your Twitter bio.</h2>
 
-<h2>Step 3: Find the people you follow on Twitter in the fediverse.</h2>
+<p>Help people who follow you on Twitter find you in the fediverse.</p>
 
-<p>Use <a href="https://www.movetodon.org/">Movetodon</a> and <a href="https://fedifinder.glitch.me/">Fedifinder</a> to find people you followed on Twitter who have moved to the fediverse.</p>
+<p>After you sign up for a server, edit your Twitter profile bio to include a link to your Mastodon profile. It will look like <em>https://example.com/@Jeremiah</em> .</p>
 
-<p>Find new and other awesome people in the fediverse based on who you follow using <a href="https://followgraph.vercel.app/">Followgraph</a>. If your timeline is still bare, you can also explore people with similar interests using <a href="https://fediverse.info/explore/people">Fediverse.info</a>’s profile hashtag explorer.</p>
+<p>You can also add your Mastodon username to your Twitter display name. It will look like <em>@Jeremiah@example.com</em> .</p>
 
-<h2>Step 4: Start posting to Mastodon first.</h2>
+<h2 id="step-3">Step 3: Rebuild your social graph.</h2>
 
-<p>Change your behavior to go to your Mastodon server instead of Twitter.</p>
+<p>Use <a href="https://www.movetodon.org/">Movetodon</a> and <a href="https://fedifinder.glitch.me/">Fedifinder</a> to find people you followed on Twitter.</p>
 
-<p>You can use <a href="https://moa.party/">Moa Party</a> to syndicate or cross-post what you post to Mastodon to Twitter. This works well, but mentioning Twitter users still must be done directly in Twitter because of limitations by Twitter. I hope everyone eventually joins the fediverse and then I will not need to use Moa Party.</p>
+<p>Find new and other awesome people based on who you follow using <a href="https://followgraph.vercel.app/">Followgraph</a>. If your timeline is still bare, you can also explore people with similar interests using <a href="https://fediverse.info/explore/people">Fediverse.info</a>’s profile hashtag explorer.</p>
 
-<p>Another tool I have been using is <a href="https://apps.apple.com/us/app/re-toot/id1661697436">Re: Toot</a>. It creates an image of fediverse posts suitable for cross posting to Instagram stories.</p>
+<h2 id="step-4">Step 4: Start going to Mastodon first.</h2>
 
-<h2>Step 5: Get the mobile app.</h2>
+<p>Change your behavior to go to Mastodon instead of Twitter.</p>
+
+<p>Mastodon is what we make it. Share the content you want to read yourself. If your timeline is boring, find more people to follow. (See <a href="#step-3">step 3</a>.) You can also follow hashtags. (<a href="https://mstdn.social/@feditips/107593643228830207">Some fun hashtags to follow.</a>) The <em>Explore</em> tab shows popular posts across many servers. The <em>Live Feeds</em> tab shows all the posts on your server as they get posted. You can also view the live feed for other servers.</p>
+
+<p>There once were tools to syndicate or cross-post what you posted to Mastodon to Twitter and vice versa. My favorite was <a href="https://moa.party/">Moa Party</a>. Unfortunately, Elon banned this use case and started charging outrageous fees for API access.</p>
+
+<p><a href="https://apps.apple.com/us/app/re-toot/id1661697436">Re: Toot</a> is an iOS app that can create an image of Mastodon posts that can be shared to Instagram stories.</p>
+
+<h2 id="step-5">Step 5: Get a mobile app.</h2>
 
 <p>The official Mastodon mobile app is available for <a href="https://play.google.com/store/apps/details?id=org.joinmastodon.android&hl=en&gl=US&pli=1">Android</a> and <a href="https://apps.apple.com/us/app/mastodon-for-iphone-and-ipad/id1571998974">iOS</a>.</p>
 
-<p>However, like email and Twitter, there are many Mastodon-compatible client apps. My recommendations:</p>
+<p>However, like email and Twitter, there are many third-party apps that are better. My recommendations:</p>
 
 <ul>
 	<li>Android: <a href="https://play.google.com/store/apps/details?id=org.joinmastodon.android.sk&gl=US">Megalodon</a></li>
