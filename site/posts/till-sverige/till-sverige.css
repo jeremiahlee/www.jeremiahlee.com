@@ -1,0 +1,29 @@
+a, .prose :where(a):not(:where([class~="not-prose"] *)) {
+	color: #006AA7;
+	font-weight: normal;
+}
+
+.highlight {
+	background-color: rgba(254, 204, 2, .1);
+}
+
+h1[property="headline"] {
+	background-color: #006AA7;
+	border-radius: 1rem;
+	color: #FFCD00;
+	letter-spacing: .2rem;
+	margin: .5rem auto;
+	padding: .5rem 1rem;
+	width: fit-content;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	background-image: linear-gradient(to right, rgba(0, 106, 167, 0), rgba(0, 106, 167, 1), rgba(0, 106, 167, 0));
+	margin: 1rem;
+}
+
+.text-emerald-600 {
+	color: #006AA7;
+}
