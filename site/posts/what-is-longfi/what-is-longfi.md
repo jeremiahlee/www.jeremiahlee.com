@@ -32,4 +32,8 @@ Due to the tiny amount of monetary value involved with each data request, this i
 
 **LongFi removes the most significant barrier to deploying IoT devices: connectivity. I think it has the potential to be a foundational technology for realizing the potential of smart devices.**
 
-I operate 2 LongFi routers from Helium in Nacka, Stockholm, Sverige. <a href="https://cinnamon.video/watch?v=418561001596651468">Unboxing video</a>
+I operate 2 LongFi routers from Helium in Nacka, Stockholm, Sverige.
+
+## Further reading
+
+<a href="https://blog.helium.com/helium-ecosystem-health-a-closer-look-at-iot-lorawan-depin-and-5g-usage-on-the-network-f74465b474a6">Helium ecosystem health: a closer look at IoT, LoRaWAN, DePIN, and 5G usage on the network</a>
