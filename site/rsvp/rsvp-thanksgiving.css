@@ -7,6 +7,9 @@ body{
 	width: 100%;
 	height: 100%;
 	background-color: rgb(255, 240, 217);
+	background-image: url("/rsvp/davies-designs-studio-HJa6GKpdHEA-unsplash.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 iframe {
 	border-radius: 0 !important;
