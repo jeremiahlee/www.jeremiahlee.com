@@ -1,0 +1,412 @@
+---
+date: 2023-11-20T18:00:00+01:00
+updated: 2024-03-24T16:00:00+01:00
+title: "Intro to the social web"
+excerpt: "What comes after Twitter and Meta? The next great social network is just the Web."
+excerptImage: "social-web-intro.jpg"
+layout: presentation.hbs
+license: "CC0-1.0"
+tags:
+  - "posts"
+  - "conferenceTalk"
+  - "social media"
+---
+
+<div id="introduction" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#introduction"><img src="/posts/social-web-intro/slide-1.webp" loading="lazy" alt="After Twitter &amp; Meta. Intro to the social web and federated social networks"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>This is an adaptation of my presentation at the <a href="https://stockholm.socialwebmeetup.com/">Stockholm Social Web Meetup</a> on November 20, 2023 and <a href="https://samnet.se/">SamNet</a> conference (<a href="https://play.dfri.se/w/2XZXqYJWkbmoPWyvER6Nth">video</a>) on January 18, 2024.</p>
+
+		<p class="text-sm">I fully released the copyright of this work (<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>). Please reuse it to promote the social web!</p>
+	</div>
+</div>
+
+<h2 id="present">The present: social networks for renters and drifters</h2>
+
+<div id="first" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#first"><img src="/posts/social-web-intro/slide-2.webp" loading="lazy" alt="What was your first social network?"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>I want you to think back to what your first social network was.</p>
+	</div>
+</div>
+
+<div id="myspace" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#myspace"><img src="/posts/social-web-intro/slide-3.webp" loading="lazy" alt="Profile photo of Tom from MySpace"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>For me, it was MySpace.</p>
+		<p>Remember MySpace Tom? I spent a lot of time with him customizing my profile with CSS hacks. He might have been one of my first crushes. I loved MySpace.</p>
+	</div>
+</div>
+
+<div id="thefacebook" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#thefacebook"><img src="/posts/social-web-intro/slide-4.webp" loading="lazy" alt="Screenshot of old Facebook website. A high contrast in blue photo of a young man is in the corner."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>But when Facebook opened access to my university, my friends dragged me to it. Poor Tom got replaced by some blue man.</p>
+		<p>Fun fact: I always thought the blue man was Mark Zuckerberg, but I recently learned it’s Al Pacino.</p>
+		<p>“Zuckerberg’s friend and classmate Andrew McCollum designed a logo using an image of Al Pacino he’d found online that he covered with a fog of ones and zeros.” <cite>The Facebook Effect</cite> by David Kirkpatrick</p>
+	</div>
+</div>
+
+<div id="pioneers" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#pioneers"><img src="/posts/social-web-intro/slide-5.webp" loading="lazy" alt="Timeline with over 15 logos of social network app logos and many striked out."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>When I graduated, I joined my professional tech peers on Twitter. As my social circles moved to Instagram, SnapChat, and Tumblr, I followed them there too.</p>
+		<p>I left out countless other social apps to keep the story short. For me, finding community online has been a nomadic journey for two decades. I set up a space for myself, switched my attention, and stayed until the party moved elsewhere. A good social network lasted 3 years. Many didn’t even make past 6 months.</p>
+	</div>
+</div>
+
+<div id="survivor" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#survivor"><img src="/posts/social-web-intro/slide-6.webp" loading="lazy" alt="Parody of Survivor tv show logo with Like thumb, heart icon, and plus icon buttons."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Meta’s and Twitter’s ability to outwit, outplay, and outlast its competitors provided relative stability for over a decade. They established unprecedented global dominance. </p>
+		<p>Social networks that were popular in just one country, like Orkut in Brasil, died off and people moved to global spaces. I saw the Arab Spring upend governments far away and Black Lives Matter awaken my home country in the same place online.</p>
+		<p>For a while, Facebook and Twitter seemed like brands that would be around the rest of my life. However, these digital empires now show early stages of decline similar to those of physical empires. They became too big to govern uniformly. The people being governed are restless. External powers challenge their economies.</p>
+	</div>
+</div>
+
+<div id="dilemma" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#dilemma"><img src="/posts/social-web-intro/slide-7.webp" loading="lazy" alt="4 images: Zucked book by Roger McNamee, The Social Dilemma documentary on Netflix, Washington Post article with headline Musk suspends journalists, Vice News article with headline Elon Musk is turning Twitter into a haven for Nazis"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>For me, the global election interference <a href="https://nymag.com/intelligencer/2018/03/facebook-haunted-by-its-handling-of-2016-election-meddling.html">Facebook enabled</a> in 2016 caused me to <a href="/posts/delete-facebook/">delete my Facebook account</a>.</p>
+		<p>Elon Musk <a href="https://www.pbs.org/newshour/nation/journalists-who-wrote-about-owner-elon-musk-suspended-from-twitter">banning</a> <a href="https://www.vanityfair.com/news/2023/04/elon-musk-twitter-still-banning-journalists">journalists</a>, <a href="https://www.rollingstone.com/politics/politics-news/elon-musk-twitter-reinstates-neo-nazi-andrew-anglin-account-1234640390/">unbanning white supremacists</a>, and <a href="https://edition.cnn.com/2023/11/17/business/elon-musk-reveals-his-actual-truth/index.html">promoting antisemitism</a> caused me to <a href="https://twitter.com/JeremiahLee/status/1714672692593623385">leave my Twitter account</a> last year. Millions of other people left Twitter too. So did <a href="https://www.npr.org/2023/12/06/1217513348/advertising-boycott-at-the-platform-formerly-known-as-twitter-grows-by-the-day">most of the advertisers Twitter relies</a> on for revenue.</p>
+	</div>
+</div>
+
+<div id="cage-match" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#cage-match"><img src="/posts/social-web-intro/slide-8.webp" loading="lazy" alt=""></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>So where do we go next to find our communities online?</p>
+		<p>The 2 big Twitter clones getting the most attention are Bluesky and Threads. Bluesky was founded and is funded by Jack Dorsey, Twitter’s former CEO and notable anti-vax conspiracist supporter. Threads is by Meta under the Instagram brand.</p>
+		<p>Both of these options just feel so very sad to me. Joining Bluesky or Threads just replaces Elon Musk with a different problematic billionaire.</p>
+	</div>
+</div>
+
+<div id="settler" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#settler"><img src="/posts/social-web-intro/slide-9.webp" loading="lazy" alt="I am tired of being a nomad online."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>I am tired of digital landlords.</p>
+		<p>I am tired not having control over how I get to interact with my friends and family online.</p>
+	</div>
+</div>
+
+<h2 id="future">The future: collectively-owned social networks</h2>
+
+<div id="none-of-the-above" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#none-of-the-above"><img src="/posts/social-web-intro/slide-10.webp" loading="lazy" alt=""></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Fortunately, we do have another option. It requires going 2 steps back to go one giant leap forward.</p>
+		<p>Long before I joined MySpace, I had a GeoCities website. In 7th grade, I learned HTML in my school’s computer class. Everyone made a webpage about something they were interested in. We presented our webpages and then linked to the ones we thought were most cool. Many of us would go on to have blogs  in highs school. And we’d subscribe to each other’s RSS feeds to see everyone’s posts.</p>
+		<p>When Twitter first arrived, it was described as micro-blogging. Its big innovation was that it lessened the effort to post online, so people posted a lot more. Another big difference from our blogs was that we could comment without having to go to each other’s website.</p>
+		<p>Now, these are not major technical innovations. And some smart people who created the technical standards for the Web knew this and they figured out a way for the <em>Web</em> itself to become a social network.</p>
+	</div>
+</div>
+
+<div id="just" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#just"><img src="/posts/social-web-intro/slide-11.webp" loading="lazy" alt="The next great social network is just the web. Screenshot of https://activitypub.rocks"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p><a href="https://activitypub.rocks/">ActivityPub</a> is a technology standard that turns any website into a social network profile that can be followed, liked, and commented upon. You don’t need to know anything about this technology other than that it exists.</p>
+		<p>HTML is for the content of a webpage. Cascading Style Sheets are for making the content look pretty. ActivityPub is for making a website social.</p>
+		<p>The Web has always been the best platform for creators. It was designed for anyone to be able to share information easily—literally originally for scientists to share research with each other and only much later for 7th graders to post about their football teams.</p>
+		<p>The Web’s decentralized design means there is no billionaire you can upset who can arbitrarily ban your website.</p>
+		<p>But until ActivityPub, the Web—as a technology platform—had been missing the capabilities that made social networks, well, social.</p>
+		<p>The only problem left was that in the 2010s, no one wanted to use the then new standard because everyone was already using Twitter and Instagram at the time.</p>
+	</div>
+</div>
+
+<div id="ngi" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#ngi"><img src="/posts/social-web-intro/slide-12.webp" loading="lazy" alt="Screenshot of European Commission Next Generation Internet initiave"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>The European Commission, however, recognized the problems of a US monopoly on global communication after the 2016 elections. It started investing in open source software that used the ActivityPub standard.</p>
+	</div>
+</div>
+
+<div id="transition" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#transition"><img src="/posts/social-web-intro/slide-13.webp" loading="lazy" alt="Arrows going from Twitter, Instagram, and YouTube to Mastodon, Pixelfed, and PeerTube"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Some of those investments helped fund the advancement of Mastodon (a Twitter-like app), Pixelfed (an Instagram-like app), and PeerTube (a YouTube-like app). All of these new apps use the ActivityPub protocol.</p>
+	</div>
+</div>
+
+<div id="federation" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#federation"><img src="/posts/social-web-intro/slide-14.webp" loading="lazy" alt="Two diagrams. Left is a circle with the Twitter logo on it that is surrounded by people. Right is several much smaller circles of varying sizes with the Mastodon logo on them. They are surrounded by smaller groups of people proportional to the size of the circle. Lines connect every circle to the other circle."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>However, the biggest difference between Mastodon and Twitter is that it is decentralized.</p>
+		<p>Think of Mastodon as a <em>technology</em> more than a company. For example: email is a technology, but there are lots of different email providers, like your work, your university, Gmail, and Hotmail. It does not matter which email provider you use, you can send an email to anyone.</p>
+		<p>Similar to email, Mastodon is a technology with lots of service providers. There is a network of thousands of independently managed Mastodon community servers. Once you join a server, you can interact with people who use any other server. We don’t all have to use Outlook to send email to each other and we should not have to all use Twitter to send tweets to each other.</p>
+		<p>This decentralized technical architecture is called federation. Each server is autonomous, but uses the same technology to be able to interoperate.</p>
+		<p>Federated social networks shift the power from a handful of companies deciding how billions of people should interact online to a multitude of smaller communities who can better self-manage. Each server operator can decide its governance model, like what behaviors are acceptable on the server and how to handle bad behavior on other servers. Individuals can find the server that best aligns with their ideals or start their own.</p>
+		<p>If you feel comfortable operating your own website, you can have full control over your social web profile. Most businesses and organizations probably will want to do this, but most individuals are probably going to join a community server managed by someone else.</p>
+	</div>
+</div>
+
+<div id="eu-voice" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#eu-voice"><img src="/posts/social-web-intro/slide-15.webp" loading="lazy" alt="Screenshot of social.network.europa.eu"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Some examples of this:</p>
+		<p>The European Commission launched a <a href="https://social.network.europa.eu/about">Mastodon</a> and <a href="https://tube.network.europa.eu/">PeerTube</a> server for use by official EU agencies a year and a half ago.</p>
+	</div>
+</div>
+
+<div id="bbc" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#bbc"><img src="/posts/social-web-intro/slide-16.webp" loading="lazy" alt="Screenshot of . Text: The principles of the Fediverse, with an emphasis on local control, quality content, and social value, are far more aligned with our public purposes than those of avowedly commercial networks like Threads or Twitter."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>The BBC launched a Mastodon server at <a href="https://social.bbc/">social.bbc</a> for its official accounts and for its journalists. I love this quote from its <a href="https://www.bbc.co.uk/rd/blog/2023-07-mastodon-distributed-decentralised-fediverse-activitypub">announcement</a>.</p>
+		<p>“The principles of the Fediverse, with an emphasis on local control, quality content, and social value, are far more aligned with our public purposes than those of avowedly commercial networks like Threads or Twitter.”</p>
+		<p><em>Fediverse</em> is just fast way of saying <em>federated social networks</em>.</p>
+	</div>
+</div>
+
+<div id="nl" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#nl"><img src="/posts/social-web-intro/slide-17.webp" loading="lazy" alt="Screenshot of social.overheid.nl"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>The government of Nederland launched a Mastodon server (<a href="https://social.overheid.nl/about">social.overheid.nl</a>) for its agencies and ministers. It’s a great example of a government leading by example. It’s creating value for citizens before most citizens have joined the social web so that when citizens do try it, they won’t be missing the social network interactions they were having on Facebook and Twitter with government agencies.</p>
+	</div>
+</div>
+
+<div id="universities" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#universities"><img src="/posts/social-web-intro/slide-18.webp" loading="lazy" alt="Screenshots of 9 university Mastodon servers"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Universities across the globe now have Mastodon servers for their students and faculty to use. Universities give their communities email addresses, so only logical for them to also provide social web accounts too.</p>
+		<ul>
+			<li><a href="https://mastodon.mit.edu/">MIT</a></li>
+			<li><a href="https://faculty.mastodon.stanford.edu/explore">Stanford University</a></li>
+			<li><a href="https://social.uibk.ac.at/">Universität Innsbruck</a></li>
+			<li><a href="https://social.up.edu.ph/">University of the Philippines</a></li>
+			<li><a href="https://mastodon.acc.umu.se/">Umeå Universitet</a></li>
+			<li><a href="https://social.edu.nl/">Universiteiten van Nederland</a></li>
+			<li><a href="https://wayne.social">Wayne State University</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="queer" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#queer"><img src="/posts/social-web-intro/slide-19.webp" loading="lazy" alt="Screenshot of tech.lgbt"></a>
+		<p class="text-sm"><a href="https://tech.lgbt">tech.lgbt</a></p>
+	</div>
+	<div class="md:w-1/2">
+		<p>People who belong to historically underrepresented and marginalized groups have created servers for their communities.</p>
+		<p>For example, trans people can join a community server run by fellow trans people and feel more comfortable knowing it’s going to be moderated by someone who understands them.</p>
+	</div>
+</div>
+
+<div id="real-name" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#real-name"><img src="/posts/social-web-intro/slide-20.webp" loading="lazy" alt="Screenshots of 2 articles from Advocate. Headlines: Facebook apologies for real name policy. Elon Musk's Twitter no longer shields transgender people from abuse."></a>
+		<p class="text-sm"><a href="https://www.advocate.com/politics/media/2014/10/01/facebook-apologizes-real-name-policy">Facebook Apologizes for 'Real Name' Policy</a>, <a href="https://www.advocate.com/business/twitter-elon-musk-transgender-abuse">Elon Musk’s Twitter No Longer Shields Transgender People from Abuse</a></p>
+	</div>
+	<div class="md:w-1/2">
+		<p>They won’t have Mark Zuckerberg forcing them to use their legal name when that’s not what they go by or Elon Musk forcing them to endure cyberbullying from anti-trans hate groups.</p>
+	</div>
+</div>
+
+<div id="moderation" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#moderation"><img src="/posts/social-web-intro/slide-21.webp" loading="lazy" alt="Screenshot of Mastodon's website. Headline: Moderating the way it should be"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>I believe that many of the behavioral problems of social networks will go away with this local self-governance because it brings in-person social expectations into the digital space.</p>
+		<p>Community servers are run by people who care about cultivating a community. If you’re a jerk, they’ll kick you off the server. If you run your own server and are a jerk, other community servers can block your server the same way we block email spammers. There’s no faceless corporation using AI to make decisions. It’s a real human who cares.</p>
+		<p>As a society, we already have decades of experience dealing with spam and illegal content on online forums and email. The social web is an extension of the web. The same abuse tools and laws created for other parts of the web can be used on the new social web too.</p>
+	</div>
+</div>
+
+<div id="why-mastodon" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#why-mastodon"><img src="/posts/social-web-intro/slide-22.webp" loading="lazy" alt="Screenshot of Mastodon's website. Headline: Why Mastodon? 4 points: Decentralized, open source, not for sale, interoperable. Highlighted text under not for sale point: We respect your agency. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data and your time are yours and yours alone."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>Much of the bad behavior on Facebook, Twitter, and YouTube is by design. These apps have been designed to keep you scrolling and keep you engaging, whether that’s healthy engagement or not, so you see more and more ads. That’s how they make money.</p>
+		<p>Social web apps like Mastodon don’t rely on advertising for revenue, so your attention is not being manipulated or sold. They just want to show you content of people you chose to follow.</p>
+		<p>You can run your website with social features for less than €10 a month. Community servers like Mastodon cost more to operate. A server for 1000 people costs around €150/month, but that’s just 15 cents a person a month. Many community servers operate as co-ops or on a donation basis. It’s like how Wikipedia is free for everyone, but gets more than enough donations from a small percentage of visitors to operate.</p>
+	</div>
+</div>
+
+<div id="norden" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#norden"><img src="/posts/social-web-intro/slide-23.webp" loading="lazy" alt="Screenshot of norden.org. Text: We recommend that Nordic countries support the use of open standards and protocols (such as ActivityPub) to encourage effective portability between competing platforms. We recommend that the Nordic countries support funding for public and civic actors and regulations that increase diversity in available platforms in accordance with established state aid rules."></a>
+		<p class="text-sm"><a href="https://pub.norden.org/nord2023-004/">A Nordic approach to democratic debate in the age of Big Tech</a></p>
+	</div>
+	<div class="md:w-1/2">
+		<p>The Nordic Council, the main forum for official co-operation between Nordic countries, published a report last year on an approach to democratic debate in the age of Big Tech. The report argued Nordic country governments should be more proactive in engaging with citizens on social media because that is where public debate now takes place.It noted how Big Tech platforms have failed in creating digital common spaces that can strengthen democratic debate and social trust.</p>
+		<p>It recommended Nordic countries support alternatives to Big Tech platforms, specifically recommending the public sector to use smaller online communities with local moderators. It even specifically called out ActivityPub as the open protocol to support.</p>
+		<p>Sverige now has an international mandate to embrace the social web.</p>
+	</div>
+</div>
+
+<div id="now" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#now"><img src="/posts/social-web-intro/slide-24.webp" loading="lazy" alt="Social web app logos with arrows between them."></a>
+		<p class="text-sm">Image source: <a href="https://fediverse.info/">fediverse.info</a></p>
+	</div>
+	<div class="md:w-1/2">
+		<p>We now have the tools we need for society to have a better social media experience.</p>
+	</div>
+</div>
+
+<div id="growth" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#growth"><img src="/posts/social-web-intro/slide-25.webp" loading="lazy" alt="Graph showing fediverse user growth increasing monthly from 2 million to almost 12 million people over 2 years"></a>
+		<p class="text-sm">Source: <a href="https://fedidb.org/">fedidb.org</a></p>
+	</div>
+	<div class="md:w-1/2">
+		<p>We now have momentum with over 11M people using these tools.</p>
+		<p>(Last updated: January 2024)</p>
+	</div>
+</div>
+
+<h2 id="now">A call to action</h2>
+
+<div id="influencers" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#influencers"><img src="/posts/social-web-intro/slide-26.webp" loading="lazy" alt="Artists, creators, governments, institutions, journalists: lead us to a better land."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>What we need now is for cultural leaders—like artists, governments, and journalists—to help lead society to a better place.</p>
+		<p>If you’re not one of those, we need tech savvy people to get their friends and their family to join a community server, in the same way my friends dragged me on to Facebook in university.</p>
+		<p>Every grandparent would join a social web community server if that was the only place online to see photos of their grandkids. Anyone can play a part in helping to create more momentum.</p>
+	</div>
+</div>
+
+<div id="you" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#you"><img src="/posts/social-web-intro/slide-27.webp" loading="lazy" alt="The future is in our hands. Open hands emoji below earth emoji."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>You came to this conference for some reason. Maybe there’s a part of you that knows social media has done a lot of harm to society. I hope I’ve convinced you there is a chance we can turn social media into a net positive for society if we can change the app we choose to spend time in. We didn’t have a choice we could make before. We now do.</p>
+		<p>I’m fortunate to have spent the last year getting to work as an open source software developer to make the choice easier for people and I think they’re ready for mass adoption. But it doesn’t matter if some programmers make the best software in the world. The value of a social network comes from the people who are present. </p>
+		<p>I’ve chosen to be less present on big tech apps and to be more present on social web apps. I want to stop being a digital nomad. The social web finally allows people to build their forever home.</p>
+	</div>
+</div>
+
+<h2 id="demos">Social web app demos</h2>
+
+<div class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#demos"><img src="/posts/social-web-intro/slide-28.webp" loading="lazy" alt=""></a>
+	</div>
+	<div class="md:w-1/2">
+		<p></p>
+	</div>
+</div>
+
+<div id="mastodon-demo" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#mastodon-demo"><img src="/posts/social-web-intro/slide-29.webp" loading="lazy" alt="Mastodon: Twitter-like experience. Both a social web server and app. Lots of great third-party client apps. Anyone can run their own Mastodon server. Most people should just join a flagship community server to get started. You can move to another server without losing your follows, followers, likes, and settings."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p><a href="https://joinMastodon.org/apps">Mastodon</a> demo using the <a href="https://GetMammoth.app">Mammoth</a> app for iPhone</p>
+		<p>(This demo was done live and not recorded.)</p>
+	</div>
+</div>
+
+<div id="pixelfed-demo" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#pixelfed-demo"><img src="/posts/social-web-intro/slide-30.webp" loading="lazy" alt="Pixelfed: Instagram-like experience. Both a social web server and app. Mobile apps are in beta. Most people should just join a flagship community server to get started. You can move to another server without losing your follows, followers, likes, settings, posts. Can import Instagram posts!"></a>
+	</div>
+	<div class="md:w-1/2">
+		<p><a href="https://pixelfed.org/">Pixelfed</a> demo</p>
+		<p>(This demo was done live and not recorded.)</p>
+	</div>
+</div>
+
+<div id="wordpress-demo" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#wordpress-demo"><img src="/posts/social-web-intro/slide-31.webp" loading="lazy" alt="ActivityPub for WordPress: Official plugin! Turns any WordPress website (43% of the Web) into a social web profile. Replies appear as comments on the blog post or page. Can be combined with other WordPress plugins to enable use of Mastodon client apps."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p><a href="https://wordpress.org/support/plugin/activitypub/">ActivityPub plugin for WordPress</a> demo</p>
+	</div>
+</div>
+
+<div id="wordpress-demo-1" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-2/3 md:pr-4">
+		<a href="#wordpress-demo-1"><img src="/posts/social-web-intro/wordpress-post.webp" loading="lazy" alt="Screenshot of WordPress post editor"></a>
+	</div>
+	<div class="md:w-1/3">
+		<p>This is different from Mastodon and Pixelfed because this plugin makes a WordPress website followable, like-able, comment-able from any other social web app like Mastodon or Pixelfed.</p>
+		<p>When writing posts or pages in WordPress, whatever is in the excerpt will be sent to people who follow the website. You can see the excerpt text here on the right column and that I have selected a featured image.</p>
+	</div>
+</div>
+<div id="wordpress-demo-2" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-2/3 md:pr-4">
+		<a href="#wordpress-demo-2"><img src="/posts/social-web-intro/wordpress-post-result.webp" loading="lazy" alt="Screenshot of Mastodon with the post from WordPress in the timeline"></a>
+	</div>
+	<div class="md:w-1/3">
+		<p>Here is how that post shows up in the timeline for someone following the website from a Mastodon community server. The featured image is displayed and link to the blog post is at the end of the excerpt text. If I had used WordPress post tags, those would appear as hashtags.</p>
+	</div>
+</div>
+<div id="wordpress-demo-3" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-2/3 md:pr-4">
+		<a href="#wordpress-demo-3"><img src="/posts/social-web-intro/wordpress-settings1.webp" loading="lazy" alt="Screenshot of ActivityPub settings page in WordPress admin. Username field: restoration.software@restoration.software. Profile name field: https://restoration.software/@restoration.software"></a>
+	</div>
+	<div class="md:w-1/3">
+		<p>Here are the settings for the ActivityPub for WordPress plugin.</p>
+		<p>Notice that the username is the domain name repeated. That’s to get around a <a href="https://github.com/mastodon/mastodon/issues/22213">compatibility issue</a> with Mastodon at the moment. In the future, the username could just be the domain name.</p>
+	</div>
+</div>
+<div id="wordpress-demo-4" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-2/3 md:pr-4">
+		<a href="#wordpress-demo-4"><img src="/posts/social-web-intro/wordpress-settings2.webp" loading="lazy" alt="Screenshot of ActivityPub settings page in WordPress admin. Checkboxes for enable authors and enable blog. Post content text area with template tags for deciding what data from a WordPress post gets posted to followers."></a>
+	</div>
+	<div class="md:w-1/3">
+		<p>If a WordPress website has multiple authors, they can be followed as individuals.</p>
+		<p>The posted content can also be configured if you want something different than the default behavior.</p>
+	</div>
+</div>
+<div id="wordpress-demo-5" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-2/3 md:pr-4">
+		<a href="#wordpress-demo-5"><img src="/posts/social-web-intro/wordpress-followers.webp" loading="lazy" alt="Screenshot of ActivityPub settings page in WordPress admin. Table of followers. Columns for avatar, name, username, URL, followed date, last updated date. Checkbox on each row with a bulk actions dropdown menu."></a>
+	</div>
+	<div class="md:w-1/3">
+		<p>You can see the people who follow the accounts on the followers tab. Here, you can also deal with moderation issues from anyone causing trouble.</p>
+	</div>
+</div>
+
+
+<div id="closing" class="container mx-auto md:flex pb-4">
+	<div class="pb-4 md:pb-0 md:w-1/2 md:pr-4">
+		<a href="#closing"><img src="/posts/social-web-intro/slide-32.webp" loading="lazy" alt="The future is in our hands."></a>
+	</div>
+	<div class="md:w-1/2">
+		<p>I hope you join the social web and give me a follow. I’m <a href="https://alpaca.gold/@Jeremiah">Jeremiah@alpaca.gold</a>.</p>
+		<p>I wrote a <a href="https://www.jeremiahLee.com/posts/twitter-mastodon/">getting started guide for migrating from Twitter to Mastodon</a>.</p>
+		<p>People in Stockholm should sign up to learn more at the next <a href="https://stockholm.socialwebmeetup.com/">Stockholm Social Web Meetup</a> event.</p>
+	</div>
+</div>
