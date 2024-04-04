@@ -5,8 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{title}}</title>
 {{> partial-head }}
-	<meta name="description" content="{{ excerpt }}">
 {{> partial-css }}
+	<meta name="description" content="{{ excerpt }}">
+	{{#if excerptImage}}
+	<meta property="og:image" content="https://www.jeremiahlee.com{{ excerptImage }}">
+	{{/if}}
 </head>
 <body>
 <div class="container mx-auto prose prose-violet text-lg">
