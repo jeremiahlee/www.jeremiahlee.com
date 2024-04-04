@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <title>{{title}}</title>
-    <meta name="description" content="{{ excerpt }}">
-{{> partial-css }}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{title}}</title>
 {{> partial-head }}
+	<meta name="description" content="{{ excerpt }}">
+{{> partial-css }}
 </head>
 <body>
 <div class="container mx-auto prose prose-violet text-lg">
-    {{{ content }}}
+{{{ content }}}
 </div>
 </body>
 </html>

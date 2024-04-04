@@ -2,7 +2,10 @@
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ collections.mostRecentNowPost.data.title }}</title>
+	<script defer src="/scripts/switch-to-firefox.js"></script>
+{{> partial-head }}
 {{> partial-css }}
 	<meta name="description" content="{{ collections.mostRecentNowPost.data.excerpt }}">
 	<meta name="author" content="Jeremiah Lee">
@@ -11,11 +14,9 @@
 	<meta property="og:type" content="article">
 	<meta property="og:description" content="{{ collections.mostRecentNowPost.data.excerpt }}">
 	<meta property="og:image" content="https://www.jeremiahlee.com/now/now.jpg">
-{{> partial-head }}
 {{#each collections.mostRecentNowPost.data.script}}
 	<script defer src="{{this}}"></script>
 {{/each}}
-	<script defer src="/scripts/switch-to-firefox.js"></script>
 </head>
 <body>
 

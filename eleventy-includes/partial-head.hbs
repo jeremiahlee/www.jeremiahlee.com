@@ -1,4 +1,10 @@
-	<meta name="generator" content="Eleventy">
+	<script defer data-domain="jeremiahlee.com" data-api="/ryanbr-event" src="/ryanbr"></script>
+	<script defer src="/scripts/web-monetization-goal-conversion.js"></script>
+{{#if script}}
+	{{#each script}}
+	<script defer src="{{this}}"></script>
+	{{/each}}
+{{/if}}
 	<link rel="manifest" href="/destiny.webmanifest">
 	<link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg">
 	<link rel="shortcut icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -9,10 +15,4 @@
 	<link rel="alternate" type="application/json" title="JSON Feed" href="/feeds/jsonfeed.json">
 	<link rel="alternate" type="application/atom+xml" title="Atom RSS" href="/feeds/atom.xml">
 	<meta name="referrer" content="no-referrer-when-downgrade">
-	<script defer data-domain="jeremiahlee.com" data-api="/ryanbr-event" src="/ryanbr"></script>
-	<script defer src="/scripts/web-monetization-goal-conversion.js"></script>
-{{#if script}}
-	{{#each script}}
-	<script defer src="{{this}}"></script>
-	{{/each}}
-{{/if}}
+	<meta name="generator" content="Eleventy">

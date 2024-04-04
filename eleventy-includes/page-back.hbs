@@ -2,7 +2,10 @@
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{title}}</title>
+	<script defer src="/scripts/switch-to-firefox.js"></script>
+{{> partial-head permalink=permalink }}
 {{> partial-css }}
 {{#if excerpt}}
 	<meta name="description" content="{{ excerpt }}">
@@ -14,8 +17,6 @@
 	<meta property="og:image" content="https://www.jeremiahlee.com{{ permalink }}{{ excerptImage }}">
 	{{/if}}
 {{/if}}
-{{> partial-head permalink=permalink }}
-	<script defer src="/scripts/switch-to-firefox.js"></script>
 </head>
 <body>
 

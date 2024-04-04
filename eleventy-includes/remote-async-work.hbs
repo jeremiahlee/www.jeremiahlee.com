@@ -2,7 +2,9 @@
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{title}}</title>
+{{> partial-head }}
 	<link rel="canonical" href="https://www.jeremiahlee.com{{ page.url }}">
 {{> partial-css }}
 {{#if excerpt}}
@@ -19,7 +21,6 @@
 	<meta property="og:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}">
 	{{/if}}
 {{/if}}
-{{> partial-head }}
 </head>
 <body class="lg:p-0">
 
