@@ -1,30 +1,31 @@
 ---
 date: 2021-06-15T00:11:20+01:00
+updated: 2024-04-17T13:32:40+02:00
 title: "How to track Web Monetization events using Plausible"
-excerpt: "I wanted to know which articles on my website received payments from Coil subscribers. Using Plausible Analytics, I am able to track Web Monetization API events."
+excerpt: "I wanted to know which articles on my website received payments from people with Web Monetization-enabled browsers. Using Plausible Analytics, I am able to track Web Monetization API events."
 excerptImage: "web-monetization-events-in-plausible.png"
 tags:
   - "posts"
   - "web monetization"
 ---
 
-<p>I wanted to know which articles on my website received payments from <a href="https://coil.com/?ref=JeremiahLee.com" target="_blank" rel="noopener">Coil</a> subscribers. I see notifications of deposits periodically, but I could correlate only the deposits with page view stats. Coil is quite new and the content that resonates with its subscribers might be different from that which excites my audience as a whole.</p>
+<p>I wanted to know which articles on my website received payments from people with Web Monetization-enabled browsers. I see notifications of deposits periodically, but I could correlate only the deposits with page view stats. Web Monetization is quite new and the content that resonates with its subscribers might be different from that which excites my audience as a whole.</p>
 
-<p>Using <a href="https://plausible.io/?ref=JeremiahLee.com" target="_blank" rel="noopener">Plausible Analytics</a>, I am able to track this data. Plausible has the ability to track page views and events that happen on a page. When a person with a Coil subscription visits a page, a “monetization start” event is emitted in the browser. The webpage can detect this event using JavaScript and register it as a “<a href="https://plausible.io/docs/custom-event-goals" target="_blank" rel="noopener">goal conversion</a>” in Plausible. This tutorial will show you how to do it in 3 steps.</p>
+<p>Using <a href="https://plausible.io/?ref=JeremiahLee.com">Plausible Analytics</a>, I am able to track this data. Plausible has the ability to track page views and events that happen on a page. When a person with Web Monetization enabled visits a page, a “monetization” event is emitted in the browser. The webpage can detect this event using JavaScript and register it as a “<a href="https://plausible.io/docs/custom-event-goals">goal conversion</a>” in Plausible. This tutorial will show you how to do it in 3 steps.</p>
 
 <img class="max-w-sm mx-auto" alt="Screenshot of Coil browser extension when paying. Arrow pointing to screenshot of a page goal conversion in Plausible." src="/posts/web-monetization-events-in-plausible/web-monetization-events-in-plausible-transparent.png" width="1024" height="1024">
 
 <h2>Background</h2>
 
-<p class="opacity-70 text-sm">(You can skip this if you are already familiar with Coil, Web Monetization, and Plausible.)</p>
+<p class="opacity-70 text-sm">(You can skip this if you are already familiar with Web Monetization and Plausible.)</p>
 
-<p><a href="https://webmonetization.org/" target="_blank" rel="noopener">Web Monetization</a> is a proposed W3 standard for payments. It is <a href="https://write.as/sharafian/doubling-down-on-privacy?ref=JeremiahLee.com" target="_blank" rel="noopener">designed</a> to preserve the privacy of both the sender and the recipient. Coil is the first of hopefully many Web Monetization wallet providers. When people with a Coil subscription visit my website with a browser that supports Web Monetization, micropayments are streamed to my wallet every second at a rate of ~$0.36/hour.</p>
+<p><a href="https://webmonetization.org/">Web Monetization</a> is a proposed W3C standard for tips. <a href="https://fynbos.app/?ref=JeremiahLee.com">Fynbos</a> is one of hopefully many Web Monetization wallet providers. When people with the Web Monetization browser extension and wallet provider an visit my website with a browser that supports Web Monetization, micropayments are streamed to my wallet every second at a rate of ~$0.36/hour.</p>
 
-<p>Plausible Analytics is a privacy-friendly alternative to Google Analytics. It provides website operators information like the quantity of unique visitors, the browsers and devices they use, and the time they spend on individual pages. Unlike other website analytics products, Plausible preserves individual visitors&rsquo; privacy through <a href="https://plausible.io/privacy-focused-web-analytics?ref=JeremiahLee.com#all-data-is-in-aggregate-only" target="_blank" rel="noopener">aggregating data</a>, <a href="https://plausible.io/privacy-focused-web-analytics?ref=JeremiahLee.com#no-personal-data-is-collected" target="_blank" rel="noopener">not collecting or storing personally identifiable information</a>, and <a href="https://plausible.io/privacy-focused-web-analytics?ref=JeremiahLee.com#no-cookies-and-other-persistent-identifiers" target="_blank" rel="noopener">not using cookies</a> or other persistent identifiers. This means that website operators receive less information about visitors, but enough about outcomes to make data-informed decisions.</p>
+<p>Plausible Analytics is a privacy-friendly alternative to Google Analytics. It provides website operators information like the quantity of unique visitors, the browsers and devices they use, and the time they spend on individual pages. Unlike other website analytics products, Plausible preserves individual visitors&rsquo; privacy through <a href="https://plausible.io/privacy-focused-web-analytics?ref=JeremiahLee.com#all-data-is-in-aggregate-only">aggregating data</a>, <a href="https://plausible.io/privacy-focused-web-analytics?ref=JeremiahLee.com#no-personal-data-is-collected">not collecting or storing personally identifiable information</a>, and <a href="https://plausible.io/privacy-focused-web-analytics?ref=JeremiahLee.com#no-cookies-and-other-persistent-identifiers">not using cookies</a> or other persistent identifiers. This means that website operators receive less information about visitors, but enough about outcomes to make data-informed decisions.</p>
 
 <h2>Tutorial</h2>
 
-<p><strong>1. Extend Plausible Analytics to enable tracking goal conversions.</strong> Follow the first step from the official <a href="https://plausible.io/docs/custom-event-goals?ref=JeremiahLee.com" target="_blank" rel="noopener">instructions for enabling custom event goals</a>. It&rsquo;s a one-line code addition after the inclusion of the Plausible script.</p>
+<p><strong>1. Extend Plausible Analytics to enable tracking goal conversions.</strong> Follow the first step from the official <a href="https://plausible.io/docs/custom-event-goals?ref=JeremiahLee.com">instructions for enabling custom event goals</a>. It&rsquo;s a one-line code addition after the inclusion of the Plausible script.</p>
 
 <pre class="font-mono">
 &lt;script defer data-domain="&lt;yourdomain.com&gt;" src="https://plausible.io/js/plausible.js"&gt;&lt;/script&gt;
@@ -43,9 +44,11 @@ tags:
 <p><strong>3. Add the following goal conversion code to every page on which you want to track monetization.</strong></p>
 
 <pre>&lt;script&gt;
-if (document.monetization) {
-	document.monetization.addEventListener(
-		"monetizationstart",
+const monetizationLink = document.querySelector('link[rel="monetization"]');
+
+if (monetizationLink) {
+	link.addEventListener(
+		"monetization",
 		() => {
 			plausible(
 				"MonetizationStart",
@@ -77,11 +80,12 @@ if (document.monetization) {
 
 <pre>
 // 1. Detect if the browser supports Web Monetization
-if (document.monetization) {
+const monetizationLink = document.querySelector('link[rel="monetization"]');
+if (monetizationLink) {
 
 	// 2. Detect when the user starts paying
-	document.monetization.addEventListener(
-		"monetizationstart",
+	link.addEventListener(
+		"monetization",
 		() => {
 
 			// 3. Tell Plausible
@@ -111,4 +115,3 @@ if (document.monetization) {
 <p>When someone visits your website with a browser that supports Web Monetization, the “MonetizationStart” goal will appear in your Plausible Analytics dashboard. The breakdown by path shows the number of unique visitors and total conversions per URL.</p>
 
 <img class="max-w-xl mx-auto border" alt="Screenshot of Plausible conversion goals UI. Table. Goal: MonetizationStart. Uniques 1. Total 2. Row: Breakdown by: path. Row: posts slash why-we-march. Uniques 1. Total 1. Row posts slash remote-async-work. Uniques 1. Total 1." src="/posts/web-monetization-events-in-plausible/monetizationstart-results.png" width="1176" height="752">
-

@@ -1,8 +1,10 @@
 window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };
 
-if (document.monetization) {
-	document.monetization.addEventListener(
-		"monetizationstart",
+const monetizationLink = document.querySelector('link[rel="monetization"]');
+
+if (monetizationLink) {
+	link.addEventListener(
+		"monetization",
 		() => {
 			plausible(
 				"MonetizationStart",
