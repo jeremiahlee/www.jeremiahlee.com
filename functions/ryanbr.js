@@ -4,7 +4,7 @@ export async function onRequestGet(context) {
 	let forwardedRequest = await caches.default.match(context.request);
 
 	if (!forwardedRequest) {
-		forwardedRequest = await fetch("https://plausible.io/js/plausible.outbound-links.js");
+		forwardedRequest = await fetch("https://plausible.io/js/script.manual.outbound-links.js");
 		context.waitUntil(caches.default.put(context.request, forwardedRequest.clone()));
 	}
 
