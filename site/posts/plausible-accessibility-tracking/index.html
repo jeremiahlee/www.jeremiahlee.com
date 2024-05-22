@@ -1,0 +1,80 @@
+---
+date: 2024-05-22T21:38:57+09:00
+title: "Tracking accessibility preferences in Plausible"
+excerpt: "How to track audience preferences for light/dark mode, reduced motion, contrast, and dynamic color range."
+excerptImage: "plausible-accessibility-tracking.png"
+tags:
+ - "posts"
+ - "tutorial"
+ - "WeblogPoMo2024"
+---
+
+<p>I was curious to know the percentage of my website visitors had set a preference for light or dark mode. I also wanted to know how many visitors had set accessibility preferences for higher/lower contrast or reduced motion. Lastly, I wanted to know how many people’s screens supported high dynamic range (HDR) colors.</p>
+
+<p><a href="https://plausible.io/?ref=JeremiahLee.com">Plausible Analytics</a> is an open source, privacy-preserving website analytics product. It tracks device type, operating system, and browser by default. Additional user agent information can be appended manually.</p>
+
+<h2>Tutorial</h2>
+
+<p id="plausible-library"><strong>1. Include the Plausible Analytics script capable of <em>manually</em> tracking custom <code>pageview</code> properties.</strong> Follow the the <a href="https://plausible.io/docs/custom-props/for-pageviews#using-scriptmanualjs-as-an-alternative">official instructions</a>.</p>
+
+<p>It will look something—<em>but not exactly</em>—like this:</p>
+
+<pre>&lt;script defer data-domain=&quot;yourdomain.com&quot; src=&quot;https://plausible.io/js/script.manual.js&quot;&gt;&lt;/script&gt;</pre>
+
+<p>Keep in mind that if you are using other Plausible extensions, those will still need to be included. The key part is the addition of a <code>manual</code> extension into the Plausible script path.</p>
+
+<p id="pageview"><strong>2. Add the following code to every page on which you want to track these details.</strong></p>
+
+<p>You have 2 options:</p>
+<ol>
+	<li>Copy the code below into a <code>accessibility-prefs.js</code> file and include it in the HTML <code>&lt;head&gt;</code> after the Plausible script.</li>
+	<li>Copy the code below into a <code>&lt;script&gt;</code> tag just above the closing <code>&lt;/body&gt;</code> tag.</li>
+</ol>
+
+<pre>
+window.plausible = window.plausible || (() => { (window.plausible.q = window.plausible.q || []).push(arguments) });
+
+const customPageviewProps = new Map();
+
+// Preference for light or dark mode
+if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+	customPageviewProps.set("prefers-color-scheme", "light");
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+	customPageviewProps.set("prefers-color-scheme", "dark");
+}
+
+// Preference for less motion
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+	customPageviewProps.set("prefers-reduced-motion", "reduce");
+}
+
+// Preference for more or less contrast
+if (window.matchMedia("(prefers-contrast: more)").matches) {
+	customPageviewProps.set("prefers-contrast", "more");
+} else if (window.matchMedia("(prefers-contrast: less)").matches) {
+	customPageviewProps.set("prefers-contrast", "less");
+} else if (window.matchMedia("(prefers-contrast: custom)").matches) {
+	customPageviewProps.set("prefers-contrast", "custom");
+}
+
+// HDR capable screens
+if (window.matchMedia("(video-dynamic-range: high)").matches) {
+	customPageviewProps.set("video-dynamic-range", "high");
+}
+if (window.matchMedia("(dynamic-range: high)").matches) {
+	customPageviewProps.set("dynamic-range", "high");
+}
+
+if (customPageviewProps.size > 0) {
+	plausible("pageview", { props: Object.fromEntries(customPageviewProps) });
+}</pre>
+
+<p id="display-settings"><strong>3. Tell Plausible you want to see the custom properties.</strong> In the Plausible dashboard, go to the <em>Custom Properties</em> section in your site settings. Tap the <em>Add Property</em> button and add the 5 custom properties individually: <code>prefers-color-scheme</code>, <code>prefers-contrast</code>, <code>prefers-reduced-motion</code>, <code>dynamic-range</code>, <code>video-dynamic-range</code>.</p>
+
+<p><img src="/posts/plausible-accessibility-tracking/plausible-custom-property-settings.webp" alt="Screenshot of Plausible Analytics settings page, custom properties section. Modal for Add Property. Property input field text prefers-reduced-motion with autocomplete suggesting Create prefers-reduced-motion." width="1107" height="623"></p>
+
+<p id="view"><strong>4. View your site and then view your stats.</strong> The <em>Custom Properties</em> section and <em>Properties</em> sub-section now will show the custom pageview properties when sent.</p>
+
+<p><img src="/posts/plausible-accessibility-tracking/macos-accessibility-settings.webp" alt="Screenshot of macOS System Settings, Accessibility Display section, Reduce motion enabled, Increase contrast enabled" width="827" height="657"></p>
+
+<p><img src="/posts/plausible-accessibility-tracking/plausible-custom-property-stats.webp" alt="Screenshot of Plausible Analytics stats, custom properties section with prefers-contrast property selected. 2 rows of results: none with 2 visitors and more with 1 visitor." width="603" height="339"></p>
