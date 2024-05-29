@@ -8,7 +8,21 @@ export default {
 		"./dist/**/*.js"
 	],
 	theme: {
-		extend: {},
+		extend: {
+			typography: {
+				DEFAULT: {
+					css: {
+						a: {
+							color: "rgb(55 65 81)", // gray-700
+							fontWeight: 400,
+							textDecorationColor: "rgb(75 85 99)", // gray-600
+							textDecorationStyle: "dotted",
+							textDecorationThickness: "1px"
+						},
+					},
+				},
+			},
+		},
 	},
 	plugins: [
 		typography,
