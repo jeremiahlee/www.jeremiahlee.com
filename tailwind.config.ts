@@ -19,6 +19,9 @@ export default {
 							textDecorationStyle: "dotted",
 							textDecorationThickness: "1px"
 						},
+						mark: {
+							backgroundColor: "rgb(245 243 255)" // bg-violet-50
+						}
 					},
 				},
 			},
