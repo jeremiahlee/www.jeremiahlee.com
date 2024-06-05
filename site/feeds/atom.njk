@@ -4,8 +4,8 @@
     "eleventyExcludeFromCollections": true,
     "metadata": {
         "title": "JeremiahLee.com",
-        "subtitle": "Thoughts from a Californian living in Stockholm, Sverige.",
-        "url": "https://www.jeremiahlee.com/",
+        "subtitle": "Thoughts from a humanitarian and technologist living in Stockholm, Sverige.",
+        "url": "https://www.jeremiahlee.com/?ref=RSS",
         "feedUrl": "https://www.jeremiahlee.com/feeds/atom.xml",
         "author": {
             "name": "Jeremiah Lee"
@@ -30,7 +30,7 @@
     {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
     <entry>
         <title>{{ post.data.title }}</title>
-        <link href="{{ absolutePostUrl }}"/>
+        <link href="{{ absolutePostUrl }}?ref=RSS"/>
         <updated>{{ (post.data.updated if post.data.updated else post.date) | rssDate }}</updated>
         <id>{{ absolutePostUrl }}</id>
         <content type="html">{{ post.data.excerpt | htmlToAbsoluteUrls(absolutePostUrl) }}</content>

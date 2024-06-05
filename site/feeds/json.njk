@@ -4,8 +4,8 @@
     "eleventyExcludeFromCollections": true,
     "metadata": {
         "title": "JeremiahLee.com",
-        "subtitle": "Thoughts from a Californian living in Stockholm, Sverige.",
-        "url": "https://www.jeremiahlee.com/",
+        "subtitle": "Thoughts from a humanitarian and technologist living in Stockholm, Sverige.",
+        "url": "https://www.jeremiahlee.com/?ref=RSS",
         "feedUrl": "https://www.jeremiahlee.com/feeds/jsonfeed.json",
         "author": {
             "name": "Jeremiah Lee"
@@ -19,7 +19,7 @@
    "home_page_url": "{{ metadata.url }}",
    "feed_url": "{{ metadata.feedUrl }}",
    "author": {
-      "url": "https://www.jeremiahlee.com/about/",
+      "url": "https://www.jeremiahlee.com/about/?ref=RSS",
       "name": "Jeremiah Lee"
    },
    "icon": "{{ metadata.url }}favicon-180x180.png",
@@ -32,7 +32,7 @@
          "date_published": "{{ post.date | rssDate }}",
          "date_modified": "{{ (post.data.updated if post.data.updated else post.date) | rssDate }}",
          "id": "{{ absolutePostUrl }}",
-         "url": "{{ absolutePostUrl }}",
+         "url": "{{ absolutePostUrl }}?ref=RSS",
          "author": {
             "name": "Jeremiah Lee"
          },
