@@ -183,6 +183,7 @@ module.exports = function(eleventyConfig) {
 			"md",
 			"mp4",
 			"njk",
+			"pdf",
 			"png",
 			"svg",
 			"ttf",
