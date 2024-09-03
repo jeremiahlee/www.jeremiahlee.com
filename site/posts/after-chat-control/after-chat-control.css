@@ -1,0 +1,94 @@
+@font-face {
+	font-family: OldStandardTT-Bold;
+	src: url("/posts/after-chat-control/OldStandardTT-Bold.ttf");
+}
+@font-face {
+	font-family: Oswald-SemiBold;
+	src: url("/posts/after-chat-control/Oswald-SemiBold.ttf");
+}
+@font-face {
+	font-family: MonaspaceKrypton;
+	src: url("/posts/after-chat-control/MonaspaceKrypton-Regular.woff2");
+}
+@font-face {
+	font-family: BreveNewsBook;
+	src: url("/posts/after-chat-control/BreveNewsBook.otf");
+}
+@font-face {
+	font-family: BreveNewsBook;
+	src: url("/posts/after-chat-control/BreveNewsBookItalic.otf");
+	font-style: italic;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+body {
+	background-color: #000;
+}
+
+.bg-soothsayer {
+	background-image: url(/posts/after-chat-control/after-chat-control-bg.webp);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.hhr {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	margin: 0;
+}
+.hhr::before,
+.hhr::after {
+	content: "";
+	flex-grow: 1;
+	background: #FFF;
+	height: 1px;
+	margin: 0 1rem;
+}
+
+.bg-apple {
+	background-color: #161617
+}
+
+.font-newspaper {
+	font-family: "OldStandardTT-Bold", serif;
+}
+
+.bg-newspaper {
+	background-image: url(/posts/after-chat-control/bg-newspaper.svg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: #2f2f2f;
+}
+
+.font-wired {
+	font-family: "Oswald-SemiBold", sans-serif;
+}
+
+.font-wired-mono {
+	font-family: "MonaspaceKrypton", monospace;
+}
+
+.font-wired-serif {
+	font-family: "BreveNewsBook", serif;
+}
+.font-wired-serif.font-serif {
+	font-family: sans-serif;
+}
+
+.border-messenger {
+	border-image: radial-gradient(112.07% 496.65% at -23.56% 119.49%,#09f 4%,#2284ff 9%,#486bff 15%,#6857ff 21%,#8147ff 28%,#923cff 34%,#9d35ff 41%,#a033ff 50%,#ff5280 85%,#ff7061 100%) 0 0 1 0;
+}
+.border-instagram {
+	border-image: linear-gradient(87.55deg,#ff7a00 -.46%,#ff0169 50.82%,#d300c5 102.1%) 0 0 1 0;
+}
+.border-whatsapp {
+	border-color: #25d366;
+}
