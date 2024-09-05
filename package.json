@@ -31,6 +31,7 @@
 		"build:spotify": "npx tailwindcss build --minify -i site/posts/failed-squad-goals/failed-squad-goals.source.css -o site/posts/failed-squad-goals/failed-squad-goals.compiled.css --config site/posts/failed-squad-goals/tailwind.config.ts",
 		"dev:burp": "npx tailwindcss build -i site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css --config site/posts/last-burp-of-hope/tailwind.config.ts",
 		"build:burp": "npx tailwindcss build --minify -i site/posts/last-burp-of-hope/last-burp-of-hope.source.css -o site/posts/last-burp-of-hope/last-burp-of-hope.compiled.css --config site/posts/last-burp-of-hope/tailwind.config.ts",
+		"build:chat": "npx tailwindcss build --minify -i site/posts/after-chat-control/after-chat-control.source.css -o site/posts/after-chat-control/after-chat-control.compiled.css --config site/posts/after-chat-control/tailwind.config.ts",
 		"dev:raw": "cd site/posts/remote-async-work && NODE_ENV=development postcss remote-async-work.source.css -o remote-async-work.compiled.css -w",
 		"build:raw": "npx tailwindcss build --minify -i site/posts/remote-async-work/remote-async-work.source.css -o site/posts/remote-async-work/remote-async-work.compiled.css --config site/posts/remote-async-work/tailwind.config.ts",
 		"build:erg": "npx tailwindcss build --minify -i site/posts/lgbtq-erg/lgbtq-erg.source.css -o site/posts/lgbtq-erg/lgbtq-erg.compiled.css --config site/posts/lgbtq-erg/tailwind.config.ts"

@@ -1,3 +1,5 @@
+@tailwind base;
+
 @font-face {
 	font-family: OldStandardTT-Bold;
 	src: url("/posts/after-chat-control/OldStandardTT-Bold.ttf");
@@ -92,3 +94,7 @@ body {
 .border-whatsapp {
 	border-color: #25d366;
 }
+
+/* Custom base styles must come before components and utilities to avoid specificity issues */
+@tailwind components;
+@tailwind utilities;
