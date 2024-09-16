@@ -1,8 +1,13 @@
 const moment = require("moment");
 const defaultCssPath = "/soul-class-style-badass.css";
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
+	eleventyConfig.addPlugin(EleventyI18nPlugin, {
+		defaultLanguage: "en",
+	});
+
 	eleventyConfig.addCollection(
 		"mostRecentNowPost",
 		function(collection) {

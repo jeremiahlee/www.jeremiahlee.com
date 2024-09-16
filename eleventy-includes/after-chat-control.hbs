@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="{{lang}}" dir="ltr">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{title}}</title>
 {{> partial-head }}
-	<link rel="canonical" href="https://www.jeremiahlee.com{{ page.url }}">
+	<link rel="canonical" href="https://www.jeremiahlee.com/posts/after-chat-control/">
 {{> partial-css }}
 {{#if excerpt}}
 	<meta name="description" content="{{ excerpt }}">
@@ -17,9 +17,7 @@
 	<meta property="og:title" content="{{ title }}">
 	<meta property="og:type" content="article">
 	<meta property="og:description" content="{{ excerpt }}">
-	{{#if excerptImage}}
-	<meta property="og:image" content="https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}">
-	{{/if}}
+	<meta property="og:image" content="https://www.jeremiahlee.com/posts/after-chat-control/after-chat-control.jpg">
 {{/if}}
 </head>
 <body class="px-4 md:p-0">

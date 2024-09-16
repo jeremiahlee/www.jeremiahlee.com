@@ -3,7 +3,7 @@ import typography from "@tailwindcss/typography";
 
 export default {
 	content: [
-		"./site/posts/after-chat-control/index.html",
+		"./site/posts/after-chat-control/**/*.html",
 		"./eleventy-includes/after-chat-control.hbs"
 	],
 	theme: {
