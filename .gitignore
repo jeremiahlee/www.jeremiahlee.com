@@ -125,3 +125,5 @@ typings/
 # Start of custom
 dist/
 .nova/
+_drafts/
+.zed/
