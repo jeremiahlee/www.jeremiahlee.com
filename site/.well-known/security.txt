@@ -1,0 +1,4 @@
+Contact: https://www.jeremiahlee.com/contact/
+Canonical: https://www.jeremiahlee.com/.well-known/security.txt
+Expires: 2025-01-15T11:00:00.000Z
+Preferred-Languages: en
