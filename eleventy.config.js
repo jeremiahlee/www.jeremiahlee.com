@@ -183,6 +183,7 @@ module.exports = function(eleventyConfig) {
 			"hbs",
 			"html",
 			"json",
+			"jpeg",
 			"jpg",
 			"m4v",
 			"md",
