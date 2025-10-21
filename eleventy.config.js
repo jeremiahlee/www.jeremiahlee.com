@@ -174,6 +174,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("site/**/*.js");
 	eleventyConfig.addPassthroughCopy("site/_headers");
 	eleventyConfig.addPassthroughCopy("site/_redirects");
+	eleventyConfig.addPassthroughCopy("site/.well-known");
 
 	eleventyConfig.addPlugin(pluginRss);
 
