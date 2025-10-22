@@ -7,7 +7,7 @@ function updateDynamicTime() {
 
 	document.getElementById("dynamicToday").innerText = `Today is ${localDate.toString()}`;
 
-	document.getElementById("dynamicWeek").innerText = `${localDate.getISOFields().isoYear}-W${String(localDate.weekOfYear).padStart(2, "0")}`;
+	document.getElementById("dynamicWeek").innerText = `${localDate.year}-W${String(localDate.weekOfYear).padStart(2, "0")}`;
 
 	document.getElementById("dynamicQuarter").innerText = `${localDate.year}-Q${quarter}`;
 
