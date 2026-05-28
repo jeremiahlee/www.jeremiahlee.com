@@ -2,9 +2,10 @@
 	"author": "Jeremiah Lee",
 	"description": "The website of Jeremiah Lee",
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.1",
+		"@11ty/eleventy": "^3.1.5",
+		"@11ty/eleventy-plugin-handlebars": "^1.0.0",
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
-		"@cloudflare/workers-types": "^4.20260526.1",
+		"@cloudflare/workers-types": "^4.20260528.1",
 		"@percy/cli": "^1.31.14",
 		"@tailwindcss/forms": "^0.5.11",
 		"@tailwindcss/typography": "^0.5.19",
@@ -20,6 +21,7 @@
 	"license": "UNLICENSED",
 	"name": "www.jeremiahlee.com",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"build": "npm run build:html && npm run build:css",
 		"build:css": "npx tailwindcss --minify -i css/style.css -o dist/soul-class-style-badass.css --config tailwind.config.ts",
@@ -36,5 +38,5 @@
 		"build:raw": "npx tailwindcss build --minify -i site/posts/remote-async-work/remote-async-work.source.css -o site/posts/remote-async-work/remote-async-work.compiled.css --config site/posts/remote-async-work/tailwind.config.ts",
 		"build:erg": "npx tailwindcss build --minify -i site/posts/lgbtq-erg/lgbtq-erg.source.css -o site/posts/lgbtq-erg/lgbtq-erg.compiled.css --config site/posts/lgbtq-erg/tailwind.config.ts"
 	},
-	"version": "5.0.0"
+	"version": "6.0.0"
 }

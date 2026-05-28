@@ -1,27 +1,34 @@
-const moment = require("moment");
-const defaultCssPath = "/soul-class-style-badass.css";
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const { EleventyI18nPlugin } = require("@11ty/eleventy");
+import moment from "moment";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import { EleventyI18nPlugin } from "@11ty/eleventy";
+import handlebarsPlugin from "@11ty/eleventy-plugin-handlebars";
 
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
+	eleventyConfig.addPlugin(handlebarsPlugin);
+	
 	eleventyConfig.addPlugin(EleventyI18nPlugin, {
 		defaultLanguage: "en",
+	});
+
+	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+		if (data.draft) { // && process.env.ELEVENTY_RUN_MODE === "build") {
+			return false;
+		}
 	});
 
 	eleventyConfig.addCollection(
 		"mostRecentNowPost",
 		function(collection) {
-			const postsTaggedNow = collection.getFilteredByTag("now");
-			const mostRecentPostTaggedNow = postsTaggedNow[postsTaggedNow.length - 1];
-			return mostRecentPostTaggedNow;
+			console.log(`Now: ${collection.getFilteredByTag("now").length}`);
+			console.log(collection.getFilteredByTag("now").at(-1));
+			return collection.getFilteredByTag("now").at(-1);
 		}
 	);
 
 	eleventyConfig.addCollection(
 		"nowPageUpdates",
 		function(collection) {
-			const postsTaggedNow = collection.getFilteredByTag("now");
-			return postsTaggedNow;
+			return collection.getFilteredByTag("now");
 		}
 	);
 
@@ -138,14 +145,14 @@ module.exports = function(eleventyConfig) {
 		}
 	);
 
-	eleventyConfig.addHandlebarsHelper(
+	eleventyConfig.addFilter(
 		"moment",
 		function(date, format) {
 			return moment(date).format(format);
 		}
 	);
 
-	eleventyConfig.addHandlebarsHelper(
+	eleventyConfig.addFilter(
 		"reverseArray",
 		function(arr) {
 			return [...arr].reverse();
@@ -157,11 +164,11 @@ module.exports = function(eleventyConfig) {
 		`css` may be a single item and therefore gets parsed as a string. Need to return it as an 1-element array.
 		If "default" is a value, replace with path to default CSS file.
 	*/
-	eleventyConfig.addHandlebarsHelper(
+	eleventyConfig.addFilter(
 		"cssHelper",
 		function(stylesheet) {
 			if (stylesheet === "default") {
-				return defaultCssPath;
+				return "/soul-class-style-badass.css";
 			} else {
 				return stylesheet;
 			}
@@ -178,6 +185,8 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addPlugin(pluginRss);
 
+
+
 	return {
 		templateFormats: [
 			"css",
@@ -187,6 +196,7 @@ module.exports = function(eleventyConfig) {
 			"jpeg",
 			"jpg",
 			"m4v",
+			
 			"md",
 			"mp4",
 			"njk",
@@ -208,7 +218,6 @@ module.exports = function(eleventyConfig) {
 		htmlTemplateEngine: "hbs",
 		passthroughFileCopy: true,
 		dir: {
-			includes: "../eleventy-includes",
 			input: "site",
 			output: "dist"
 		}

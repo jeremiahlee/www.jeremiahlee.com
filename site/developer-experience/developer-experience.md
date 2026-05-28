@@ -1,6 +1,6 @@
 ---
 date: 2016-08-30T22:34:03+00:00
-layout: page-back.hbs
+layout: "page-back.hbs"
 title: "Developer Experience (DX)"
 excerpt: "Jeremiah Lee first wrote about developer experience in 2011."
 ---
