@@ -1,4 +1,5 @@
-@tailwind base;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
 
 /* Custom base styles start */
 hr {
@@ -19,7 +20,3 @@ hr {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
-/* Custom base styles must come before components and utilities to avoid specificity issues */
-@tailwind components;
-@tailwind utilities;

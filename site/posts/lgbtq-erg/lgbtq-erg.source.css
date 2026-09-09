@@ -1,4 +1,5 @@
-@tailwind base;
+@import "tailwindcss";
+@config "./tailwind.config.ts";
 
 body {
 	@apply text-lg;
@@ -36,20 +37,10 @@ abbr[title] {
 
 /* Custom base styles start */
 /* Small, Medium, Large breakpoints */
-@screen sm {
-}
-
-@screen md {
-}
-
-@screen lg {
+@media (min-width: 1024px) {
 	.spread {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		box-sizing: border-box;
 	}
 }
-
-/* Custom base styles must come before components and utilities to avoid specificity issues */
-@tailwind components;
-@tailwind utilities;

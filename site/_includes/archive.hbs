@@ -21,7 +21,7 @@
 	<div class="max-w-lg mb-12 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 
 {{#each (reverseArray collections.featured)}}
-		<a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-violet-600 hover:shadow-2xl" href="{{this.url}}">
+		<a class="border border-gray-200 flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-violet-600 hover:shadow-2xl" href="{{this.url}}">
 			<div class="flex-shrink-0">
 				<img class="w-full object-cover" src="{{this.url}}{{#if this.data.excerptImageSquare}}{{this.data.excerptImageSquare}}{{else}}{{this.data.excerptImage}}{{/if}}" alt="" loading="lazy">
 			</div>
@@ -42,7 +42,7 @@
 	<h2 class="my-2 text-3xl tracking-tight text-gray-900 text-center lg:text-left">Featured conference talks</h2>
 	<div class="max-w-lg mb-12 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 {{#each (reverseArray collections.conferenceTalk)}}
-		<a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-violet-600 hover:shadow-2xl" href="{{this.url}}">
+		<a class="border border-gray-200 flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-violet-600 hover:shadow-2xl" href="{{this.url}}">
 			<div class="flex-shrink-0">
 				<img class="w-full object-cover" src="{{this.url}}{{this.data.excerptImage}}" alt="" loading="lazy">
 			</div>
@@ -64,7 +64,7 @@
 	<div class="max-w-lg mb-12 mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 
 {{#each (reverseArray collections.featuredInterview)}}
-		<a class="border flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-violet-600 hover:shadow-2xl" href="{{this.url}}">
+		<a class="border border-gray-200 flex flex-col rounded-lg no-underline overflow-hidden shadow-lg hover:border-violet-600 hover:shadow-2xl" href="{{this.url}}">
 			<div class="flex-shrink-0">
 				<img class="w-full object-cover" src="{{this.url}}{{this.data.excerptImage}}" alt="" loading="lazy">
 			</div>
@@ -88,7 +88,7 @@
 		<ul class="list-outside list-disc ml-4 mb-4">{{#each this.data}}
 			<li class="mb-4">
 				<a class="block no-underline" href="{{this.url}}">
-					<p class="m-0"><span class="font-bold underline">{{this.data.title}}</span> <span class="bg-violet-100 inline-block px-2 py-1 ml-2 rounded text-xs text-violet">{{this.data.tags.[1]}}</span></p>
+					<p class="m-0"><span class="font-bold underline">{{this.data.title}}</span> <span class="bg-violet-100 inline-block px-2 py-1 ml-2 rounded-sm text-xs text-violet">{{this.data.tags.[1]}}</span></p>
 					<p class="mt-0 text-gray-600">{{this.data.excerpt}}</p>
 				</a>
 			</li>
