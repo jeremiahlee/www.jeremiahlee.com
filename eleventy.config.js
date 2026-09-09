@@ -55,7 +55,7 @@ function formatDate(date, format) {
 
 export default function(eleventyConfig) {
 	eleventyConfig.addPlugin(handlebarsPlugin);
-	
+
 	eleventyConfig.addPlugin(EleventyI18nPlugin, {
 		defaultLanguage: "en",
 	});
@@ -249,13 +249,14 @@ export default function(eleventyConfig) {
 	return {
 		templateFormats: [
 			"css",
+			"gif",
 			"hbs",
 			"html",
 			"json",
 			"jpeg",
 			"jpg",
 			"m4v",
-			
+
 			"md",
 			"mp4",
 			"njk",
