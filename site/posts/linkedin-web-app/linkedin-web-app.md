@@ -1,5 +1,5 @@
 ---
-date: 2017-09-17T21:08:00+02:00
+date: "2017-09-17T21:08:00+02:00"
 excerpt: "LinkedIn's mobile Web app is great, but you wouldn't know that from the first 15 seconds of using it."
 excerptImage: 2017-09-17-linkedin.png
 original-permalink: /blog/2017/09/17/linkedin-web-app/

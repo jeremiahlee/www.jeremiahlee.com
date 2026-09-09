@@ -1,5 +1,5 @@
 ---
-date: 2020-09-02T08:00:00+02:00
+date: "2020-09-02T08:00:00+02:00"
 title: "Spotify’s Failed Squad Goals: the conference talk"
 excerpt: "Recording of my talk about practices at the Leading the Product 2020 conference on September 2, 2020."
 excerptImage: video.jpg

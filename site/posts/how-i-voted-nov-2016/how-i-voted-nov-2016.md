@@ -1,5 +1,5 @@
 ---
-date: 2016-10-16T16:27:00-07:00
+date: "2016-10-16T16:27:00-07:00"
 original-permalink: /blog/2016/10/16/2016-11-voting/
 title: "How I voted in November 2016"
 excerpt: "My voter guide to the bajillion CA propositions"

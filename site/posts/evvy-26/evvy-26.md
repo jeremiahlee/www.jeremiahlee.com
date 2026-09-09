@@ -1,5 +1,5 @@
 ---
-date: 2007-05-12T22:35:21-07:00
+date: "2007-05-12T22:35:21-07:00"
 excerpt: "The honor of winning Best Interactive Project at The 26th Annual EVVY Awards"
 original-id: 918
 original-permalink: /blog/2007/05/12/evvy-26/

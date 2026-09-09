@@ -1,5 +1,5 @@
 ---
-date: 2020-05-19T08:00:00+01:00
+date: "2020-05-19T08:00:00+01:00"
 excerpt: "Clarifications from me and select comments from you"
 title: "Reactions to “Spotify’s Failed Squad Goals”"
 excerptImage: "comments.jpg"

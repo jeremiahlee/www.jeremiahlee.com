@@ -1,9 +1,9 @@
 ---
-date: 2016-12-10T16:38:00-08:00
+date: "2016-12-10T16:38:00-08:00"
 original-permalink: /blog/2016/12/10/the-music-that-moves-me/
 title: "The music that moves me"
 excerpt: "Bye, San Francisco. Hej, Stockholm."
-updated: 2017-01-03T14:52:00-07:00
+updated: "2017-01-03T14:52:00-07:00"
 tags:
   - "posts"
   - "journal"

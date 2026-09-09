@@ -1,10 +1,10 @@
 ---
-date: 2016-06-26T09:39:28+00:00
+date: "2016-06-26T09:39:28+00:00"
 excerpt: "St. Thomas saw pride as the queen of the seven deadly sins. But hating isn’t a sin on that list."
 excerptImage: why-we-march-1x1.png
 original-id: 1361
 title: Why we march
-updated: 2017-06-24T16:39:00+02:00
+updated: "2017-06-24T16:39:00+02:00"
 tags:
   - "posts"
   - "journal"

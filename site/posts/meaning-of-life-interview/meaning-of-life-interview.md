@@ -1,5 +1,5 @@
 ---
-date: 2008-08-05T10:00:05-07:00
+date: "2008-08-05T10:00:05-07:00"
 original-id: 1009
 original-permalink: /blog/2008/08/05/meaning-of-life-interview/
 title: "What is the meaning of life?"

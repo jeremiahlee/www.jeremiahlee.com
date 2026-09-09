@@ -1,5 +1,5 @@
 ---
-date: 2008-07-30T01:00:42-07:00
+date: "2008-07-30T01:00:42-07:00"
 original-id: 1008
 original-permalink: /blog/2008/07/30/fairy-tale-ending/
 title: "Fairy Tale Ending"

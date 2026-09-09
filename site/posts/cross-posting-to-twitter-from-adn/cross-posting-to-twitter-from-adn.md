@@ -1,5 +1,5 @@
 ---
-date: 2013-04-28T22:34:03+00:00
+date: "2013-04-28T22:34:03+00:00"
 excerpt: Proposed interaction and user interface design for App.net clients cross-posting to Twitter
 original-id: 1304
 original-permalink: /2013/04/28/cross-posting-to-twitter-from-adn/

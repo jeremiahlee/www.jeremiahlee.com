@@ -1,5 +1,5 @@
 ---
-date: 2019-07-10T23:00:00+02:00
+date: "2019-07-10T23:00:00+02:00"
 excerpt: "What I learned creating two LGBT+ Pride related smartwatchfaces"
 excerptImage: 2019-07-10-making-fitbitos-watchfaces-preview.png
 original-permalink: /blog/2019/07/10/making-fitbitos-watchfaces/

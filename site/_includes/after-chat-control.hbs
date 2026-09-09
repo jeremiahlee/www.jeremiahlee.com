@@ -10,9 +10,9 @@
 {{#if excerpt}}
 	<meta name="description" content="{{ excerpt }}">
 	<meta name="author" content="Jeremiah Lee">
-	<meta property="article:published_time" content="{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}">
+	<meta property="article:published_time" content="{{ formatDate date 'iso' }}">
 	{{#if updated}}
-	<meta property="article:modified_time" content="{{ moment updated 'YYYY-MM-DDTHH:mm:ssZZ' }}">
+	<meta property="article:modified_time" content="{{ formatDate updated 'iso' }}">
 	{{/if}}
 	<meta property="og:title" content="{{ title }}">
 	<meta property="og:type" content="article">
@@ -24,7 +24,7 @@
 <article>
 {{{ content }}}
 </article>
-<p class="text-sm text-center text-white m-4">Last updated: {{ moment updated 'YYYY-MM-DDTHH:mm:ssZZ' }}</p>
+<p class="text-sm text-center text-white m-4">Last updated: {{ formatDate updated 'iso' }}</p>
 <div class="bg-white py-2 px-4 mt-8 mb-16 w-fit mx-auto rounded-full"><a href="/posts/" class="text-purple-800 no-underline">←︎ More writing by Jeremiah</a></div>
 </body>
 </html>

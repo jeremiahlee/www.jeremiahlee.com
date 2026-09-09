@@ -1,5 +1,5 @@
 ---
-date: 2007-12-25T19:47:03-05:00
+date: "2007-12-25T19:47:03-05:00"
 original-id: 988
 original-permalink: /2007/12/25/xmas-prayer/
 title: "Xmas Prayer"

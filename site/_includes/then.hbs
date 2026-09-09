@@ -27,7 +27,7 @@
 		<div class="mt-6 prose prose-violet prose-lg text-gray-700 mx-auto">
 			<ul>
 {{#each (reverseArray collections.nowPageUpdates)}}
-				<li><a href="{{this.url}}">{{moment this.data.date 'YYYY-MM-DD'}}</a></li>
+				<li><a href="{{this.url}}">{{formatDate this.data.date 'isoDate'}}</a></li>
 {{/each}}
 			</ul>
 		</div>

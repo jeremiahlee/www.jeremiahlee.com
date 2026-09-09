@@ -1,5 +1,5 @@
 ---
-date: 2016-11-04T16:00:00+06:00
+date: "2016-11-04T16:00:00+06:00"
 title: "How Fitbit’s API makes the world move"
 excerpt: "Scaling the Fitbit Web API strategy and engineering practices"
 excerptImage: slide-1.png

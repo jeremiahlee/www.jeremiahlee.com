@@ -1,5 +1,5 @@
 ---
-date: 2020-05-27T12:00:00+01:00
+date: "2020-05-27T12:00:00+01:00"
 excerpt: "Fitbit and Spotify are not polar opposites and sometimes the market does not reward innovative “empowered product teams” equally."
 title: "Spotify vs Fitbit: Marty Cagan’s false premise and false cause fallacy"
 excerptImage: "your-logical-fallacy-is-false-cause.png"

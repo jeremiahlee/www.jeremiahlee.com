@@ -1,5 +1,5 @@
 ---
-date: 2020-09-16T10:00:00+02:00
+date: "2020-09-16T10:00:00+02:00"
 title: "We don’t stop until hate for profit stops"
 excerpt: "The Stop Hate for Profit protest must continue until Facebook takes action to stop the real harm to real people. Here is a template to ask your employer’s executives to remain committed."
 excerptImage: facebook-skulls.png

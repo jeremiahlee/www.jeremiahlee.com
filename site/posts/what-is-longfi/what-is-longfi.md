@@ -1,5 +1,5 @@
 ---
-date: 2020-09-28T19:00:00+02:00
+date: "2020-09-28T19:00:00+02:00"
 title: "What is LongFi and HNT?"
 excerpt: "LongFi is foundational technology for realizing the potential of smart IoT devices."
 excerptImage: preview-wide.jpg

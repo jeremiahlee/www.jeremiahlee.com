@@ -1,5 +1,5 @@
 ---
-date: 2020-08-25T12:00:00+02:00
+date: "2020-08-25T12:00:00+02:00"
 title: "14 reasons why #DeleteFacebook"
 excerpt: "Over the course of August 2020, I shared why I was leaving Facebook on Facebook"
 excerptImage: preview-square.jpg

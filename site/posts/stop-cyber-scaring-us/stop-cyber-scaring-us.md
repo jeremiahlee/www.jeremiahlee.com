@@ -1,5 +1,5 @@
 ---
-date: 2016-10-06T21:50:00-07:00
+date: "2016-10-06T21:50:00-07:00"
 original-permalink: /blog/2016/10/06/stop-cyber-scaring-us/
 title: 'Dear NPR: Please stop “cyber” scaring us'
 excerpt: "Word choice matters, especially to digital immigrants."

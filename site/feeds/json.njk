@@ -30,7 +30,7 @@
       {
          "title": "{{ post.data.title }}",
          "date_published": "{{ post.date | dateToRfc3339 }}",
-         "date_modified": "{{ (post.data.updated if post.data.updated else post.date) | dateToRfc3339 }}",
+         "date_modified": "{{ (post.data.updated if post.data.updated else post.date) | toDate | dateToRfc3339 }}",
          "id": "{{ absolutePostUrl }}",
          "url": "{{ absolutePostUrl }}?ref=RSS",
          "author": {

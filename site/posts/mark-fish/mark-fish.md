@@ -1,5 +1,5 @@
 ---
-date: 2017-09-09T09:58:00-07:00
+date: "2017-09-09T09:58:00-07:00"
 excerpt: "We all need a personal cheerleader in life. Mark was mine."
 excerptImage: 2017-09-09-mark-fish-preview.jpg
 original-permalink: /blog/2017/09/09/mark-fish/

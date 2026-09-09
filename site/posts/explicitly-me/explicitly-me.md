@@ -1,5 +1,5 @@
 ---
-date: 2005-07-30T12:11:12-04:00
+date: "2005-07-30T12:11:12-04:00"
 original-id: 702
 original-permalink: /blog/2005/07/30/explicitly-me/
 title: "Explicitly Me"

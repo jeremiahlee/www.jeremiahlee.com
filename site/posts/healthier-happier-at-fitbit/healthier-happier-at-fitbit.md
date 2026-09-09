@@ -1,5 +1,5 @@
 ---
-date: 2013-06-06T12:53:01+00:00
+date: "2013-06-06T12:53:01+00:00"
 original-id: 1325
 original-permalink: /2013/06/06/healthier-happier-at-fitbit/
 title: "Healthier, Happier at Fitbit"

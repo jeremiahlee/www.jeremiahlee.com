@@ -1,10 +1,10 @@
 ---
-date: 2019-02-03T23:45:00+01:00
+date: "2019-02-03T23:45:00+01:00"
 excerpt: "Tab Tosser is a Firefox extension that automatically closes tabs you have ignored for too long. I created Tab Tosser to help free myself of digital clutter."
 excerptImage: 2019-02-03-tab-tosser-preview-rectangle.png
 original-permalink: /blog/2019/02/03/tab-tosser/
 title: "Introducing Tab Tosser"
-updated: 2019-03-03T13:30:00+01:00
+updated: "2019-03-03T13:30:00+01:00"
 tags:
   - "posts"
   - "side project"

@@ -1,7 +1,57 @@
-import moment from "moment";
+import { Temporal } from "temporal-polyfill";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import { EleventyI18nPlugin } from "@11ty/eleventy";
 import handlebarsPlugin from "@11ty/eleventy-plugin-handlebars";
+
+const ordinalRules = new Intl.PluralRules("en-US", { type: "ordinal" });
+const ORDINAL_SUFFIXES = { one: "st", two: "nd", few: "rd", other: "th" };
+const weekdayMonthFormat = new Intl.DateTimeFormat("en-US", { weekday: "long", month: "long", timeZone: "UTC" });
+const timeFormat = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", hour12: true, timeZone: "UTC" });
+
+function pad(number, width = 2) {
+	return String(number).padStart(width, "0");
+}
+
+function ordinal(day) {
+	return `${day}${ORDINAL_SUFFIXES[ordinalRules.select(day)] ?? "th"}`;
+}
+
+// Front matter `date`/`updated` values are quoted strings (see YAML front matter)
+// so their authored UTC offset survives Eleventy's data cascade instead of being
+// collapsed to a JS Date, which only stores a UTC instant.
+function toZonedDateTime(date) {
+	const isoString = date instanceof Date ? date.toISOString() : String(date);
+	const offsetMatch = isoString.match(/([+-]\d{2}:?\d{2}|Z)$/);
+	const offset = !offsetMatch || offsetMatch[0] === "Z" ? "+00:00" : offsetMatch[0];
+	return Temporal.Instant.from(isoString).toZonedDateTimeISO(offset);
+}
+
+// Intl.DateTimeFormat can't format Temporal instances from a polyfill (only the
+// native/global Temporal classes pass its brand check), so weekday/month names
+// are read off a same-wall-clock UTC Date instead.
+function formatDate(date, format) {
+	const zdt = toZonedDateTime(date);
+	const wallClock = new Date(Date.UTC(zdt.year, zdt.month - 1, zdt.day, zdt.hour, zdt.minute, zdt.second));
+
+	switch (format) {
+		case "iso":
+			return `${pad(zdt.year, 4)}-${pad(zdt.month)}-${pad(zdt.day)}T${pad(zdt.hour)}:${pad(zdt.minute)}:${pad(zdt.second)}${zdt.offset.replace(":", "")}`;
+		case "isoDate":
+			return zdt.toPlainDate().toString();
+		case "year":
+			return String(zdt.year);
+		case "long": {
+			const parts = Object.fromEntries(weekdayMonthFormat.formatToParts(wallClock).map((part) => [part.type, part.value]));
+			return `${parts.weekday}, ${parts.month} ${ordinal(zdt.day)} ${zdt.year}`;
+		}
+		case "longWithTime": {
+			const parts = Object.fromEntries(weekdayMonthFormat.formatToParts(wallClock).map((part) => [part.type, part.value]));
+			return `${parts.weekday}, ${parts.month} ${zdt.day}, ${zdt.year} ${timeFormat.format(wallClock)}`;
+		}
+		default:
+			throw new Error(`Unknown date format: ${format}`);
+	}
+}
 
 export default function(eleventyConfig) {
 	eleventyConfig.addPlugin(handlebarsPlugin);
@@ -146,9 +196,18 @@ export default function(eleventyConfig) {
 	);
 
 	eleventyConfig.addFilter(
-		"moment",
+		"formatDate",
 		function(date, format) {
-			return moment(date).format(format);
+			return formatDate(date, format);
+		}
+	);
+
+	// Front matter `date`/`updated` are quoted strings (see comment above formatDate);
+	// eleventy-plugin-rss's dateToRfc3339/dateToRfc822 filters require a JS Date.
+	eleventyConfig.addFilter(
+		"toDate",
+		function(value) {
+			return new Date(value);
 		}
 	);
 

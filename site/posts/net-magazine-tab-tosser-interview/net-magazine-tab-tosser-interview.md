@@ -1,10 +1,10 @@
 ---
-date: 2019-06-13T12:00:00+01:00
+date: "2019-06-13T12:00:00+01:00"
 excerpt: "My interview about Tab Tosser in Net magazine issue 321"
 excerptImage: 2019-06-13-net-magazine-tab-tosser-preview.jpg
 original-permalink: /blog/2019/06/13/net-magazine-tab-tosser/
 title: "Net magazine side project of the month: Tab Tosser"
-updated: 2019-06-30T12:00:00+01:00
+updated: "2019-06-30T12:00:00+01:00"
 tags:
   - "posts"
   - "interview"

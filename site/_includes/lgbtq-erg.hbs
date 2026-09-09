@@ -10,9 +10,9 @@
 {{#if excerpt}}
 	<meta name="description" content="{{ excerpt }}">
 	<meta name="author" content="Jeremiah Lee">
-	<meta property="article:published_time" content="{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}">
+	<meta property="article:published_time" content="{{ formatDate date 'iso' }}">
 	{{#if updated}}
-	<meta property="article:modified_time" content="{{ moment updated 'YYYY-MM-DDTHH:mm:ssZZ' }}">
+	<meta property="article:modified_time" content="{{ formatDate updated 'iso' }}">
 	{{/if}}
 	<meta property="og:title" content="{{ title }}">
 	<meta property="og:type" content="article">
@@ -37,18 +37,18 @@
 		"@type": "Person",
 		"name": "Jeremiah Lee"
 	},
-	"datePublished": "{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}",
+	"datePublished": "{{ formatDate date 'iso' }}",
 {{#if updated}}
-	"dateModified": "{{moment updated 'YYYY-MM-DDTHH:mm:ssZZ'}}",
+	"dateModified": "{{formatDate updated 'iso'}}",
 {{else}}
-	"dateModified": "{{ moment date 'YYYY-MM-DDTHH:mm:ssZZ' }}",
+	"dateModified": "{{ formatDate date 'iso' }}",
 {{/if}}
 {{#if excerptImage}}
 	"image": [
 		"https://www.jeremiahlee.com{{ page.url }}{{ excerptImage }}"
 	],
 {{/if}}
-	"copyrightYear": {{moment date 'YYYY'}}
+	"copyrightYear": {{formatDate date 'year'}}
 }
 </script>
 

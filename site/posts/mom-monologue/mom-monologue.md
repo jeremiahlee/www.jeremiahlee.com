@@ -1,5 +1,5 @@
 ---
-date: 2003-05-10T01:00:00-04:00
+date: "2003-05-10T01:00:00-04:00"
 original-id: 255
 original-permalink: /blog/2003/05/10/mom-monologue/
 title: "Mom Monologue"
