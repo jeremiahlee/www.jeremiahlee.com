@@ -1,0 +1,140 @@
+---
+date: "2023-08-15T20:25:03+0200"
+title: "Interledger Foundation fellowship interim report: Web Monetization on the Social Web"
+excerpt: "In April 2023, I began researching how to adapt Web Monetization to work within federated social networks with Mastodon being the reference implementation."
+excerptImage: "interledger-fellowship-interim-report.jpg"
+showExcerptImage: true
+archiveOf: "https://community.interledger.org/jeremiahlee/web-monetization-in-the-fediverse-ilf-grant-progress-report-1-37c7"
+tags:
+ - "posts"
+ - "Interledger Foundation fellowship"
+---
+
+<h2>
+  <a name="overview" href="#overview">
+  </a>
+  Overview
+</h2>
+
+<p>In April 2023, I began a fellowship with the <a href="https://interledger.org/">Interledger Foundation</a> to advance <a href="https://webmonetization.org/">Web Monetization</a> in <a href="https://joinmastodon.org/">Mastodon</a> and other applications using <a href="https://activitypub.rocks/">ActivityPub</a>. ActivityPub is a W3C standard that adds a social layer to the Web platform. It enables any website or app to have social networking functionality that can interoperate with other websites and apps. Instead of everyone having to join one social network, people can now pick a social network provider like they can pick an email provider. My project’s goal is to adapt Web Monetization to work within federated social networks with Mastodon being the reference implementation.</p>
+
+<h2>
+  <a name="project-update" href="#project-update">
+  </a>
+  Project Update
+</h2>
+
+<h3>
+  <a name="building-a-fediverse-home-for-the-interledger-foundation" href="#building-a-fediverse-home-for-the-interledger-foundation">
+  </a>
+  Building a fediverse home for the Interledger Foundation
+</h3>
+
+<p>My first task was to setup a Mastodon instance for the Interledger Foundation. This required more effort than I anticipated. The Mastodon project did not have an automated way to operate the server application and its required dependencies with the security and reliability expected of commercial services. I created a Terraform project to provision the cloud infrastructure necessary to run a Mastodon instance and deploy the Mastodon software on Google Cloud Platform. <a href="https://github.com/interledger/mastodon-gcp-terraform">This code</a> is now open sourced and anyone can use it to easily deploy their own Mastodon instance onto Google Cloud Platform in under 30 minutes! I also submitted <a href="https://github.com/mastodon/chart/pull/81">multiple</a> <a href="https://github.com/mastodon/chart/pull/82">fixes</a> and <a href="https://github.com/mastodon/chart/pull/75#issuecomment-1661682890">bug</a> <a href="https://github.com/hashicorp/terraform-provider-google/issues/13916#issuecomment-1566985485">reports</a> to the Mastodon project and to Google Cloud Platform’s Terraform provider.</p>
+
+<p>Once the technical part was ready, I worked with the foundation to establish community guidelines, a privacy policy,  and moderation plan to support inviting the general public to join its Mastodon server. I documented Mastodon-specific norms for brands and worked with <a class="mentioned-user" href="https://community.interledger.org/julaireh">@julaireh</a> to start posting all of the foundation’s great social media posts on Mastodon too. We then opened <a href="https://interledger.social">Interledger.social</a> to the world. I hosted <a href="https://community.interledger.org/jeremiahlee/interledger-launches-a-mastodon-instance-3k0">3 office hour sessions</a> to help people learn about Mastodon, federated social networks (aka “the fediverse”), and get their accounts setup.</p>
+
+<h3>
+  <a name="building-web-monetization-into-activity-streams" href="#building-web-monetization-into-activity-streams">
+  </a>
+  Building Web Monetization into Activity Streams
+</h3>
+
+<p>Before support for Web Monetization can be added to Mastodon, support for Web Monetization must be added to the technology standards that Mastodon uses. Mastodon and other federated social network servers send data to each other using a protocol called ActivityPub. The data must be sent in a format called <a href="https://www.w3.org/TR/activitystreams-core/">Activity Streams</a>.</p>
+
+<p>Web Monetization requires a <a href="https://paymentpointers.org/">payment pointer</a>, which is a URL to an <a href="https://docs.openpayments.guide/#specification">Open Payments API entry-point</a>. I wrote <a href="https://jeremiahlee.github.io/web-monetization-vocabulary/">a proposal for how to add a payment pointer to the Activity Streams data format</a>. It’s now being reviewed by people working on the Web Monetization standard.</p>
+
+<p>The W3C group that defined the Activity Streams standard concluded its work in 2018. Extensions to the data format are now proposed and adopted informally by the developers of federated social network servers. Once the Web Monetization group agrees on how to represent payment pointers in the Activity Streams data format, I will submit a <a href="https://codeberg.org/fediverse/fep">Fediverse Enhancement Proposal</a> for consideration by server implementers.</p>
+
+<h3>
+  <a name="building-web-monetization-into-mastodon" href="#building-web-monetization-into-mastodon">
+  </a>
+  Building Web Monetization into Mastodon
+</h3>
+
+<p>Once the Fediverse Enhancement Proposal is finalized, I will submit a pull request to the Mastodon project that adds functionality to:</p>
+
+<ol>
+<li>Allow a server to set its payment pointer</li>
+<li>Allow a user to set their payment pointer</li>
+<li>Append a user’s payment pointer to their posts and profile</li>
+<li>Store payment pointer information for received posts and user profiles</li>
+<li>Dynamically set the active payment pointer in the Mastodon web app based on the post or user profile being viewed</li>
+</ol>
+
+<p>When this work is completed, Mastodon servers and creators with payment pointers will start receiving streaming micropayments from followers who use a browser with Web Monetization support.</p>
+
+<h2>
+  <a name="project-impact-amp-target-audience" href="#project-impact-amp-target-audience">
+  </a>
+  Project Impact &amp; Target Audience
+</h2>
+
+<p>Federated social networks allow a digital creator to finally, truly own their online presence, relationship with their audience, and their distribution. It’s now possible for digital creators to break free from the problematic algorithmic curation of centralized social networks that never shows their work to their followers or unjustifiably moderates their posts. Marginalized communities can create their own safe places online, set their own rules for acceptable behavior, and decide how to deal with bad behavior by people on other servers. We have a unique opportunity and momentum right now for people to choose an online community managed by people like them and say goodbye to exploitative, privacy-invading, ad-filled social networks like Instagram, Twitter, and others.</p>
+
+<p>These community servers are not free to run. They need tools to help financially sustain their operation. Similarly, digital creators need tools to be supported financially by their fans. If we can get Web Monetization added as a standard feature in fediverse servers and we can convince fans to setup a digital wallet in their browsers, we can expand the economic opportunity for digital creators globally.</p>
+
+<p>The potential is huge. This is a multi-year journey dependent on several other efforts the foundation is investing in. The exciting part for me is how achievable this all feels in this moment.</p>
+
+<h2>
+  <a name="communications-and-marketing" href="#communications-and-marketing">
+  </a>
+  Communications and Marketing
+</h2>
+
+<p>I led a session on financial sustainability of fediverse server operators at <a href="https://fediforum.org/">Fediforum virtual conference</a> and participated in the <a href="https://fediversereport.com/mozfest-and-the-fediverse/">MozFest workshop on the next steps for the fediverse</a> in March. That led to creation of the <a href="https://fedidevs.org/">Fediverse Developer Network</a>, a group that meets regularly to discuss progress and challenges in developing fediverse servers.</p>
+
+<p>I presented an introduction to Mastodon and federated social networks at the June Open Payments Huddle (<a href="https://drive.google.com/file/d/15V-nZzKMzVuqUdfWr9ZoYIlXFg9ZIeuS/view?usp=drive_link">video</a>) and to the <a href="https://community.interledger.org/interledger/announcing-awardees-of-the-futuremoney-arts-culture-grant-3h0c">Future Money Grantees</a> in July. I also <a href="https://community.interledger.org/jeremiahlee/interledger-joins-the-fediverse-30fi">wrote a summary</a> of that presentation.</p>
+
+<p>I submitted proposals to several conferences and hope to speak more about my work this fall and into next year.</p>
+
+<h2>
+  <a name="whats-next" href="#whats-next">
+  </a>
+  What’s Next?
+</h2>
+
+<ul>
+<li>Finalize the representation of payment pointers in Activity Streams with the Web Monetization standards group</li>
+<li>Submit the specification as a Fediverse Enhancement Proposal</li>
+<li>Complete the code and submit a pull request to the Mastodon project implementing the specification</li>
+</ul>
+
+<h2>
+  <a name="community-support" href="#community-support">
+  </a>
+  Community Support
+</h2>
+
+<p>If you haven’t already, <a href="https://interledger.social/@Interledger">follow Interledger</a> on Mastodon or your preferred fediverse server.</p>
+
+<p>If you haven’t joined a fediverse server yet, read my <a href="https://www.jeremiahlee.com/posts/twitter-mastodon/">getting started guide</a> and consider joining <a href="https://interledger.social/">Interledger.social</a>.</p>
+
+<p>When my Fediverse Enhancement Proposal is published, please add a comment stating your support for the idea and why you believe this particular implementation is the best one. This will show Mastodon and other federated social network server developers how much support there is. I do not work for the company that created Mastodon, so I cannot guarantee my pull request will be accepted. My hope is that people who believe in the fan-supported creators will join me in advocating for this feature to be included.</p>
+
+<h2>
+  <a name="special-thanks" href="#special-thanks">
+  </a>
+  Special Thanks
+</h2>
+
+<ul>
+<li>
+<a class="mentioned-user" href="https://community.interledger.org/ericahargreave">@ericahargreave</a> for brainstorming with me early on about bringing federated social networks and Interledger together and encouraging me to apply for the ambassadorship</li>
+<li>
+<a class="mentioned-user" href="https://community.interledger.org/laka">@laka</a> for providing constructive feedback along the way</li>
+<li>
+<a class="mentioned-user" href="https://community.interledger.org/chrislarry">@chrislarry</a> for connecting me with the right people within the foundation, generally making things happen, and getting up super early to fix Zoom meeting issues</li>
+<li>
+<a class="mentioned-user" href="https://community.interledger.org/ayeshaware">@ayeshaware</a> for helping me prepare for the Open Payments Huddle, being a fantastic MC, and answering my newbie questions about setting up Eventbrite webinars</li>
+<li>
+<a class="mentioned-user" href="https://community.interledger.org/julaireh">@julaireh</a> for making the Interledger fediverse account worth following with great posts</li>
+<li>@ adrianhopebailie and Kevin Swiber for feedback and guidance on using JSON-LD</li>
+<li>Anna Sheard for reviewing my blog post drafts</li>
+<li>@ huijing for approving my PRs</li>
+<li>@ sabineschaller, @ lwlkarama, and Melissa Henderson for the productive conversations about how the Web Monetization spec should evolve</li>
+</ul>
+
+<p>(Sorry for the broken username tags. The website won't let me tag more than 7 people in one post!)</p>
+
+

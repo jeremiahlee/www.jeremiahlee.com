@@ -1,0 +1,99 @@
+---
+date: "2023-06-26T16:35:35+0200"
+updated: "2023-09-15T00:17:41+0200"
+title: "Interledger Joins the Fediverse – Open Payments Community Call"
+excerpt: "You can watch the full presentation of this announcement with a lot more info here (15 minutes).  In..."
+excerptImage: "main-image.png"
+archiveOf: "https://community.interledger.org/jeremiahlee/interledger-joins-the-fediverse-30fi"
+tags:
+ - "posts"
+ - "announcements"
+ - "interledgerfoundation"
+ - "software"
+ - "webmonetization"
+---
+
+<p><strong><em>You can watch the full presentation of this announcement with a lot more info <a href="https://drive.google.com/file/d/15V-nZzKMzVuqUdfWr9ZoYIlXFg9ZIeuS/view?usp=drive_link">here</a> (15 minutes).</em></strong></p>
+
+<p>In the last 6 months, millions of people started using <a href="https://joinmastodon.org/">Mastodon</a>. It’s a new type of social network that allows you to follow friends and interesting people without intrusive advertising or questionable algorithms deciding what you should see.</p>
+
+<p>The biggest difference between Mastodon and Twitter is that it is decentralized. No single company controls the social network. Instead, Mastodon uses a network of thousands of independently managed servers. Once you join a server, you can interact with people who use any other server. It’s similar to how we can send email to each other without having to all use Gmail.</p>
+
+<p>This decentralized technical architecture is called <em>federation</em>. Each server is autonomous, but uses the same W3C technology standards to be able to work together for the greater good.</p>
+
+<p>Mastodon is just one of several products that use these standards. There are now federated alternatives to every centralized social media service. For example, while Mastodon offers a Twitter-inspired experience, Pixelfed offers an Instagram-like experience and PeerTube offers a YouTube-like experience. Collectively, these federated social networks are known as the <em>fediverse</em>.</p>
+
+<h2>
+  <a name="a-creator-economy-owned-by-creators" href="#a-creator-economy-owned-by-creators">
+  </a>
+  A creator economy owned by creators
+</h2>
+
+<p>Federated social networks shift the power from a handful of companies deciding how billions of people should interact online to a multitude of smaller communities who can better self-manage. Each server operator can decide its governance model, like what behaviors are acceptable on the server and how to handle bad behavior on other servers. Individuals can find the server that best aligns with their ideals or start their own.</p>
+
+<p>The original promise of the Web was the ability for anyone to publish information. Centralized social networks lowered the barrier for people to share their digital creations and for interacting with each other. Federated social networks now make it possible for individuals to truly own their online presence and the relationship with their audience with the same rich, two-way interactions. We think this is a notable improvement for humanity and we are excited to share how we intend to invest in furthering its development.</p>
+
+<h2>
+  <a name="money-matters" href="#money-matters">
+  </a>
+  Money matters
+</h2>
+
+<p>Centralized social networks earn revenue primarily from online advertising. By contrast, federated social networks today are funded by donations of time and money. A variety of monetization methods will be required to support the fediverse growing from use by ~<a href="https://fedidb.org/">10 million people</a> to eventually billions of people. While ethical forms of online advertising exist and may have a place, we envision cooperative memberships and fan-supported models becoming dominant.</p>
+
+<p>Most people will pay to support media that brings them value. Public radio and television broadcast stations pioneered audience donation financing in the 1970s. The Internet equivalent is Wikipedia, the 7th most popular website in the world funded entirely by donations. Today, niche creators with comparatively small audiences use Patreon, GitHub Sponsors, and Substack memberships to support their work.</p>
+
+<p>Federated social networks can attract more creators from centralized services by offering the features they need to be supported financially. More creators will attract more audience members, resulting in a virtuous growth cycle. The same features that help individual creators receive support could be used by server administrators to sustain their operations too.</p>
+
+<p>Key creator monetization features for the fediverse:</p>
+
+<ul>
+<li>Passive micropayments using the proposed W3C <a href="https://webmonetization.org/">Web Monetization standard</a>
+</li>
+<li>Memberships using recurring payments</li>
+<li>Tips using one-time payment</li>
+<li>Rewards/perks access for supporters</li>
+<li>Sponsored post labels (required by law in the <a href="https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers">US</a> and many European countries)</li>
+</ul>
+
+<p>Some people might worry that introducing monetization features into the fediverse will turn every social interaction and relationship into a transaction. That would be harmful and is not the intent. No one wants a Web with a thousand paywalls. Growing a fanbase requires being accessible and payment-gated content inherently is less discoverable. We think most creators will opt for greater potential reach to attract more supporting fans over predominantly exclusive paid access.</p>
+
+<h2>
+  <a name="federated-social-media-meet-the-federated-payment-network" href="#federated-social-media-meet-the-federated-payment-network">
+  </a>
+  Federated social media, meet the federated payment network
+</h2>
+
+<p>The Interledger Protocol was conceived as a payment network modeled after computer data networks. It brings the fast transaction speed and negligible transaction fee features of cryptocurrencies to legitimate, regulated financial institutions. It’s not tied to any single company or currency, fiat or otherwise. A payment can be facilitated simply with a special type of URL called an <a href="https://paymentpointers.org/">Interledger Payment Pointer</a>. Streaming, recurring, and one-time payments are supported by any wallet app that implements the <a href="https://openpayments.guide/">Open Payments API</a>.</p>
+
+<h2>
+  <a name="our-next-steps" href="#our-next-steps">
+  </a>
+  Our next steps
+</h2>
+
+<p>The Interledger Foundation is joining the fediverse with the launch of a Mastodon instance later this week. We also are open sourcing our first contribution to the Mastodon project: <a href="https://github.com/interledger/mastodon-gcp-terraform">Terraform code to easily and resiliently host Mastodon on Google Cloud Platform</a>.</p>
+
+<p>This is my first work done as an Interledger Foundation technical ambassador to the fediverse. I’m a software engineer who has worked with social network APIs since the original Facebook Platform and most recently managed financial infrastructure at Stripe. I am thrilled to get to work on two areas of technology most interesting to me.</p>
+
+<p>Enabling the previously mentioned monetization features requires Interledger Payment Pointers to be added as metadata to fediverse posts and user profiles. In the coming weeks, we will issue a request for comments on a proposal for extending the <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> in the context of the <a href="https://www.w3.org/TR/activitystreams-core/">ActivityStreams 2.0 format</a> for <a href="https://www.w3.org/TR/activitypub/">ActivityPub implementations</a> to support Web Monetization and Open Payments. We then will submit a <a href="https://codeberg.org/fediverse/fep">Fediverse Enhancement Proposal</a> to encourage all fediverse servers and clients to support this extension with a pull request to the Mastodon project as a reference implementation.</p>
+
+<h2>
+  <a name="not-just-mastodon" href="#not-just-mastodon">
+  </a>
+  Not just Mastodon
+</h2>
+
+<p>We’re starting with Mastodon today because it’s the most deployed fediverse server. We hope to collaborate with the entire ecosystem of server and client apps. The Interledger Foundation first supported federated social networks with a grant to <a href="https://joinpeertube.org/">PeerTube</a> in 2020. <a href="https://castopod.org/">Castopod</a>, an open source podcasting fediverse server, also supports Web Monetization.</p>
+
+<p>“Castopod has been supporting Interledger’s Web Monetisation for more than 2 years. It allows podcast lovers to support their favorite shows by sending micropayments, promoting a fair and sustainable ecosystem.” —Benjamin Bellamy, Castopod CEO &amp; Founder</p>
+
+<h2>
+  <a name="open-and-inclusive-to-put-humanity-first" href="#open-and-inclusive-to-put-humanity-first">
+  </a>
+  Open and inclusive to put humanity first
+</h2>
+
+<p>The Interledger Foundation believes its technical standards and network of payment providers can help federated social network servers sustain their operations and help digital creators be supported by the fans who love them. We look forward to working with fediverse software authors, server operators, digital creators, and their fans to realize this vision.</p>
+
+
