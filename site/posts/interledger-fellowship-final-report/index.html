@@ -1,0 +1,82 @@
+---
+date: "2023-11-30T23:39:27+0100"
+updated: "2025-12-19T11:45:37+0100"
+title: "Interledger Foundation fellowship final report: Web Monetization on the Social Web"
+excerpt: "Community engaged, specs updated, friendly feature fork deployed, but blocked by payment network launch delays."
+excerptImage: "interledger-fellowship-final-report.jpg"
+showExcerptImage: true
+archiveOf: "https://community.interledger.org/jeremiahlee/web-monetization-on-the-social-web-ilf-grant-final-report-4i4k"
+tags:
+ - "posts"
+ - "Interledger Foundation fellowship"
+---
+
+<p><em>Previous post: <a href="/posts/interledger-fellowship-interim-report/">interim progress report</a></em></p>
+
+<p><em>Note: I will use the term ‘social web’ instead of ‘fediverse’ to refer to federated, decentralized social networks.</em></p>
+
+<p>Digital creators of all kinds across the world will benefit when they can fully own their social media presences, content distribution, relationships with their audiences, and compensation methods. The Interledger Foundation’s support enabled me to make significant contributions towards realizing this goal by adding support for micropayments to social web apps.</p>
+
+<p>There’s a line in <a href="https://www.harpercollins.com/products/the-lion-trackers-guide-to-life-boyd-varty?variant=40828381167650"><em>The Lion Tracker’s Guide to Life</em></a>: “I don’t know where I’m going, but I know exactly how to get there.” It means that sometimes you know the end goal, but the path to it is not obvious. Instead of worrying, you trust your skills and work methodically towards the goal.</p>
+
+<p>My technical goals for my fellowship were to publish a Fediverse Enhancement Proposal that defined how to include payment pointers in the Activity Streams 2.0 specification and to submit a pull request to the Mastodon project implementing the FEP. These remain my goals, but they are not yet accomplished. I completed significant portions of both goals, but releasing them publicly at this point would be counterproductive to achieving the goals.</p>
+
+<p>I believed the most significant risk to my work was triggering strong opposition to the introduction of monetization to the social web. Early adopters previously were critical of the introduction of full text search and I did not want to repeat that situation. I attempted to mitigate this risk by engaging with many Mastodon community server operators, social web app developers, and end users. I participated in 3 community events to workshop ideas and conducted over 20 interviews.</p>
+
+<p>Community server operators are concerned about how to fund the increasing cost of providing service. Creators are unsatisfied with their monetization options on Mastodon compared to centralized social networks. While skeptical of monetization proposals and vendors, early adoptions of the social web are open to ideas.</p>
+
+<p>Few people had heard of the Interledger payment network prior to my conversation with them. The recurring immediate questions were if it was cryptocurrency (no) and if it was the most viable option (maybe). The Interledger payment network appealed to these people because it was globally focused, championed by a non-profit, and federated in design—just like the Web. However, the lack of operating wallet providers and a browser extension kept people from embracing my proposal.</p>
+
+<p>The Interledger payment network only gets one shot at a first impression. It has to be strong. I am withholding the introduction of a Fediverse Enhancement Proposal and Mastodon pull request until I can demonstrate everything working end-to-end with real money, without demo hacks, and reproducible by others.</p>
+
+<p>Like a lion tracker, I don’t know where I’m going, but I know exactly how to get there—and I will get there.</p>
+
+<p>Even without the FEP and Mastodon pull request published, my fellowship resulted in:</p>
+
+<ul>
+<li>improvements (<a href="https://github.com/hashicorp/terraform-provider-google/issues/13916#issuecomment-1566985485">1</a>, <a href="https://github.com/hashicorp/terraform-provider-google/issues/14748">2</a>) to Google Cloud Platform’s official Terraform provider (Interledger Foundation’s cloud infrastructure provider)</li>
+<li>eased <a href="https://github.com/interledger/mastodon-gcp-terraform">Mastodon deployment on Google Cloud Platform</a>
+</li>
+<li>bug fixes to Mastodon (<a href="https://github.com/mastodon/chart/pull/81">1</a>, <a href="https://github.com/mastodon/chart/pull/82">2</a>)</li>
+<li>the <a href="https://community.interledger.org/jeremiahlee/interledger-launches-a-mastodon-instance-3k0">launch of Interledger.social</a>
+</li>
+<li>tentative refinements to the proposed Web Monetization specification</li>
+<li>broadened community outreach and engagement with digital creators and early social web users</li>
+<li>actionable research findings on digital creator monetization methods</li>
+<li>participation in the Interledger Summit as a panelist, presenter, and hackathon judge</li>
+<li>the launch of the <a href="https://stockholm.socialwebmeetup.com/">Stockholm Social Web Meetup</a> and plans to support expansion in more cities</li>
+<li>advising Interledger community members on strategies and technical approaches </li>
+</ul>
+
+<p>I am proud of this work and am grateful to have had the foundation fund it.</p>
+
+<h2 id="open-questions">Open questions about open payments</h2>
+
+<p>By meeting a complex, real world use case, the proposed Web Monetization specification draft has been tested. The Web Monetization specification drafts have focused on a single-author, webpage-centric use case. The Mastodon use case is a web application with content aggregated from multiple authors. Both are valid use cases of the Web platform and need to be accounted for in Web Monetization’s design.</p>
+
+<p>One such detail was how to specify a payment pointer in JSON-LD, the data format used by Activity Streams 2.0 and other W3C specifications. The current Web Monetization specification draft only defines how to specify a payment pointer in HTML. Progress was made, but open questions remain and block completion of my work. The Web Monetization working group decided to establish a namespace on <code>interledger.org/ns</code>, but continues to debate whether to rename <em>payment pointer</em> to <em>wallet address</em> and whether to adopt Decentralized Identifiers (DIDs) as the data format.</p>
+
+<p>Another detail was how to handle multiple monetization tags. Earlier drafts permitted one monetization tag per webpage. The <a href="https://webmonetization.org/specification/">2023-09-20 draft</a> supports multiple monetization tags, but leaves several implementation details unanswered.</p>
+
+<ul>
+<li>What happens in a Tweetdeck-like view when there are 30+ posts with unique monetization tags visible at once?</li>
+<li>How should user agents send payments when the number of active payment pointers exceeds the user agent’s limit on concurrent HTTP requests?</li>
+<li>If there were 30 active payment pointers, is the payment rate being multiplied by 30 (spending 30x as much) or being split 30 ways?</li>
+<li>How frequently should the user agent / monetization provider send a payment anyway?</li>
+</ul>
+
+<p>While W3C specifications vary in specificity of implementation details, I believe the current Web Monetization draft is too vague and that these implementation details will determine its success or failure. Technical specifications exist to create certainty in the user experience across user agents.</p>
+
+<p>Lastly, I believe the 2023-09-20 draft of the Web Monetization specification needs additional functionality to meet how users expect micropayments to work. This belief is based on my interviews with digital creators and countless conversations at events during my fellowship. While my fellowship has ended, I continue to work on an additional proposal and hope to share that in the next week.</p>
+
+<h2 id="progress">Real progress on audacious goals</h2>
+
+<p>I want to change the primary revenue model of the Web from invasive advertising to audience-supported creation.</p>
+
+<p>This can be accomplished by building payments into the browser as a platform feature of the Web and by adding a social interaction layer onto websites to liberate creators from controlling, closed content platforms (eg Instagram, Twitter, TikTok).</p>
+
+<p>Once the Interledger payment network is production ready and Web Monetization matches user expectations for passive, attention-based creator compensation, audiences will be able to support creators on the social web. This will accelerate the virtuous cycle of attracting more creators to the social web away from centralized platforms which will attract more people to join the social web.</p>
+
+<p>I am grateful for the support from the Interledger Foundation and community during my fellowship. I intend to keep working in this domain as much as I can. A better social media experience for people and creators is possible, plausible, and within reach with continued support.</p>
+
+<p><em>You can follow me on the social web at <a href="https://alpaca.gold/@Jeremiah">@Jeremiah@alpaca.gold</a>.</em></p>
